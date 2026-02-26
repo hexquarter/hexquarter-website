@@ -87,7 +87,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1 }}
           >
             We build software where Bitcoin serves as the security, settlement, and trust layer. 
-            <br />Not as an add-on. Not as a payment option. But <strong className="text-primary">as the foundation.</strong>
+            <br />Leverage Bitcoin <strong className="text-primary">as the foundation</strong>.
           </motion.p>
           
           <motion.p 
