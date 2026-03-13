@@ -61,13 +61,13 @@ const Blog = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background px-5 lg:px-20 py-20">
+    <div className="min-h-screen bg-background">
       <Header />
-      <main className="flex flex-col">
+      <main className="flex flex-col px-5 lg:px-20 py-20">
         <section className="py-10">
           <div className="flex flex-col gap-5">
             <h2 className="font-mono uppercase text-muted-foreground">Blog</h2>
-            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">Insights on Bitcoin engineering</h1>
+            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl text-foreground leading-tight">Insights on Bitcoin engineering</h1>
           </div>
         </section>
 

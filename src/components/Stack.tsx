@@ -3,7 +3,7 @@ export const Stack = () => {
         <div id="stack" className="lg:px-20 px-5 py-20 border-muted-foreground/30 border-b-1 flex flex-col gap-10">
             <div className="max-w-4xl flex flex-col gap-10">
                 <h3 className="font-mono uppecase text-primary tracking-widest uppercase text-xs">The protocol stack</h3>
-                <h2 className="text-6xl 2xl:text-8xl font-[Cal_Sans]">Bitcoin isn't just money. <br />It's a <span className="text-primary">platform.</span></h2>
+                <h2 className="text-6xl lg:text-7xl  2xl:text-8xl font-[Cal_Sans]">Bitcoin isn't just money. <br />It's a <span className="text-primary">platform.</span></h2>
                 <div className="flex flex-col gap-2">
                     <p className="text-muted-foreground hover:text-foreground animate">Most people see Bitcoin as an asset. </p>
                     <p className="text-muted-foreground hover:text-foreground animate">We see it as the most battle-tested execution environment ever built <br />— and the foundation for an entirely new class of applications</p>

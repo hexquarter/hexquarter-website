@@ -54,7 +54,7 @@ export const Bitcoin = () => {
                 <div className="flex lg:flex-row flex-col justify-between gap-10">
                     <div className="flex-1 flex flex-col gap-10">
                         <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-primary/60">Bitcoin engineering</h3>
-                        <h2 className="text-5xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">Bitcoin as a programmable <span className="text-primary">settlement layer</span></h2>
+                        <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">Bitcoin as a programmable <span className="text-primary">settlement layer</span></h2>
                         <div className="flex flex-col gap-5">
                             <p className="text-muted-foreground hover:text-foreground/80">Bitcoin's conservatism is a feature, not a limitation. The constraints force precision.</p>
                             <p className="text-muted-foreground hover:text-foreground/80">New generation of protocols has unlocked programmability without introducing consensus risk or trusted third parties.</p>

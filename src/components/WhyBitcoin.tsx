@@ -9,7 +9,7 @@ export const WhyBitcoin = () => {
                 <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Why Bitcoin</h3>
                 <div className="flex lg:flex-row flex-col justify-content gap-10">
                     <div className="flex flex-col flex-1 gap-10 justify-between">
-                        <h2 className="font-[Cal_Sans] text-6xl lg:max-w-2xl">We've seen the full arc. We chose Bitcoin.</h2>
+                        <h2 className="font-[Cal_Sans] text-6xl lg:text-7xl 2xl:text-8xl lg:max-w-2xl">We've seen the full arc. We chose Bitcoin.</h2>
                         <div className="flex gap-5">
                             <div className="lg:flex grid grid-cols-2 lg:grid-cols-4 gap-3">
                                 <Tooltip delayDuration={10}>

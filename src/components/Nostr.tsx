@@ -36,7 +36,7 @@ export const Nostr = () => {
                 <div className="flex lg:flex-row flex-col justify-between gap-10">
                     <div className="flex-1 flex flex-col gap-10">
                         <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-violet-400/40">Nostr expertise</h3>
-                        <h2 className="text-5xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">The missing <span className="text-violet-400">data layer</span> for sovereign apps.</h2>
+                        <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">The missing <br /><span className="text-violet-400">data layer</span> for sovereign apps.</h2>
                         <div className="flex flex-col gap-5">
                             <p className="text-muted-foreground hover:text-foreground/80">Every Bitcoin payment needs context — a receipt, a timestamp, a merchant identity. <br />Centralized servers are the obvious solution, and the obvious failure point. Nostr eliminates that tradeoff.
                             </p>

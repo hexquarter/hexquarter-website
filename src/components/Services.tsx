@@ -3,7 +3,7 @@ export const Services = () => {
         <div id="services" className="px-5 lg:px-20 py-20 pb-10 border-muted-foreground/30 border-b-1">
             <div className="flex-1 flex flex-col gap-10">
                 <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground/80">what we build ?</h3>
-                <h2 className="text-5xl 2xl:text-8xl font-[Cal_Sans] max-w-5xl">Sovereign products, <span className="text-primary">start to finish.</span></h2>
+                <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-5xl">Sovereign products, <br /><span className="text-primary">start to finish.</span></h2>
 
                 <div className="flex flex-col gap-0">
                     <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-primary hover:border-t-3 p-5 border-b-1 border-muted-foreground/30">

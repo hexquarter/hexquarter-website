@@ -58,9 +58,9 @@ const BlogDetails = () => {
   }, [])
 
   return (
-    <div className="min-h-screen px-5 lg:px-20 py-20">
+    <div className="min-h-screen">
       <Header />
-      <main className="flex flex-col gap-10 py-10">
+      <main className="flex flex-col gap-10 px-5 lg:px-20 py-30">
         <section className="">
           <div className="">
             {article &&
@@ -68,7 +68,7 @@ const BlogDetails = () => {
                 <div className="flex"><Link to="/blog" className="text-primary flex items-center gap-2"><ArrowLeftCircle className="" />Back</Link></div>
                 <h2 className="text-muted-foreground font-mono uppercase text-sm">{article.date.toDateString()}</h2>
                 <div className="flex flex-col justify-between">
-                  <h1 className="text-5xl cover md:text-4xl lg:text-5xl mb-8 flex items-center font-[Cal_Sans]">{article.title}</h1>
+                  <h1 className="text-5xl cover md:text-4xl lg:text-7xl mb-8 flex items-center font-[Cal_Sans]">{article.title}</h1>
                 </div>
               </div>
             }
@@ -82,7 +82,7 @@ const BlogDetails = () => {
           <div className="flex lg:flex-row flex-col justify-between gap-5 items-start">
             <img src={article.image} className="lg:w-1/3 object-cover lg:object-scale-down border border-muted-foreground/20" />
 
-            <div className="flex flex-col gap-5 text-muted-foreground text-sm bg-card p-10 border border-muted-foreground/20">
+            <div className="flex flex-col gap-5 text-muted-foreground text-base bg-card p-10 border border-muted-foreground/20">
               <Markdown components={{
                 h2(p) {
                   const { node, ...rest } = p
