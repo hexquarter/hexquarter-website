@@ -1,90 +1,69 @@
-import { motion } from "framer-motion";
-import AnimatedSection from "./AnimatedSection";
-import AnimatedCard from "./animations/AnimatedCard";
+import { Battery, Key, Package, Satellite, SatelliteIcon } from "lucide-react"
+import { Tooltip, TooltipTrigger } from "./ui/tooltip"
+import { TooltipContent } from "@radix-ui/react-tooltip"
 
-const WhyBitcoin = () => {
-  const reasons = [
-    {
-      title: "Durability",
-      description: "15 years of uninterrupted operation. No chain reorgs, no consensus changes mid-flight, no foundation drama."
-    },
-    {
-      title: "Neutrality",
-      description: "No insider allocations, no governance tokens, no protocol politics. Just a predictable, ossifying base layer."
-    },
-    {
-      title: "Long-term guarantees",
-      description: "Build on something that will exist in 20 years. Your product's trust model shouldn't depend on VC runway."
-    }
-  ];
+export const WhyBitcoin = () => {
+    return (
+        <div id="why-bitcoin" className="px-5 lg:px-20 py-20 border-muted-foreground/30 border-b-1">
+            <div className="flex flex-col gap-10">
+                <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Why Bitcoin</h3>
+                <div className="flex lg:flex-row flex-col justify-content gap-10">
+                    <div className="flex flex-col flex-1 gap-10 justify-between">
+                        <h2 className="font-[Cal_Sans] text-6xl lg:max-w-2xl">We've seen the full arc. We chose Bitcoin.</h2>
+                        <div className="flex gap-5">
+                            <div className="lg:flex grid grid-cols-2 lg:grid-cols-4 gap-3">
+                                <Tooltip delayDuration={10}>
+                                    <TooltipTrigger>
+                                        <div className="border p-2 font-mono text-[10px] text-primary/40 hover:text-primary">Unbattled security model</div>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                        <p className="text-xs">
+                                            Bitcoin's proof-of-work security model has compounded for 15 years. No downtime. No governance crisis. No rug. Building on Bitcoin means inheriting a security budget no startup could replicate.
+                                        </p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip delayDuration={10}>
+                                    <TooltipTrigger>
+                                        <div className="border p-2 font-mono text-[10px] text-green-400/40 hover:text-green-400">UTXO: Simple State</div>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                        <p className="text-xs">
+                                            The UTXO model makes application state easier to reason about. Balances are deterministic, auditable, and self-contained. No hidden global state. No reentrancy attacks. Less complexity, fewer failure modes.
+                                        </p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip delayDuration={10}>
+                                    <TooltipTrigger>
+                                        <div className="border p-2 font-mono text-[10px] text-yellow-400/40 hover:text-yellow-400">Self custody first</div>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                        <p className="text-xs">
+                                            Every custodian is a point of failure. Bitcoin makes self-custody practical — and we make it the default. Our architecture decisions start from the assumption that users should hold their own keys.
+                                        </p>
+                                    </TooltipContent>
+                                </Tooltip>
+                                <Tooltip delayDuration={10}>
+                                    <TooltipTrigger>
+                                        <div className="border p-2 font-mono text-[10px] text-violet-400/40 hover:text-violet-400">Nostr closes the loop</div>
+                                    </TooltipTrigger>
+                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                        <p className="text-xs">
+                                            Bitcoin handles the money layer. Nostr handles the data layer. Together they enable a complete application stack with no centralized chokepoint — not even us. That's a new class of product.
+                                        </p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </div>
+                        </div>
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
-  return (
-    <section className="hex-section bg-card relative overflow-hidden">
-      {/* Background glow */}
-      <motion.div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent rounded-full blur-3xl pointer-events-none"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
-      
-      <div className="hex-container relative z-10">
-        <AnimatedSection>
-          <p className="hex-tag">Why Bitcoin</p>
-          <h2 className="hex-heading max-w-xl">
-            We've built on altchains. < br />We stopped.
-          </h2>
-          <p className="hex-body max-w-2xl mb-12">
-            After a decade of building on various protocols, we chose Bitcoin for production systems. 
-            The reasons are practical, not ideological.
-          </p>
-        </AnimatedSection>
-        
-        <motion.div 
-          className="grid md:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          {reasons.map((reason, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <AnimatedCard className="h-full p-6 bg-background/50 border border-border rounded-lg backdrop-blur-sm">
-                <motion.h3 
-                  className="font-mono text-sm font-medium text-foreground mb-3"
-                  whileHover={{ color: "hsl(var(--primary))" }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {reason.title}
-                </motion.h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {reason.description}
-                </p>
-              </AnimatedCard>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default WhyBitcoin;
+                    </div>
+                    <div className="flex flex-col flex-1 gap-10">
+                        <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">The Web3 decade produced real engineering breakthroughs — peer-to-peer networking, applied cryptography, programmable settlement. It also proved that complexity without constraint creates catastrophic attack surface.</p>
+                        <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">We've built across the stack: Web2 SaaS, Ethereum, DeFi protocols. We've seen what happens when the foundation is governance tokens, roadmaps, and validator cartels. <span className="text-white">The assets got confiscated. The bridges got drained. The devs moved on.</span></p>
+                        <p className="border-l-2 border-primary text-white pl-5">Bitcoin made a different bet: conservatism over expressiveness, physics over governance, simplicity over feature velocity. That bet has compounded for 15 years. We build on what compounded.</p>
+                        <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">HexQuarter exists to help founders navigate this stack — not just Bitcoin as a payment rail, but as a foundation, with Nostr as the data fabric, and self-custody as the architecture default. <span className="text-white">We build what goes on top.</span></p>
+                    </div>
+                </div >
+            </div >
+        </div >
+    )
+}

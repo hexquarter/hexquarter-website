@@ -1,27 +1,29 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Positioning from "@/components/Positioning";
-import WhyBitcoin from "@/components/WhyBitcoin";
-import HowBitcoinIsUsed from "@/components/HowBitcoinIsUsed";
-import Approach from "@/components/Approach";
-import WhoThisIsFor from "@/components/WhoThisIsFor";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
+import { Stack } from "@/components/Stack";
+import { Nostr } from "@/components/Nostr";
+import { Services } from "@/components/Services";
+import { Work } from "@/components/Work";
+import { Bitcoin } from "@/components/Bitcoin";
+import { WhyBitcoin } from "@/components/WhyBitcoin";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="flex flex-col gap-10">
+      <main className="flex flex-col">
         <Hero />
-        <Positioning />
+        <Stack  />
+        <Bitcoin />
+        <Nostr />
+        <Services />
+        <Work />
         <WhyBitcoin />
-        <HowBitcoinIsUsed />
-        <Approach />
-        <WhoThisIsFor />
-        <CTA />
+        <Contact />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };

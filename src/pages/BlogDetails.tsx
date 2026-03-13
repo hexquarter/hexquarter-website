@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 import { SimplePool } from '@nostr/tools/pool'
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Markdown from 'react-markdown';
 import { ArrowLeft, ArrowLeftCircle } from "lucide-react";
+import { Footer } from "@/components/Footer";
 
 const pool = new SimplePool()
 const relays = ['wss://cache2.primal.net/v1', 'wss://nos.lol/', 'wss://nostr.mom/', 'wss://nostrelites.org/', 'wss://relay.damus.io/', 'wss://wot.nostr.party/']
@@ -22,6 +22,7 @@ const BlogDetails = () => {
 
   const { id } = useParams()
 
+  const [loading, setLoading] = useState(true)
   const [article, setArticle] = useState<Article | undefined>(undefined)
   const ran = useRef(false);
 
@@ -44,6 +45,7 @@ const BlogDetails = () => {
         } as Article
 
         setArticle(article)
+        setLoading(false)
       }
       catch (e) {
         alert(e)
@@ -56,90 +58,57 @@ const BlogDetails = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen px-5 lg:px-20 py-20">
       <Header />
-      <main className="flex flex-col gap-10 ">
-        <section className="hex-section">
-          <div className="hex-container">
+      <main className="flex flex-col gap-10 py-10">
+        <section className="">
+          <div className="">
             {article &&
-              <div>
-                <Link to="/blog"><ArrowLeftCircle className="text-primary" /></Link>
-                <h2 className="hex-tag">{article.date.toDateString()}</h2>
-                <div className="lg:grid lg:grid-cols-2 flex flex-col">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-8 flex items-center">{article.title}</h1>
-                  <img src={article.image} className="h-"/>
+              <div className="flex flex-col gap-5">
+                <div className="flex"><Link to="/blog" className="text-primary flex items-center gap-2"><ArrowLeftCircle className="" />Back</Link></div>
+                <h2 className="text-muted-foreground font-mono uppercase text-sm">{article.date.toDateString()}</h2>
+                <div className="flex flex-col justify-between">
+                  <h1 className="text-5xl cover md:text-4xl lg:text-5xl mb-8 flex items-center font-[Cal_Sans]">{article.title}</h1>
                 </div>
               </div>
             }
-            {!article && <span>Fetching from <span className="text-primary">Nostr</span>...yes completely decentralized :)</span>}
-          </div>
+            {loading && <div className="flex items-center gap">
+              <svg className="mr-3 size-5 bg-violet-400 animate-spin ..." viewBox="0 0 24 24">
+              </svg>
+              <p>Fetching from <span className="text-violet-400">Nostr</span>...yes completely decentralized </p>
+            </div>}          </div>
         </section>
         {article &&
-          <div className="hex-section bg-card">
-            <div className="hex-container flex flex-col gap-5 text-muted-foreground text-sm">
+          <div className="flex lg:flex-row flex-col justify-between gap-5 items-start">
+            <img src={article.image} className="lg:w-1/3 object-cover lg:object-scale-down border border-muted-foreground/20" />
+
+            <div className="flex flex-col gap-5 text-muted-foreground text-sm bg-card p-10 border border-muted-foreground/20">
               <Markdown components={{
                 h2(p) {
                   const { node, ...rest } = p
-                  return <h2 className="text-white text-2xl" {...rest} />
+                  return <h2 className="text-white text-4xl font-[Cal_Sans] border-b-3 border-violet-400 pb-5 mt-10" {...rest} />
                 },
                 p(p) {
                   const { node, ...rest } = p
-                  return <p {...rest} />
+                  return <p className=""{...rest} />
                 },
                 ul(p) {
                   const { node, ...rest } = p
-                  return <ul className="list-disc" {...rest} />
+                  return <ul className="list-disc marker:text-violet-400" {...rest} />
                 },
                 strong(p) {
                   const { node, ...rest } = p
-                  return <strong className="text-primary font-light" {...rest} />
+                  return <strong className="text-white font-semibold" {...rest} />
                 },
                 ol(p) {
                   const { node, ...rest } = p
-                  return <ul className="list-decimal" {...rest} />
+                  return <ul className="list-decimal marker:text-violet-400" {...rest} />
                 }
               }}>{article.content}</Markdown>
             </div>
+
           </div>
         }
-        {/* <section className="hex-section bg-card">
-          <div className="hex-container">
-            <p className="hex-tag">Our story</p>
-            <h2 className="hex-heading max-w-xl">
-              Discover founder's vision
-            </h2>
-            <div className="flex flex-col lg:flex-row justify-between gap-10">
-              <div className="flex flex-col gap-5 w-full ">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  I spent years deep in blockchain systems — early in the Ethereum dApps facing the ICO wave, building digital identity, supply chain smart contracts.
-                  <br />Down in the rabbit hole of the peer-to-peer networking system, and designed applied cryptography protocols for freedom and privacy purposes.
-                  <br />During that journey I designed and built - from scratch - much bigger and disruptive projects such as Layer 1 protocol and interoperabilities for this whole ecosystem.
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  That experience shaped how I approached Bitcoin after a decade as a decentralized pioneer.
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-white">Bitcoin is not just digital gold;</strong> it is a durable execution and settlement platform.
-                  <br />
-                  Its constrained model makes it possible to encode product rules that remain stable under scale, adversarial conditions, and long time horizons.
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Now I'm working with founders and product teams building Bitcoin-native products where <strong className="text-primary">Bitcoin enforces critical business logic.</strong>
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  My focus is on execution-layer design, correctness, and translating product requirements into Bitcoin-backed guarantees.
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Today, through <strong className="text-primary">HexQuarter</strong>, I help teams design and build products that rely on Bitcoin’s security, neutrality, and global reach — turning those properties into concrete product behavior.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 text-center">
-                <img src={Founder} className="rounded-xl"/>
-                <span className="text-sm text-muted-foreground">Samuel Manzanera</span>
-              </div>
-            </div>
-          </div>
-        </section> */}
       </main >
       <Footer />
     </div >

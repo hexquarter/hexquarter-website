@@ -1,20 +1,9 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Positioning from "@/components/Positioning";
-import WhyBitcoin from "@/components/WhyBitcoin";
-import HowBitcoinIsUsed from "@/components/HowBitcoinIsUsed";
-import Approach from "@/components/Approach";
-import WhoThisIsFor from "@/components/WhoThisIsFor";
-import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 
 import { SimplePool } from '@nostr/tools/pool'
 import { useEffect, useRef, useState } from "react";
-import AnimatedCard from "@/components/animations/AnimatedCard";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRightCircle } from "lucide-react";
+import { Footer } from "@/components/Footer";
 
 const pool = new SimplePool()
 const relays = ['wss://cache2.primal.net/v1', 'wss://nos.lol/', 'wss://nostr.mom/', 'wss://nostrelites.org/', 'wss://relay.damus.io/', 'wss://wot.nostr.party/']
@@ -29,6 +18,7 @@ type ArticleItem = {
 
 const Blog = () => {
 
+  const [loading, setLoading] = useState(true)
   const [articles, setArticles] = useState<ArticleItem[]>([])
   const ran = useRef(false);
   const navigate = useNavigate()
@@ -51,7 +41,15 @@ const Blog = () => {
             summary: tagsMap.get('summary')
           } as ArticleItem
 
-          setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
+          if (loading) {
+            setTimeout(() => {
+              setLoading(false)
+              setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
+            }, 1000)
+          }
+          else {
+            setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
+          }
         }
       })
     }
@@ -63,40 +61,41 @@ const Blog = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background px-5 lg:px-20 py-20">
       <Header />
-      <main className="flex flex-col gap-10 ">
-        <section className="hex-section">
-          <div className="hex-container">
-            <h2 className="hex-tag">Blog</h2>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-8">Insights on Bitcoin engineering</h1>
+      <main className="flex flex-col">
+        <section className="py-10">
+          <div className="flex flex-col gap-5">
+            <h2 className="font-mono uppercase text-muted-foreground">Blog</h2>
+            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">Insights on Bitcoin engineering</h1>
           </div>
         </section>
-        <div className="bg-card ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 hex-container p-10">
-            {articles.map((a, i) => (
-              <article key={a.id}>
-                <AnimatedCard className="h-full p-6 bg-background/50 border border-border rounded-lg backdrop-blur-sm ">
-                  <div className="flex flex-col gap-5">
-                    <motion.h3
-                      className="font-mono text-2xl font-medium text-foreground mb-3"
-                      whileHover={{ color: "hsl(var(--primary))", cursor: 'pointer' }}
-                      transition={{ duration: 0.2 }}
-                      onClick={() => navigate(`/blog/${a.id}`)}
-                    >
-                      {a.title}
-                    </motion.h3>
-                    <h2 className="hex-tag">{a.date.toDateString()}</h2>
-                    <img src={a.image} />
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {a.summary}
-                    </p>
-                  </div>
 
-                </AnimatedCard>
-              </article>
-            ))}
-          </div>
+        {loading && <div className="flex items-center gap">
+          <svg className="mr-3 size-5 bg-violet-400 animate-spin ..." viewBox="0 0 24 24">
+          </svg>
+          <p>Fetching from <span className="text-violet-400">Nostr</span>...yes completely decentralized </p>
+        </div>}
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+          {articles.map((a, i) => (
+            <article key={a.id} onClick={() => navigate(`/blog/${a.id}`)}>
+              <div className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group hover:cursor-pointer">
+                <div className="flex flex-col gap-5">
+                  <h3
+                    className="font-[Cal_Sans] text-2xl font-medium text-foreground mb-3 group-hover:text-black"
+                  >
+                    {a.title}
+                  </h3>
+                  <h2 className="hex-tag">{a.date.toDateString()}</h2>
+                  <img src={a.image} />
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {a.summary}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </main >
       <Footer />
