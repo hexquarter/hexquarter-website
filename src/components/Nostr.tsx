@@ -38,9 +38,9 @@ export const Nostr = () => {
                         <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-violet-400/40">Nostr expertise</h3>
                         <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">The missing <br /><span className="text-violet-400">data layer</span> for sovereign apps.</h2>
                         <div className="flex flex-col gap-5">
-                            <p className="text-muted-foreground hover:text-foreground/80">Every Bitcoin payment needs context — a receipt, a timestamp, a merchant identity. <br />Centralized servers are the obvious solution, and the obvious failure point. Nostr eliminates that tradeoff.
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">Every Bitcoin payment needs context — a receipt, a timestamp, a merchant identity. <br />Centralized servers are the obvious solution, and the obvious failure point. Nostr eliminates that tradeoff.
                             </p>
-                            <p className="text-muted-foreground hover:text-foreground/80">We've built production systems using Nostr as the event bus for payment metadata, merchant profiles, and application state.</p>
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">We've built production systems using Nostr as the event bus for payment metadata, merchant profiles, and application state.</p>
                             <p>The result: products where no intermediary — including us — sits between the user and their data.</p>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export const Nostr = () => {
                         <p className="text-muted-foreground/50 uppercase font-mono text-sm tracking-widest px-5">// How Bitcoin + Nostr fit together</p>
                         <div className="flex flex-col">
                             {process.map((p, i, list) => (
-                                <div key={i} className={`flex ${i < list.length-1 ? 'border-b-1' : ''} border-muted-foreground/20 py-5 px-5 flex-col gap-5 hover:bg-white/10`}>
+                                <div key={i} className={`flex ${i < list.length-1 ? 'border-b-1' : ''} border-muted-foreground/20 py-5 px-5 flex-col gap-5 hover:bg-white/10 transition duration-500`}>
                                     {p.hint && <p className="text-muted-foreground/50 font-mono text-xs tracking-widest ml-15 flex gap-2 items-center"><ArrowDown className="h-3 w-3" />{p.hint}</p>}
                                     <div className="flex gap-5 tems-center ">
                                         <div className={`p-3 border-1 ${p.color ? `border-${p.color}` : 'border-muted-foreground/30'}  rounded-xl`}>

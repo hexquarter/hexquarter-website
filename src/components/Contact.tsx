@@ -51,8 +51,8 @@ export const Contact = () => {
                         <h2 className="font-[Cal_Sans] text-4xl lg:text-7xl lg:max-w-2xl">Let's build on <span className="text-primary">Bitcoin</span></h2>
                         <p className="text-muted-foreground">Have a product idea that should live on a foundation you can trust? <br />Tell us what you're building — we'll tell you if Bitcoin is the right stack for it.</p>
                         <div className="flex flex-col gap-2 hidden lg:block">
-                            <p className="font-mono text-muted-foreground/50 flex items-center gap-2 text-sm hover:text-white"><ArrowRight className="h-3 text-primary" /> <a href="mailto:build@hexquarter.com">build@hexquarter.com</a></p>
-                            <p className="font-mono text-muted-foreground/50 flex items-center gap-2 text-sm hover:text-white"><ArrowRight className="h-3 text-violet-400" /> <a href="https://primal.net/p/nprofile1qqszc4ag3v5ftf233s50c4qhwgd7vlavq4amcezdug9f9e62kcdk6vqn2kudp" target="_blank">npub193t63zegjkj4rrpgl32pwusmuel6cptmh3jymcs2jtn54dsmd5cqrrzwr4</a></p>
+                            <p className="font-mono text-muted-foreground/50 flex items-center gap-2 text-sm hover:text-white transition duration-500"><ArrowRight className="h-3 text-primary" /> <a href="mailto:build@hexquarter.com">build@hexquarter.com</a></p>
+                            <p className="font-mono text-muted-foreground/50 flex items-center gap-2 text-sm hover:text-white transition duration-500"><ArrowRight className="h-3 text-violet-400" /> <a href="https://primal.net/p/nprofile1qqszc4ag3v5ftf233s50c4qhwgd7vlavq4amcezdug9f9e62kcdk6vqn2kudp" target="_blank">npub193t63zegjkj4rrpgl32pwusmuel6cptmh3jymcs2jtn54dsmd5cqrrzwr4</a></p>
                         </div>
                     </div>
                     <form ref={formRef} className="flex flex-col flex-1 gap-5 lg:gap-10" method="post" onSubmit={handleSubmit}>

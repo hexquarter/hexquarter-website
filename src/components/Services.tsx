@@ -6,7 +6,7 @@ export const Services = () => {
                 <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-5xl">Sovereign products, <br /><span className="text-primary">start to finish.</span></h2>
 
                 <div className="flex flex-col gap-0">
-                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-primary hover:border-t-3 p-5 border-b-1 border-muted-foreground/30">
+                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-primary hover:border-t-3 p-5 border-b-1 border-muted-foreground/30 transition duration-500">
                         <div className="col-span-1 text-muted-foreground/50 text-sm group-hover:text-primary">01</div>
                         <div className="col-span-10 flex flex-col gap-5">
                             <p className="font-[Cal_Sans] text-2xl group-hover:text-primary">Bitcoin-Native Products</p>
@@ -23,7 +23,7 @@ export const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-violet-400 hover:border-t-3 p-5 border-b-1 border-muted-foreground/30">
+                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-violet-400 hover:border-t-3 p-5 border-b-1 border-muted-foreground/30 transition duration-500">
                         <div className="col-span-1 text-muted-foreground/50 text-sm">02</div>
                         <div className="col-span-10 flex flex-col gap-5">
                             <p className="font-[Cal_Sans] text-2xl group-hover:text-violet-400">Nostr-Powered Application Data Layers</p>
@@ -40,7 +40,7 @@ export const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-muted-foreground hover:border-t-3 p-5">
+                    <div className="grid gap-5 lg:grid-cols-12 justify-between group hover:bg-white hover:border-t-muted-foreground hover:border-t-3 p-5 transition duration-500">
                         <div className="col-span-1 text-muted-foreground/50 text-sm">03</div>
                         <div className="col-span-10 flex flex-col gap-5">
                             <p className="font-[Cal_Sans] text-2xl group-hover:text-black">Protocol Architecture & Technical Advisory</p>

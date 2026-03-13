@@ -5,19 +5,19 @@ export const Stack = () => {
                 <h3 className="font-mono uppecase text-primary tracking-widest uppercase text-xs">The protocol stack</h3>
                 <h2 className="text-6xl lg:text-7xl  2xl:text-8xl font-[Cal_Sans]">Bitcoin isn't just money. <br />It's a <span className="text-primary">platform.</span></h2>
                 <div className="flex flex-col gap-2">
-                    <p className="text-muted-foreground hover:text-foreground animate">Most people see Bitcoin as an asset. </p>
-                    <p className="text-muted-foreground hover:text-foreground animate">We see it as the most battle-tested execution environment ever built <br />— and the foundation for an entirely new class of applications</p>
-                    <p className="text-muted-foreground hover:text-foreground animate">Layer by layer, the stack extends its reach without sacrificing the properties that make Bitcoin worth building on.</p>
+                    <p className="text-muted-foreground hover:text-foreground transition duration-500">Most people see Bitcoin as an asset. </p>
+                    <p className="text-muted-foreground hover:text-foreground transition duration-500">We see it as the most battle-tested execution environment ever built <br />— and the foundation for an entirely new class of applications</p>
+                    <p className="text-muted-foreground hover:text-foreground transition duration-500">Layer by layer, the stack extends its reach without sacrificing the properties that make Bitcoin worth building on.</p>
                 </div>
             </div>
             <div className="grid lg:grid-cols-2 2xl:grid-cols-4 w-full ">
-                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 justify-between gap-10 flex group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white">
+                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 justify-between gap-10 flex group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white transition duration-500">
                     <div className="flex flex-col gap-7 ">
                         <div className="flex flex-col gap-2">
                             <span className="text-muted-foreground/40 font-mono uppercase text-xs">L1</span>
                             <div className="flex">
                                 <div className="flex items-center gap-2 font-mono uppercase text-primary text-xs px-3 py-2 border-primary border-1 tracking-widest">
-                                    <div className="group-hover:bg-primary animate bg-primary/30 w-2 h-2 rounded-full"></div> Bitcoin
+                                    <div className="group-hover:bg-primary bg-primary/30 w-2 h-2 rounded-full"></div> Bitcoin
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,7 @@ export const Stack = () => {
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">Multisig</div>
                     </div>
                 </div>
-                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white">
+                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white transition duration-500">
                     <div className="flex flex-col gap-7">
                         <div className="flex flex-col gap-2">
                             <span className="text-muted-foreground/40 font-mono uppercase text-xs">L2</span>
@@ -59,7 +59,7 @@ export const Stack = () => {
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">LNUrl</div>
                     </div>
                 </div>
-                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col  border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white">
+                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col  border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white transition duration-500">
                     <div className="flex flex-col gap-7">
                         <div className="flex flex-col gap-2">
                             <span className="text-muted-foreground/40 font-mono uppercase text-xs">Data</span>
@@ -83,7 +83,7 @@ export const Stack = () => {
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">DM encrypted</div>
                     </div>
                 </div>
-                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white">
+                <div className="border-1 border-muted-foreground/20 p-5 2xl:p-10 flex justify-between gap-10 group flex-col border-t-1 hover:border-t-primary hover:border-t-3 hover:bg-white transition duration-500">
                     <div className="flex flex-col gap-7">
                         <div className="flex flex-col gap-2">
                             <span className="text-muted-foreground/40 font-mono uppercase text-xs">Asset</span>

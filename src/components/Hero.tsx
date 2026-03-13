@@ -21,7 +21,7 @@ const Hero = () => {
 
       {/* Animated overlay */}
       <div
-        className="absolute inset-0 bg-background opacity-95"
+        className="absolute inset-0 bg-background opacity-80"
       />
 
       <div
@@ -38,7 +38,7 @@ const Hero = () => {
           </h1>
 
           <div className="flex flex-col gap-5">
-            <p className="text-gray-100 text-muted-foreground text-lg">
+            <p className="text-gray-100 text-muted-foreground text-lg hover:text-white/80 transition duration-500">
               Products built on Bitcoin don't depend on promises, governance votes, or custodians.
               <br />They inherit 15 years of hardened security — overeign applications, decentralized by design..
             </p>
@@ -48,8 +48,8 @@ const Hero = () => {
         </div>
         <div className="flex justify-between items-start hidden md:block">
           <div className="flex items-center font-mono text-xs uppercase gap-5">
-            <div className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer">Start a project</div>
-            <Link to='#stack' className="text-muted-foreground hover:text-foreground transition flex items-center">Explore the stack <ArrowRight className="h-2" /></Link>
+            <div className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</div>
+            <Link to='#stack' className="text-muted-foreground hover:text-foreground transition flex items-center transition duration-500">Explore the stack <ArrowRight className="h-2" /></Link>
           </div>
         </div>
       </div>

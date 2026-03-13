@@ -55,12 +55,12 @@ export const Bitcoin = () => {
                     <div className="flex-1 flex flex-col gap-10">
                         <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-primary/60">Bitcoin engineering</h3>
                         <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">Bitcoin as a programmable <span className="text-primary">settlement layer</span></h2>
-                        <div className="flex flex-col gap-5">
-                            <p className="text-muted-foreground hover:text-foreground/80">Bitcoin's conservatism is a feature, not a limitation. The constraints force precision.</p>
-                            <p className="text-muted-foreground hover:text-foreground/80">New generation of protocols has unlocked programmability without introducing consensus risk or trusted third parties.</p>
-                            <p className="text-muted-foreground hover:text-foreground/80">We work at the intersection of modern Bitcoin stacks<br />
+                        <div className="flex flex-col gap-5 ">
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">Bitcoin's conservatism is a feature, not a limitation. The constraints force precision.</p>
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">New generation of protocols has unlocked programmability without introducing consensus risk or trusted third parties.</p>
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">We work at the intersection of modern Bitcoin stacks<br />
                                 Each layer inherits Bitcoin's security model completely.</p>
-                            <p className="text-muted-foreground hover:text-foreground/80">We use scripts to deliver automated settlement rules
+                            <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">We use scripts to deliver automated settlement rules
                             <br />and state transitions to increase user experience.</p>
                             <p>Just Bitcoin — doing more than most people think it can.</p>
                         </div>
@@ -68,14 +68,14 @@ export const Bitcoin = () => {
                     <div className="flex-1 flex flex-col gap-5 pt-5 lg:w-1/3">
                         <p className="text-muted-foreground/50 uppercase font-mono text-sm tracking-widest px-5">// Bitcoin as execution environment</p>
                         {useCases.map((u, i) => (
-                            <div key={i} className="flex flex-col group border-muted-foreground/20 border-1 group ">
+                            <div key={i} className="flex flex-col group border-muted-foreground/20 border-1 group transition duration-500">
                                 <header className="flex justify-between p-3 text-sm border-b-1 border-muted-foreground/20 font-mono text-white/60 group-hover:bg-white/5">
                                     <div className="flex items-center gap-2">
                                         <div className={`h-2 w-2 ${u.iconColor} rounded-full`}></div>{u.title}
                                     </div>
                                     <div className={`uppercase ${u.tagTextColor ? `${u.tagTextColor}` : 'text-muted-foreground/30'} border ${u.tagBorderColor ? u.tagBorderColor : 'border-muted-foreground/20'} text-[10px] px-2 py-1`}>{u.tag}</div>
                                 </header>
-                                <div className="flex flex-col gap-2 p-5 bg-card group-hover:bg-white/10">
+                                <div className="flex flex-col gap-2 p-5 bg-card group-hover:bg-white/10 transition duration-500">
                                     {u.items.map((item, i2) => (
                                         <p className="text-xs text-muted-foreground" key={i2}>- {item}</p>
                                     ))}
