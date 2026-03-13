@@ -51,8 +51,8 @@ export const Nostr = () => {
                                 <div key={i} className={`flex ${i < list.length-1 ? 'border-b-1' : ''} border-muted-foreground/20 py-5 px-5 flex-col gap-5 hover:bg-white/10 transition duration-500`}>
                                     {p.hint && <p className="text-muted-foreground/50 font-mono text-xs tracking-widest ml-15 flex gap-2 items-center"><ArrowDown className="h-3 w-3" />{p.hint}</p>}
                                     <div className="flex gap-5 tems-center ">
-                                        <div className={`p-3 border-1 ${p.color ? `border-${p.color}` : 'border-muted-foreground/30'}  rounded-xl`}>
-                                            <div className={`h-5 w-5 flex items-center ${p.color ? `text-${p.color}` : ''} `}>{p.icon}</div>
+                                        <div className={`p-3 flex items-center border-1 ${p.color ? `border-${p.color}` : 'border-muted-foreground/30'}  rounded-xl`}>
+                                            <div className={`flex items-center ${p.color ? `text-${p.color}` : ''} `}>{p.icon}</div>
                                         </div>
                                         <div className="flex flex-col gap-2 text-sm">
                                             <p className={`text-${p.color}`}>{p.title}</p>

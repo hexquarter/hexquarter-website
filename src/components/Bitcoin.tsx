@@ -61,7 +61,7 @@ export const Bitcoin = () => {
                             <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">We work at the intersection of modern Bitcoin stacks<br />
                                 Each layer inherits Bitcoin's security model completely.</p>
                             <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">We use scripts to deliver automated settlement rules
-                            <br />and state transitions to increase user experience.</p>
+                                <br />and state transitions to increase user experience.</p>
                             <p>Just Bitcoin — doing more than most people think it can.</p>
                         </div>
                     </div>
@@ -69,11 +69,13 @@ export const Bitcoin = () => {
                         <p className="text-muted-foreground/50 uppercase font-mono text-sm tracking-widest px-5">// Bitcoin as execution environment</p>
                         {useCases.map((u, i) => (
                             <div key={i} className="flex flex-col group border-muted-foreground/20 border-1 group transition duration-500">
-                                <header className="flex justify-between p-3 text-sm border-b-1 border-muted-foreground/20 font-mono text-white/60 group-hover:bg-white/5">
-                                    <div className="flex items-center gap-2">
+                                <header className="flex flex-col gap-2 lg:flex-row justify-between p-3 text-sm border-b-1 border-muted-foreground/20 font-mono text-white/60 group-hover:bg-white/5">
+                                    <div className="flex-1 flex items-center gap-2">
                                         <div className={`h-2 w-2 ${u.iconColor} rounded-full`}></div>{u.title}
                                     </div>
-                                    <div className={`uppercase ${u.tagTextColor ? `${u.tagTextColor}` : 'text-muted-foreground/30'} border ${u.tagBorderColor ? u.tagBorderColor : 'border-muted-foreground/20'} text-[10px] px-2 py-1`}>{u.tag}</div>
+                                    <div className="flex">
+                                        <div className={`uppercase ${u.tagTextColor ? `${u.tagTextColor}` : 'text-muted-foreground/30'} border ${u.tagBorderColor ? u.tagBorderColor : 'border-muted-foreground/20'} text-[10px] px-2 py-1`}>{u.tag}</div>
+                                    </div>
                                 </header>
                                 <div className="flex flex-col gap-2 p-5 bg-card group-hover:bg-white/10 transition duration-500">
                                     {u.items.map((item, i2) => (

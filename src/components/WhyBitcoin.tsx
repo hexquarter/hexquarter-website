@@ -14,7 +14,7 @@ export const WhyBitcoin = () => {
                             <div className="lg:flex grid grid-cols-2 lg:grid-cols-4 gap-3">
                                 <Tooltip delayDuration={10}>
                                     <TooltipTrigger>
-                                        <div className="border p-2 font-mono text-[10px] text-primary/40 hover:text-primary">Unbattled security model</div>
+                                        <div className="border p-2 flex h-full font-mono text-[10px] text-primary/40 hover:text-primary">Unbattled security model</div>
                                     </TooltipTrigger>
                                     <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
                                         <p className="text-xs">
@@ -26,7 +26,7 @@ export const WhyBitcoin = () => {
                                     <TooltipTrigger>
                                         <div className="border p-2 font-mono text-[10px] text-green-400/40 hover:text-green-400">UTXO: Simple State</div>
                                     </TooltipTrigger>
-                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                    <TooltipContent className="bg-card items-center flex h-full p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
                                         <p className="text-xs">
                                             The UTXO model makes application state easier to reason about. Balances are deterministic, auditable, and self-contained. No hidden global state. No reentrancy attacks. Less complexity, fewer failure modes.
                                         </p>
@@ -36,7 +36,7 @@ export const WhyBitcoin = () => {
                                     <TooltipTrigger>
                                         <div className="border p-2 font-mono text-[10px] text-yellow-400/40 hover:text-yellow-400">Self custody first</div>
                                     </TooltipTrigger>
-                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                    <TooltipContent className="bg-card flex h-full p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
                                         <p className="text-xs">
                                             Every custodian is a point of failure. Bitcoin makes self-custody practical — and we make it the default. Our architecture decisions start from the assumption that users should hold their own keys.
                                         </p>
@@ -46,7 +46,7 @@ export const WhyBitcoin = () => {
                                     <TooltipTrigger>
                                         <div className="border p-2 font-mono text-[10px] text-violet-400/40 hover:text-violet-400">Nostr closes the loop</div>
                                     </TooltipTrigger>
-                                    <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
+                                    <TooltipContent className="bg-card flex h-full p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
                                         <p className="text-xs">
                                             Bitcoin handles the money layer. Nostr handles the data layer. Together they enable a complete application stack with no centralized chokepoint — not even us. That's a new class of product.
                                         </p>

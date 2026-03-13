@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="pt-30 relative h-screen overflow-hidden lg:px-20 px-5">
+    <section className="pt-30 relative h-full lg:h-screen pb-10 overflow-hidden lg:px-20 px-5">
       <div
         className="absolute inset-0 w-full h-[130%] -top-[15%]"
       >
@@ -46,7 +46,7 @@ const Hero = () => {
               <span className="text-white">Build on <span className="text-primary">Bitcoin as platform</span>, <span className="text-violet-400">Nostr as fabric.</span></span></p>
           </div>
         </div>
-        <div className="flex justify-between items-start hidden md:block">
+        <div className="flex justify-between items-start">
           <div className="flex items-center font-mono text-xs uppercase gap-5">
             <div className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</div>
             <Link to='#stack' className="text-muted-foreground hover:text-foreground transition flex items-center transition duration-500">Explore the stack <ArrowRight className="h-2" /></Link>

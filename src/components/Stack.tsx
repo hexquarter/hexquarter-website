@@ -100,7 +100,7 @@ export const Stack = () => {
                             <p>Use scripts to deliver state of the art automated rules without introducing consensus risk</p>
                         </div>
                     </div>
-                    <div className="lg:grid grid-cols grid-cols-2 lg:grid-cols-4 gap-3">
+                    <div className="lg:flex grid grid-cols grid-cols-2 lg:grid-cols-4 gap-3">
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">Taproot assets</div>
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">Spark BTKN tokens</div>
                         <div className="border-1 border-muted-foreground/40 px-2 py-1 text-muted-foreground/40 group-hover:text-muted-foreground text-[10px] font-mono">Arkade Script</div>
