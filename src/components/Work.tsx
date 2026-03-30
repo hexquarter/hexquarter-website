@@ -39,34 +39,34 @@ const work = [
             }
         ]
     },
-    {
-        status: 'in production',
-        title: 'Brio',
-        description: 'Non-custodial Bitcoin wallet built as a Telegram MiniApp, allowing users to send and receive Bitcoin directly in chat — no separate app. Using Spark and Lightning Network for instant payments and keeps keys encrypted client-side, merging Bitcoin’s security with Telegram’s social UX.',
-        link: 'https://t.me/brio_btc_bot',
-        items: [
-            {
-                text: 'Spark Protocol — self-custody payments',
-                icon: Zap,
-                borderColor: 'border-yellow-600/40',
-                textColor: 'text-yellow-600'
-            },
-            {
-                text: 'Bitcoin L1 — settlement anchor',
-                icon: Bitcoin,
-                borderColor: 'border-primary/40',
-                textColor: 'text-primary'
-            },
-            {
-                text: 'Zero custodial risk — keys stay with merchant',
-                icon: Lock
-            },
-            {
-                text: 'Telegram native with established user base',
-                icon: Send
-            },
-        ]
-    }
+    // {
+    //     status: 'in production',
+    //     title: 'Brio',
+    //     description: 'Non-custodial Bitcoin wallet built as a Telegram MiniApp, allowing users to send and receive Bitcoin directly in chat — no separate app. Using Spark and Lightning Network for instant payments and keeps keys encrypted client-side, merging Bitcoin’s security with Telegram’s social UX.',
+    //     link: 'https://t.me/brio_btc_bot',
+    //     items: [
+    //         {
+    //             text: 'Spark Protocol — self-custody payments',
+    //             icon: Zap,
+    //             borderColor: 'border-yellow-600/40',
+    //             textColor: 'text-yellow-600'
+    //         },
+    //         {
+    //             text: 'Bitcoin L1 — settlement anchor',
+    //             icon: Bitcoin,
+    //             borderColor: 'border-primary/40',
+    //             textColor: 'text-primary'
+    //         },
+    //         {
+    //             text: 'Zero custodial risk — keys stay with merchant',
+    //             icon: Lock
+    //         },
+    //         {
+    //             text: 'Telegram native with established user base',
+    //             icon: Send
+    //         },
+    //     ]
+    // }
 ]
 
 export const Work = () => {
