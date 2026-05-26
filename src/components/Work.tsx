@@ -1,6 +1,44 @@
-import { BarChart2, Bitcoin, Lock, Network, Repeat, Zap } from "lucide-react"
+import { Activity, BarChart2, Bitcoin, CheckCircle, Lock, Network, Repeat, Shield, TrendingUp, Zap } from "lucide-react"
 
 const work = [
+    {
+        status: 'in production',
+        title: 'PriceStr',
+        description: 'Signed Bitcoin price feed for Nostr. Median‑aggregated from exchanges, delivered via dedicated or public relays. No API keys, no database — the signature is truth. Free tier + Pro paid in sats.',
+        link: 'https://pricestr.xyz',
+        items: [
+            {
+                text: "Median aggregation from Binance, Kraken, Coinbase",
+                icon: Activity,
+                borderColor: "border-primary/40",
+                textColor: "text-primary"
+            },
+            {
+                text: "Cryptographically signed events — verify in one function call",
+                icon: Shield,
+                borderColor: "border-violet-400/40",
+                textColor: "text-violet-400/90"
+            },
+            {
+                text: "Nostr relay distribution — any relay, no vendor lock",
+                icon: Network,
+                borderColor: "border-yellow-600/40",
+                textColor: "text-yellow-600"
+            },
+            {
+                text: "Free tier: 60s BTC/USD via public relays",
+                icon: CheckCircle
+            },
+            {
+                text: "Pro tier: 10s updates, forex pairs, webhooks",
+                icon: Bitcoin
+            },
+            {
+                text: "Enterprise: private relay, custom pairs, SLA",
+                icon: TrendingUp
+            }
+        ]
+    },
     {
         status: 'in production',
         title: 'Bitlasso',
@@ -76,7 +114,7 @@ export const Work = () => {
                 <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Proof of work</h3>
                 <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
                     {work.map((w, i) => (
-                        <div key={i} className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500">
+                        <div key={i} className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500 hover:cursor-pointer" onClick={() => window.open(w.link, "_blank")}>
                             <div className="flex-1 flex flex-col gap-10">
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 bg-green-400/40 rounded-full"></div>
@@ -88,7 +126,7 @@ export const Work = () => {
                             </div>
                             <div className="flex flex-col flex-1 gap-2">
                                 {w.items.map((item, i2) => (
-                                    <div key={i2} className={`font-mono text-xs border ${item.borderColor || 'border-muted-foreground/40'} ${item.textColor || 'text-muted-foreground'} p-3 flex items-center`}><item.icon className="h-4" /> {item.text}</div>
+                                    <div key={i2} className={`font-mono text-xs border ${item.borderColor || 'border-muted-foreground/40'} ${item.textColor || 'text-muted-foreground'} p-3 flex items-center gap-2`}><item.icon className="h-4" /> {item.text}</div>
                                 ))}
                             </div>
                         </div>

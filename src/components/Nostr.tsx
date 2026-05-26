@@ -3,13 +3,13 @@ import { AppWindow, ArrowDown, LayoutDashboard, Network, User, Zap } from "lucid
 const process = [
     {
         hint: 'start session',
-        title: 'User / Merchant',
-        subtitle: 'Holds keypair - same key on Bitcoin + Nostr',
+        title: 'User',
+        subtitle: 'Holds keypair - same identity on Bitcoin + Nostr',
         icon: <User />
     },
     {
         hint: 'payment intent',
-        title: 'Spark / Lightning',
+        title: 'Lightning',
         subtitle: 'Self-custody payment, settled on Bitcoin',
         icon: <Zap />,
         color: 'primary'
