@@ -1,4 +1,4 @@
-import { AppWindow, ArrowDown, BarChart, BarChart2, BarChart3, BarChart4, BarChartBig, Bitcoin, Circle, LayoutDashboard, Lock, Network, Repeat, Send, User, Zap } from "lucide-react"
+import { BarChart2, Bitcoin, Lock, Network, Repeat, Zap } from "lucide-react"
 
 const work = [
     {
@@ -75,8 +75,8 @@ export const Work = () => {
             <div className="flex flex-col gap-10">
                 <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Proof of work</h3>
                 <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
-                    {work.map((w) => (
-                        <div className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500">
+                    {work.map((w, i) => (
+                        <div key={i} className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500">
                             <div className="flex-1 flex flex-col gap-10">
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 bg-green-400/40 rounded-full"></div>
@@ -88,7 +88,7 @@ export const Work = () => {
                             </div>
                             <div className="flex flex-col flex-1 gap-2">
                                 {w.items.map((item, i2) => (
-                                    <div className={`font-mono text-xs border ${item.borderColor || 'border-muted-foreground/40'} ${item.textColor || 'text-muted-foreground'} p-3 flex items-center`}><item.icon className="h-4" /> {item.text}</div>
+                                    <div key={i2} className={`font-mono text-xs border ${item.borderColor || 'border-muted-foreground/40'} ${item.textColor || 'text-muted-foreground'} p-3 flex items-center`}><item.icon className="h-4" /> {item.text}</div>
                                 ))}
                             </div>
                         </div>

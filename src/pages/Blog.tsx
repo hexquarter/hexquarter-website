@@ -4,9 +4,11 @@ import { SimplePool } from '@nostr/tools/pool'
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "@/components/Footer";
+import { flushSync } from 'react-dom'
+
 
 const pool = new SimplePool()
-const relays = ['wss://cache2.primal.net/v1', 'wss://nos.lol/', 'wss://nostr.mom/', 'wss://nostrelites.org/', 'wss://relay.damus.io/', 'wss://wot.nostr.party/']
+const relays = ['wss://relay.primal.net', 'wss://nos.lol/', 'wss://nostr.mom/', 'wss://nostrelites.org/', 'wss://relay.damus.io/', 'wss://wot.nostr.party/']
 
 type ArticleItem = {
   id: string,
@@ -24,8 +26,8 @@ const Blog = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const loadEvents = () => {
-      pool.subscribe(relays, {
+    const sub = () => {
+      return pool.subscribe(relays, {
         authors: ['2c57a88b2895a5518c28fc5417721be67fac057bbc644de20a92e74ab61b6d30'],
         kinds: [30023]
       }, {
@@ -41,23 +43,24 @@ const Blog = () => {
             summary: tagsMap.get('summary')
           } as ArticleItem
 
-          if (loading) {
-            setTimeout(() => {
+          setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
+        },
+
+          oneose() {
+            console.log('eose, loading state before:', loading)
+            setLoading(false)
+            flushSync(() => {
               setLoading(false)
-              setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
-            }, 1000)
+              console.log('setLoading called')
+
+            })
           }
-          else {
-            setArticles((prev) => [article, ...prev].sort((a, b) => b.date.getTime() - a.date.getTime()))
-          }
-        }
       })
     }
 
     if (ran.current) return;
     ran.current = true;
-    loadEvents()
-
+    sub()
   }, [])
 
   return (
@@ -67,7 +70,7 @@ const Blog = () => {
         <section className="py-10">
           <div className="flex flex-col gap-5">
             <h2 className="font-mono uppercase text-muted-foreground">Blog</h2>
-            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl text-foreground leading-tight">Insights on Bitcoin engineering</h1>
+            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl text-foreground leading-tight">Insights on Bitcoin & Nost Engineering</h1>
           </div>
         </section>
 
@@ -78,7 +81,7 @@ const Blog = () => {
         </div>}
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
-          {articles.map((a, i) => (
+          {!loading && articles.map((a, i) => (
             <article key={a.id} onClick={() => navigate(`/blog/${a.id}`)}>
               <div className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group hover:cursor-pointer">
                 <div className="flex flex-col gap-5">

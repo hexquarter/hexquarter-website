@@ -1,4 +1,3 @@
-import { Battery, Key, Package, Satellite, SatelliteIcon } from "lucide-react"
 import { Tooltip, TooltipTrigger } from "./ui/tooltip"
 import { TooltipContent } from "@radix-ui/react-tooltip"
 
