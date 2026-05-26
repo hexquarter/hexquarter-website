@@ -114,7 +114,7 @@ export const Work = () => {
                 <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Proof of work</h3>
                 <div className="grid grid-cols-1 2xl:grid-cols-2 gap-5">
                     {work.map((w, i) => (
-                        <div key={i} className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500 hover:cursor-pointer" onClick={() => window.open(w.link, "_blank")}>
+                        <div key={i} className="p-5 lg:p-10 border group bg-card hover:bg-white border-muted-foreground/40 flex flex-col lg:flex-row lg:gap-50 gap-10 transition duration-500">
                             <div className="flex-1 flex flex-col gap-10">
                                 <div className="flex items-center gap-2">
                                     <div className="w-2 h-2 bg-green-400/40 rounded-full"></div>
