@@ -48,7 +48,7 @@ const Hero = () => {
         </div>
         <div className="flex justify-between items-start">
           <div className="flex items-center font-mono text-xs uppercase gap-5">
-            <div className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</div>
+            <Link to='#contact' className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</Link>
             <Link to='#stack' className="text-muted-foreground hover:text-foreground transition flex items-center transition duration-500">Explore the stack <ArrowRight className="h-2" /></Link>
           </div>
         </div>
