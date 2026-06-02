@@ -1,15 +1,11 @@
-import { Link } from "react-router-dom";
-import Video from "../../public/bg-video.mp4";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="pt-30 relative h-full lg:h-screen pb-10 overflow-hidden lg:px-20 px-5">
-      <div
-        className="absolute inset-0 w-full h-[130%] -top-[15%]"
-      >
+      <div className="absolute inset-0 w-full h-[130%] -top-[15%]">
         <video
-          src={Video}
+          src="/bg-video.mp4"
           loop
           muted
           preload="auto"
@@ -19,13 +15,9 @@ const Hero = () => {
         />
       </div>
 
-      {/* Animated overlay */}
-      <div
-        className="absolute inset-0 bg-background opacity-80"
-      />
+      <div className="absolute inset-0 bg-background opacity-80" />
 
-      <div
-        className="flex flex-col xl:gap-20 gap-10 relative">
+      <div className="flex flex-col xl:gap-20 gap-10 relative">
         <div className="lg:max-w-6xl flex flex-col gap-10 lg:gap-10 2xl:gap-20 justify-between">
           <h2 className="uppercase font-mono text-xs tracking-widest uppercase ">
             <span className="text-primary">Bitcoin</span> & <span className="text-violet-400">Nostr</span> Engineering
@@ -43,18 +35,18 @@ const Hero = () => {
               <br />They inherit 15 years of hardened security — overeign applications, decentralized by design..
             </p>
             <p className="text-xl lg:text-2xl text-muted-foreground">
-              <span className="text-white">Build on <span className="text-primary">Bitcoin as platform</span>, <span className="text-violet-400">Nostr as fabric.</span></span></p>
+              <span className="text-white">Build on <span className="text-primary">Bitcoin as platform</span>, <span className="text-violet-400">Nostr as fabric.</span></span>
+            </p>
           </div>
         </div>
         <div className="flex justify-between items-start">
           <div className="flex items-center font-mono text-xs uppercase gap-5">
-            <Link to='#contact' className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</Link>
-            <Link to='#stack' className="text-muted-foreground hover:text-foreground transition flex items-center transition duration-500">Explore the stack <ArrowRight className="h-2" /></Link>
+            <a href="#contact" className="bg-primary px-4 py-3 hover:shadow-lg hover:bg-white hover:text-violet-400 hover:cursor-pointer transition duration-500">Start a project</a>
+            <a href="#stack" className="text-muted-foreground hover:text-foreground transition flex items-center transition duration-500">Explore the stack <ArrowRight className="h-2" /></a>
           </div>
         </div>
       </div>
-
-    </section >
+    </section>
   );
 };
 

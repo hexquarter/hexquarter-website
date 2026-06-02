@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Header = () => {
   return (
     <header
@@ -13,15 +11,15 @@ const Header = () => {
           <p className="font-[Cal_Sans] text-2xl"><span className="text-primary">H</span>ex<span className="text-violet-400">Q</span>uarter</p>
         </a>
         <div className="flex gap-10 items-center uppercase font-mono text-xs text-muted-foreground">
-          <Link to='#stack' className="hover:text-white hidden md:block transition duration-500">Stack</Link>
-          <Link to='#bitcoin' className="hover:text-white hidden md:block transition duration-500">Bitcoin</Link>
-          <Link to='#nostr' className="hover:text-white hidden md:block transition duration-500">Nostr</Link>
-          <Link to='#services' className="hover:text-white hidden md:block transition duration-500">Services</Link>
-          <Link to='#work' className="hover:text-white hidden md:block transition duration-500">Work</Link>
-          <Link to='#why-bitcoin' className="hover:text-white hidden md:block transition duration-500">Why Bitcoin</Link>
-          <Link to='#contact' className="flex flex-col bg-primary px-3 py-2 hover:bg-white hover:text-violet-400 hover:border-black text-white transition duration-500">
+          <a href="#stack" className="hover:text-white hidden md:block transition duration-500">Stack</a>
+          <a href="#bitcoin" className="hover:text-white hidden md:block transition duration-500">Bitcoin</a>
+          <a href="#nostr" className="hover:text-white hidden md:block transition duration-500">Nostr</a>
+          <a href="#services" className="hover:text-white hidden md:block transition duration-500">Services</a>
+          <a href="#work" className="hover:text-white hidden md:block transition duration-500">Work</a>
+          <a href="#why-bitcoin" className="hover:text-white hidden md:block transition duration-500">Why Bitcoin</a>
+          <a href="#contact" className="flex flex-col bg-primary px-3 py-2 hover:bg-white hover:text-violet-400 hover:border-black text-white transition duration-500">
             Let's build
-          </Link>
+          </a>
           <span
             className="absolute -bottom-1 left-0 h-px bg-primary"
           />
