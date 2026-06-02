@@ -8,6 +8,7 @@ import { Bitcoin } from "@/components/Bitcoin";
 import { WhyBitcoin } from "@/components/WhyBitcoin";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import Head from "next/head";
 
 const Index = () => {
   return (

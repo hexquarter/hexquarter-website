@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from "@/components/Header";
 import Link from "next/link";
 import { SimplePool } from '@nostr/tools/pool';
@@ -57,6 +58,10 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>HexQuarter Blog — Bitcoin & Nostr engineering</title>
+        <meta name="description" content="Technical articles and updates about Bitcoin and Nostr engineering from HexQuarter." />
+      </Head>
       <Header />
       <main className="flex flex-col px-5 lg:px-20 py-20">
         <section className="py-10">

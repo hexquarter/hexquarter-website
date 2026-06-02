@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from "@/components/Header";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -134,6 +135,10 @@ const BlogDetails = () => {
 
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>{article ? `${article.title} — HexQuarter` : 'Blog — HexQuarter'}</title>
+        <meta name="description" content={article ? article.summary : 'Technical articles about Bitcoin and Nostr from HexQuarter.'} />
+      </Head>
       <Header />
       <main className="flex flex-col gap-10 px-5 lg:px-20 py-30">
         <section>
