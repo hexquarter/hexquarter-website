@@ -13,12 +13,12 @@ const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="flex flex-col gap-10">
+      <main className="flex flex-col gap-10 m-20">
         <section className="hex-section">
           <div className="hex-container">
             <h1 className="mb-4 text-4xl font-bold">404</h1>
             <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-            <Link href="/" className="text-primary underline hover:text-primary/90">
+            <Link href="/" className="text-primary hover:underline hover:text-primary/90">
               Return to Home
             </Link>
           </div>

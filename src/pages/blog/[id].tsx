@@ -16,13 +16,31 @@ renderer.heading = ({ text, depth }) => {
   return `<h${depth} class="${styles[depth] ?? ''}">${text}</h${depth}>`;
 };
 
+renderer.code = ({ text }) => {
+  return `<pre class="bg-white p-5 overflow-x-auto text-sm rounded-xl border-muted-foreground/20"><code>${text}</code></pre>`;
+}
+
+renderer.table = (e) => {
+  console.log(e)
+  return `<table class="table-auto w-full border-collapse my-5">
+    <thead>
+      <tr>
+        ${e.header.map((h) => `<th class="border-b border-r px-3 border-muted-foreground/20 text-left pb-2 text-white">${h.text}</th>`).join('')}
+      </tr>
+    </thead>
+    <tbody>
+      ${e.rows.map((row) => `<tr>${row.map((c) => `<td class="border-b border-r px-3 last:border-r-0 py-3 border-muted-foreground/20 py-2 text-white/70">${c.text}</td>`).join('')}</tr>`).join('')}
+    </tbody>
+  </table>`;
+}
+
 renderer.paragraph = (e) => {
   const text = e.tokens.map((t) => {
     if (t.type == 'text') {
       return `${t.text}`;
     }
     if (t.type == 'strong') {
-      return `<strong class="text-white/90 font-semibold">${t.text}</strong>`;
+      return `<strong class="font-bold">${t.text}</strong>`;
     }
     if (t.type == 'br') {
       return `<br />`;
@@ -30,7 +48,7 @@ renderer.paragraph = (e) => {
     return '';
   }).join(' ');
 
-  return `<p class="text-white/60 my-2 ">${text}</p>`;
+  return `<p class="text-white">${text}</p>`;
 };
 renderer.list = (e) => {
   const { ordered } = e;
@@ -50,7 +68,7 @@ renderer.list = (e) => {
     return '';
   });
 
-  return `<${tag} class="${cls} my-3 ml-8 text-white/60 ">${items.join('')}</${tag}>`;
+  return `<${tag} class="${cls} my-3 ml-8 text-white">${items.join('')}</${tag}>`;
 };
 
 renderer.link = ({ href, title }) => {
@@ -142,8 +160,8 @@ const BlogDetails = () => {
           </div>
         </section>
         {article && (
-          <div className="flex lg:flex-row flex-col justify-between gap-5 items-start">
-            <img src={article.image} alt={article.title} className="lg:w-1/3 object-cover lg:object-scale-down border border-muted-foreground/20" />
+          <div className="flex flex-col justify-between gap-5 items-start mx-auto">
+            <img src={article.image} alt={article.title} className="object-cover max-h-100 w-full border border-muted-foreground/20" />
             <div className="flex flex-col gap-5 text-muted-foreground text-base bg-card p-10 border border-muted-foreground/20">
               <MarkdownRenderer content={article.content} />
             </div>
