@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import '../index.css';
+import '@/index.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
