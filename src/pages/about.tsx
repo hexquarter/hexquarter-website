@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/PageShell";
+import { WhyBitcoin } from "@/components/WhyBitcoin";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -70,6 +71,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <WhyBitcoin />
 
       <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
         <div className="grid lg:grid-cols-12 gap-10">
