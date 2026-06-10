@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { PositioningStrip } from "@/components/home/PositioningStrip";
+import { WhyBitcoin } from "@/components/WhyBitcoin";
 import { WhoWeWorkWith } from "@/components/home/WhoWeWorkWith";
 import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { WorkPreview } from "@/components/home/WorkPreview";
@@ -24,6 +25,7 @@ const Index = () => {
       <main className="flex flex-col">
         <Hero />
         <PositioningStrip />
+        <WhyBitcoin />
         <WhoWeWorkWith />
         <ServicesPreview />
         <WorkPreview />
