@@ -25,6 +25,7 @@ const Index = () => {
       <main className="flex flex-col">
         <Hero />
         <PositioningStrip />
+        <WhyBitcoin />
         <WhoWeWorkWith />
         <ServicesPreview />
         <WorkPreview />
