@@ -26,7 +26,7 @@ const products = [
     problem:
       "Merchants want to accept Bitcoin without inheriting custodial risk, percentage fees, or a centralized customer database they do not own.",
     solution:
-      "A complete merchant stack: Spark-powered payments, Nostr-based receipts and customer profiles, flat monthly fee, self-custody by default.",
+      "A complete merchant stack: Spark-powered payments, Nostr-based receipts and customer profiles, free, self-custody by default.",
     architecture:
       "Spark + Lightning settlement on the trust layer. Nostr identities and receipts on the coordination layer. Merchant keeps keys; customers keep identity.",
     outcome:

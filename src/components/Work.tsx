@@ -42,7 +42,7 @@ const work = [
     {
         status: 'in production',
         title: 'Bitlasso',
-        description: 'Bitcoin-native checkout and loyalty for merchants. Payments flow through Spark with full self-custody. Payment metadata, receipts, and merchant identity live on Nostr relays. Flat-fee pricing. Zero platform risk.',
+        description: 'Bitcoin-native checkout and loyalty for merchants. Payments flow through Spark with full self-custody. Payment metadata, receipts, and merchant identity live on Nostr relays. Open-Source. Zero platform risk.',
         link: 'https://bitlasso.xyz',
         items: [
             {
@@ -66,10 +66,6 @@ const work = [
             {
                 text: 'Zero custodial risk — keys stay with merchant',
                 icon: Lock
-            },
-            {
-                text: 'Flat-fee pricing',
-                icon: BarChart2
             },
             {
                 text: 'Merchant loyalty — built-in',

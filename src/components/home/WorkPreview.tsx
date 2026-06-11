@@ -13,7 +13,7 @@ const work = [
     status: "In production",
     title: "Bitlasso",
     description:
-      "Bitcoin-native checkout and loyalty for merchants. Payments through Spark, metadata on Nostr, flat-fee pricing.",
+      "Bitcoin-native checkout and loyalty for merchants. Payments through Spark, metadata on Nostr, free and open-source.",
     link: "https://bitlasso.xyz",
   },
 ];
