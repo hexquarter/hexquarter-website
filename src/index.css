@@ -88,6 +88,35 @@
     --background: 220 15% 6%;
     --foreground: 40 10% 92%;
   }
+
+  .light {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --card: #f7f7f7;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #ff5502;
+    --primary-foreground: #ffffff;
+    --secondary: #f0f0f0;
+    --secondary-foreground: #0a0a0a;
+    --muted: #f0f0f0;
+    --muted-foreground: #525252;
+    --accent: #ff5502;
+    --accent-foreground: #ffffff;
+    --border: #e5e5e5;
+    --input: #e5e5e5;
+    --ring: #ff5502;
+  }
+
+  .light .hex-logo p,
+  .light .hex-logo .logo-accent {
+    color: #000 !important;
+  }
+
+  .light .bg-card {
+    background-color: #f7f7f7;
+  }
 }
 
 @layer base {

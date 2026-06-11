@@ -1,6 +1,8 @@
 import { PageShell } from "@/components/PageShell";
 import { Bitcoin } from "@/components/Bitcoin";
 import { Nostr } from "@/components/Nostr";
+import { NostrArchitecture } from "@/components/NostrArchitecture";
+import { ComparisonTable } from "@/components/ComparisonTable";
 import { Stack } from "@/components/Stack";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -39,6 +41,8 @@ const Approach = () => {
       <Stack />
       <Bitcoin />
       <Nostr />
+      <NostrArchitecture />
+      <ComparisonTable />
 
       <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
         <div className="flex flex-col gap-10">
