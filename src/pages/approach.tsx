@@ -3,7 +3,6 @@ import { Bitcoin } from "@/components/Bitcoin";
 import { Nostr } from "@/components/Nostr";
 import { NostrArchitecture } from "@/components/NostrArchitecture";
 import { ComparisonTable } from "@/components/ComparisonTable";
-import { Nostr } from "@/components/Nostr";
 import { Stack } from "@/components/Stack";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
