@@ -1,21 +1,20 @@
 import { PageShell } from "@/components/PageShell";
-import { WhyBitcoin } from "@/components/WhyBitcoin";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const arc = [
   {
-    year: "2014 — 2018",
+    year: "2016 — 2018",
     title: "Early decentralized systems",
-    body: "First-generation smart contracts, applied cryptography, P2P networks. Building from first principles when most of the tooling didn't exist yet.",
+    body: "First-generation smart contracts, applied cryptography, Building from first principles when most of the tooling didn't exist yet.",
   },
   {
-    year: "2018 — 2022",
+    year: "2018 — 2025",
     title: "Across the stack",
-    body: "DeFi protocols, L1/L2 architectures, custody systems. Seeing — close-up — what governance, incentive games and validator cartels actually cost in production.",
+    body: "L1 architectures, P2P networks, DeFi protocols, DApps. Seeing — close-up — what governance, incentive games and validator cartels actually cost in production.",
   },
   {
-    year: "2022 — today",
+    year: "2025 — today",
     title: "Convergence on Bitcoin & Nostr",
     body: "After a decade of evidence, focusing where the foundations compound. Bitcoin for settlement, ownership and permanence. Nostr for identity, communication and coordination.",
   },
@@ -72,7 +71,7 @@ const About = () => {
         </div>
       </section>
 
-      <WhyBitcoin />
+      {/* <WhyBitcoin /> */}
 
       <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
         <div className="grid lg:grid-cols-12 gap-10">
@@ -90,7 +89,7 @@ const About = () => {
               for sovereignty from the start, and avoiding the failure modes of the last decade.
               When code is needed, we ship it.
             </p>
-            <p className="text-muted-foreground border-l-2 border-primary pl-5">
+            <p className="text-white border-l-2 border-primary pl-5">
               The conclusion after ten years: build on what compounded.
             </p>
           </div>

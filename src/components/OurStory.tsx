@@ -1,7 +1,8 @@
+import { FounderStory } from "./home/FounderStory"
 import { Tooltip, TooltipTrigger } from "./ui/tooltip"
 import { TooltipContent } from "@radix-ui/react-tooltip"
 
-export const WhyBitcoin = () => {
+export const OurStory = () => {
     return (
         <div id="why-bitcoin" className="px-5 lg:px-20 py-20 border-muted-foreground/30 border-b-1">
             <div className="flex flex-col gap-10">
@@ -62,6 +63,8 @@ export const WhyBitcoin = () => {
                         <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">HexQuarter exists to help founders navigate this stack — not just Bitcoin as a payment rail, but as a foundation, with Nostr as the data fabric, and self-custody as the architecture default. <span className="text-white">We build what goes on top.</span></p>
                     </div>
                 </div >
+                <FounderStory />
+
             </div >
         </div >
     )

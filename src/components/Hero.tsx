@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import posthog from "posthog-js";
 
 const Hero = () => {
   return (
@@ -43,6 +44,7 @@ const Hero = () => {
         <div className="flex flex-wrap items-center font-mono text-xs uppercase gap-5">
           <Link
             href="/contact"
+            onClick={() => posthog.capture('hero_cta_clicked', { cta_label: 'Start a project' })}
             className="bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
           >
             Start a project

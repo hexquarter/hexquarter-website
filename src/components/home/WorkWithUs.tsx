@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
+import posthog from "posthog-js";
 
 const offers = [
   {
@@ -114,6 +115,7 @@ export const WorkWithUs = () => {
 
               <Link
                 href={o.href}
+                onClick={() => posthog.capture('offer_cta_clicked', { offer_tag: o.tag, offer_name: o.name, offer_href: o.href })}
                 className="mt-auto bg-primary px-4 py-3 font-mono uppercase text-xs text-center hover:bg-foreground hover:text-primary transition duration-500 flex items-center justify-center gap-2"
               >
                 {o.cta} <ArrowRight className="h-3 w-3" />

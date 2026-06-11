@@ -8,27 +8,27 @@ const stats = [
 ];
 
 const testimonials = [
-  {
-    quote:
-      "HexQuarter took our payment architecture from a moving target to a system we actually trust. The Lightning + Nostr split made our backend smaller, not bigger.",
-    name: "CTO, Bitcoin-native fintech",
-    detail: "Lightning settlement · Nostr event bus",
-  },
-  {
-    quote:
-      "We spent a year fighting bridge risk and validator drama. One quarter with HexQuarter and our settlement layer is just Bitcoin. We stopped thinking about it.",
-    name: "Founder, Web3 → Bitcoin migration",
-    detail: "Architecture audit · Re-platforming",
-  },
-  {
-    quote:
-      "They speak CTO, not crypto. Event sourcing, CQRS, message buses — Nostr finally made sense as infrastructure instead of a social toy.",
-    name: "VP Engineering, fintech infra",
-    detail: "Nostr advisory · Identity layer",
-  },
+  // {
+  //   quote:
+  //     "HexQuarter took our payment architecture from a moving target to a system we actually trust. The Lightning + Nostr split made our backend smaller, not bigger.",
+  //   name: "CTO, Bitcoin-native fintech",
+  //   detail: "Lightning settlement · Nostr event bus",
+  // },
+  // {
+  //   quote:
+  //     "We spent a year fighting bridge risk and validator drama. One quarter with HexQuarter and our settlement layer is just Bitcoin. We stopped thinking about it.",
+  //   name: "Founder, Web3 → Bitcoin migration",
+  //   detail: "Architecture audit · Re-platforming",
+  // },
+  // {
+  //   quote:
+  //     "They speak CTO, not crypto. Event sourcing, CQRS, message buses — Nostr finally made sense as infrastructure instead of a social toy.",
+  //   name: "VP Engineering, fintech infra",
+  //   detail: "Nostr advisory · Identity layer",
+  // },
 ];
 
-const featured = ["Lightning Network", "Spark", "Nostr", "Taproot Assets", "Ark", "Cashu"];
+const featured = ["Lightning Network", "Nostr", "Smart contracts", "Taproot Assets", "Spark", "Ark", "Stacks"];
 
 export const TrustProof = () => {
   return (

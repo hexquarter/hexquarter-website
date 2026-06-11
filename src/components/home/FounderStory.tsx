@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
-import founderPhoto from "@/assets/founder.jpg";
+import founderPhoto from "@/assets/founder2.png";
 
 const credibility = [
   "10 years building decentralized systems",
@@ -13,34 +13,14 @@ const credibility = [
 
 export const FounderStory = () => {
   return (
-    <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
+    <section className="py-20 border-b border-muted-foreground/30">
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-        <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="relative aspect-[4/5] w-full overflow-hidden border border-muted-foreground/30">
-            <Image
-              src={founderPhoto}
-              alt="Samuel — founder of HexQuarter, decentralized systems architect"
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover grayscale"
-              priority={false}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col gap-1">
-              <p className="font-[Cal_Sans] text-2xl">Samuel</p>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-primary">
-                Founder · Decentralized systems architect
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="lg:col-span-7 flex flex-col gap-8">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">
             The founder
           </h3>
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl leading-[1.05]">
-            A decade of decentralized systems.{" "}
+            A decade of decentralized systems.{" "}<br />
             <span className="text-primary">One deliberate convergence.</span>
           </h2>
           <div className="flex flex-col gap-5 text-muted-foreground">
@@ -79,6 +59,25 @@ export const FounderStory = () => {
             >
               Read the full story <ArrowUpRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+        <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="relative aspect-[4/5] w-full overflow-hidden border border-muted-foreground/30">
+            <Image
+              src={founderPhoto}
+              alt="Samuel — founder of HexQuarter, decentralized systems architect"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover grayscale"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col gap-1">
+              <p className="font-[Cal_Sans] text-2xl">Samuel</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-primary">
+                Founder · Decentralized systems architect
+              </p>
+            </div>
           </div>
         </div>
       </div>

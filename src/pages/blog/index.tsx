@@ -5,6 +5,7 @@ import { SimplePool } from '@nostr/tools/pool';
 import { useEffect, useRef, useState } from "react";
 import { Footer } from "@/components/Footer";
 import { flushSync } from 'react-dom';
+import posthog from 'posthog-js';
 
 const pool = new SimplePool();
 const relays = ['wss://relay.primal.net', 'wss://nos.lol/', 'wss://nostr.mom/', 'wss://nostrelites.org/', 'wss://relay.damus.io/', 'wss://wot.nostr.party/'];
@@ -81,7 +82,7 @@ const Blog = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           {!loading && articles.map((a) => (
-            <Link key={a.id} href={`/blog/${a.id}`} className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group">
+            <Link key={a.id} href={`/blog/${a.id}`} onClick={() => posthog.capture('blog_article_clicked', { article_id: a.id, article_title: a.title })} className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group">
               <div className="flex flex-col gap-5">
                 <h3 className="font-[Cal_Sans] text-2xl font-medium text-foreground mb-3 group-hover:text-black">
                   {a.title}

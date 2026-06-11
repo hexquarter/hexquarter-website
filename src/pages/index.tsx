@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { PositioningStrip } from "@/components/home/PositioningStrip";
-import { WhyBitcoin } from "@/components/WhyBitcoin";
+import { OurStory } from "@/components/OurStory";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { FounderStory } from "@/components/home/FounderStory";
 import { TrustProof } from "@/components/TrustProof";
@@ -26,10 +26,9 @@ const Index = () => {
       <Header />
       <main className="flex flex-col">
         <Hero />
+        <OurStory />
         <PositioningStrip />
-        <WhyBitcoin />
         <ComparisonTable />
-        <FounderStory />
         <TrustProof />
         <Products />
         <WorkWithUs />

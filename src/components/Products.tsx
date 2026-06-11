@@ -15,7 +15,7 @@ const products = [
       "Production-grade price oracle that any wallet, exchange or merchant tool can adopt in a few lines of code.",
     lesson:
       "Nostr is not a social network. It is a generic, signed, fan-out event bus — and that is the part that matters for infrastructure.",
-    price: "Free · 21k sats/mo Pro",
+    price: "Free · $10/mo Pro",
     link: "https://pricestr.xyz",
     accent: "text-primary",
     border: "border-primary/40",
@@ -33,7 +33,7 @@ const products = [
       "Merchants ship a real Bitcoin storefront in days, with loyalty mechanics that do not require giving up sovereignty on either side.",
     lesson:
       "When the trust layer and the coordination layer are separated cleanly, the application layer gets dramatically smaller.",
-    price: "29 USD / mo",
+    price: "$1/invoice",
     link: "https://bitlasso.xyz",
     accent: "text-violet-400",
     border: "border-violet-400/40",
@@ -122,12 +122,12 @@ export const Products = () => {
           >
             Apply this expertise to your system
           </Link>
-          <Link
+          {/* <Link
             href="/work"
             className="font-mono text-xs uppercase text-muted-foreground hover:text-foreground transition flex items-center gap-2"
           >
             See more case studies <ArrowUpRight className="h-4 w-4" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

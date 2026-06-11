@@ -8,7 +8,7 @@ const work = [
         link: 'https://pricestr.xyz',
         items: [
             {
-                text: "Median aggregation from Binance, Kraken, Coinbase",
+                text: "Median aggregation from Binance, Kraken, Coinbase, Uniswap, Chainlink, Hyperliquid",
                 icon: Activity,
                 borderColor: "border-primary/40",
                 textColor: "text-primary"

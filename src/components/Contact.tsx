@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import { FormEvent, useRef, useState } from "react"
+import posthog from "posthog-js"
 
 export const Contact = () => {
 
@@ -13,9 +14,10 @@ export const Contact = () => {
 
         setStatus(undefined)
         setLoading(true)
-        
+
         const formData = new FormData(formRef.current)
         const name = formData.get('name');
+        const service = formData.get('service') as string;
 
         const subject = `${name} sent a message from website`;
         formData.append('subject', subject);
@@ -36,10 +38,12 @@ export const Contact = () => {
         if (!res.ok) {
             console.log(await res.json())
             setStatus('error')
+            posthog.capture('contact_form_error', { service_category: service })
             return
         }
 
         setStatus('success')
+        posthog.capture('contact_form_submitted', { service_category: service })
     }
 
     return (

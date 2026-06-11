@@ -14,7 +14,7 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <header className="fixed top-0 left-0 px-5 lg:px-20 right-0 z-50 bg-background/70 backdrop-blur-md border-b border-muted-foreground/30">
+    <header className="fixed top-0 left-0 px-5 lg:px-20 right-0 z-50 bg-black/10 backdrop-blur-md border-b border-muted-foreground/30">
       <div className="py-4 flex items-center justify-between">
         <Link href="/" className="font-mono text-lg font-semibold text-foreground hex-logo">
           <p className="font-[Cal_Sans] text-2xl">
@@ -35,7 +35,7 @@ const Header = () => {
               </Link>
             );
           })}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Link
             href="/contact"
             className="bg-primary px-3 py-2 hover:bg-foreground hover:text-primary text-white transition duration-500"
