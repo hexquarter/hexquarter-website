@@ -33,7 +33,7 @@ const products = [
       "Merchants ship a real Bitcoin storefront in days, with loyalty mechanics that do not require giving up sovereignty on either side.",
     lesson:
       "When the trust layer and the coordination layer are separated cleanly, the application layer gets dramatically smaller.",
-    price: "$1/invoice",
+    price: "Free - Open-Source",
     link: "https://bitlasso.xyz",
     accent: "text-violet-400",
     border: "border-violet-400/40",
