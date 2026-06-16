@@ -7,7 +7,7 @@ const offers = [
     tag: "01 · Diagnostic",
     name: "Bitcoin & Nostr Architecture Review",
     price: "€1,500",
-    duration: "2-3 days · async + 1 working session",
+    duration: "3-5 days · async + 1 working session",
     best: "Founders, CTOs and product leaders evaluating Bitcoin / Nostr for a real system.",
     deliverables: [
       "Architecture review of your current or proposed system",
@@ -23,7 +23,7 @@ const offers = [
   {
     tag: "02 · Blueprint",
     name: "Sovereign Infrastructure Blueprint",
-    price: "€3,500 – €5,000",
+    price: "€3,000",
     duration: "1-2 weeks",
     best: "Teams committing to a Bitcoin + Nostr foundation and needing a design they can build against.",
     deliverables: [
@@ -41,7 +41,7 @@ const offers = [
   {
     tag: "03 · Build",
     name: "Implementation Projects",
-    price: "From €7,500",
+    price: "Starting at €7,000",
     duration: "Scoped per project",
     best: "Teams who need a senior experience to ship the system.",
     deliverables: [
