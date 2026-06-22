@@ -4,24 +4,88 @@ import posthog from "posthog-js";
 
 const offers = [
   {
-    tag: "00 · Discovery",
+    tag: "01 · Discovery",
     name: "Strategic Fit Assessment",
-    price: "$300",
-    duration: "2-3 hours · async + 1 working session",
+    price: "€100",
+    duration: "1 hour + brief written recommendations",
     best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
     deliverables: [
-      "Review of your business, product or publishing strategy",
-      "Identification of opportunities and trade-offs",
-      "Honest recommendation: pursue now, pilot, or wait",
-      "Recommended next steps and engagement path",
+      "Review of your product or business",
+      "Opportunities for Bitcoin, Lightning and Nostr",
+      "Recommended next steps"
     ],
     cta: "Schedule Assessment",
-    href: "https://cal.com/hexquarter/intro",
+    href: "https://cal.com/hexquarter/strategit-fit",
     accent: "text-muted-foreground",
     border: "border-muted-foreground/40"
   },
   {
-    tag: "01 · Diagnostic",
+    tag: "02 · Launch Packs",
+    name: "Nostr Identity",
+    price: "Starting at €300",
+    duration: "1-3 days",
+    best: "Applications looking to add decentralized authentication using Nostr identities.",
+    deliverables: [
+      "Nostr login integration",
+      "User profile mapping",
+      "Session management"
+    ],
+    cta: "Start Nostr Login",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-violet-400",
+    border: "border-violet-400/40"
+  },
+  {
+    tag: "02 · Launch Packs",
+    name: "Bitcoin wallet integration",
+    price: "Starting at €500",
+    duration: "1-3 days",
+    best: "Businesses wanting to send and receive Bitcoin and Lightning payments within their app and being self-custodial.",
+    deliverables: [
+      "Bitcoin & Lightning wallet embedding",
+      "Seemless and fluid user experience",
+      "P2P payment solution for less-risk and better compliance"
+    ],
+    cta: "Accept Bitcoin",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-primary",
+    border: "border-primary/40"
+  },
+  {
+    tag: "02 · Launch Packs",
+    name: "Nostr Messaging",
+    price: "Starting at €500",
+    duration: "1-3 days",
+    best: "Applications or platforms that want encrypted, user-owned messaging or notification systems built on Nostr.",
+    deliverables: [
+      "End-to-end encrypted messaging integration",
+      "User-to-user or system-to-user messaging flow",
+      "Relay configuration for message delivery",
+    ],
+    cta: "Enable Secure Messaging",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-violet-400",
+    border: "border-violet-400/40"
+  },
+  {
+    tag: "02 · Launch Packs",
+    name: "Decentralized Storage & Metadata Layer",
+    price: "Starting at €1000",
+    duration: "4-7 days",
+    best: "Project needing persistent, user-owned metadata, profiles, or content pointers anchored in decentralized infrastructure.",
+    deliverables: [
+      "Nostr-based metadata design (events, profiles, pointers)",
+      "Integration with decentralized or external storage (as required)",
+      "Content addressing strategy",
+      "Data ownership and portability layer design"
+    ],
+    cta: "Build Data Layer",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-violet-400",
+    border: "border-violet-400/40"
+  },
+  {
+    tag: "03 · Diagnostic",
     name: "Bitcoin & Nostr Architecture Review",
     price: "€1,500",
     duration: "3-5 days · async + 1 working session",
@@ -38,7 +102,7 @@ const offers = [
     border: "border-primary/40",
   },
   {
-    tag: "02 · Blueprint",
+    tag: "04 · Blueprint",
     name: "Sovereign Infrastructure Blueprint",
     price: "€3,000",
     duration: "1-2 weeks",
@@ -52,11 +116,11 @@ const offers = [
     ],
     cta: "Discuss the Blueprint",
     href: "https://cal.com/hexquarter/intro",
-    accent: "text-violet-400",
-    border: "border-violet-400/40",
+    accent: "text-green-400",
+    border: "border-green-400/40",
   },
   {
-    tag: "03 · Build",
+    tag: "05 · Build",
     name: "Implementation Projects",
     price: "Starting at €7,000",
     duration: "Scoped per project",
@@ -69,8 +133,8 @@ const offers = [
     ],
     cta: "Start a Project",
     href: "https://cal.com/hexquarter/intro",
-    accent: "text-green-400",
-    border: "border-green-400/40",
+    accent: "text-yellow-400",
+    border: "border-yellow-400/40",
   },
 ];
 
@@ -87,12 +151,11 @@ export const WorkWithUs = () => {
             <span className="text-primary">One clear next step.</span>
           </h2>
           <p className="text-muted-foreground">
-            Productized engagements designed around how founders and CTOs actually buy
-            architectural expertise — diagnose first, design second, build third.
+            Sovereign infrastructure, built two ways: structured advisory for system design, and productized packs for fast integration.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
           {offers.map((o) => (
             <div
               key={o.name}
@@ -131,7 +194,7 @@ export const WorkWithUs = () => {
               </div>
 
               <Link
-              target="_blank"
+                target="_blank"
                 href={o.href}
                 onClick={() => posthog.capture('offer_cta_clicked', { offer_tag: o.tag, offer_name: o.name, offer_href: o.href })}
                 className="mt-auto bg-primary px-4 py-3 font-mono uppercase text-xs text-center hover:bg-foreground hover:text-primary transition duration-500 flex items-center justify-center gap-2"
@@ -143,9 +206,8 @@ export const WorkWithUs = () => {
         </div>
 
         <p className="font-mono text-xs text-muted-foreground border-l-2 border-l-primary pl-5">
-         Not sure where to start? 
-         <br /><br />The <strong className="text-white">Strategic Fit Assessment</strong> is designed to help you determine whether Bitcoin, Lightning and Nostr are the right fit for your business. 
-         <br />If you proceed with an Architecture Review, Blueprint or Implementation Project within 30 days, the full €300 <strong className="text-white">is credited</strong> toward your engagement.
+          Not sure where to start?
+          <br />The <strong className="text-white">Strategic Fit Assessment</strong> is designed to help you determine whether Bitcoin, Lightning and Nostr are the right fit for your business.
         </p>
       </div>
     </section>

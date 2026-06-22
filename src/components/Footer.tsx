@@ -28,8 +28,8 @@ export const Footer = () => {
         ))}
       </div>
       <div className="flex flex-col gap-1 text-xs text-muted-foreground lg:items-end">
-        <a href="mailto:build@hexquarter.com" className="hover:text-white transition duration-500">
-          build@hexquarter.com
+        <a href="mailto:contact@hexquarter.com" className="hover:text-white transition duration-500">
+          contact@hexquarter.com
         </a>
         <p>© {new Date().getFullYear()} HexQuarter</p>
       </div>

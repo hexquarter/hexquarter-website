@@ -53,16 +53,10 @@ export const FounderStory = () => {
             >
               Start a conversation
             </Link>
-            <Link
-              href="/about"
-              className="font-mono text-xs uppercase text-primary hover:text-foreground transition flex items-center gap-2"
-            >
-              Read the full story <ArrowUpRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="relative aspect-[4/5] w-full overflow-hidden border border-muted-foreground/30">
+          <div className="relative aspect-[4/5] w-1/2 overflow-hidden border border-muted-foreground/30">
             <Image
               src={founderPhoto}
               alt="Samuel — founder of HexQuarter, decentralized systems architect"
@@ -71,7 +65,7 @@ export const FounderStory = () => {
               className="object-cover grayscale"
               priority={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col gap-1">
               <p className="font-[Cal_Sans] text-2xl">Samuel</p>
               <p className="font-mono text-[10px] uppercase tracking-widest text-primary">

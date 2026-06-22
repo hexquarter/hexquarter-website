@@ -1,20 +1,22 @@
 import { FounderStory } from "./home/FounderStory"
+import { PositioningStrip } from "./home/PositioningStrip"
+import { TrustProof } from "./TrustProof"
 import { Tooltip, TooltipTrigger } from "./ui/tooltip"
 import { TooltipContent } from "@radix-ui/react-tooltip"
 
 export const OurStory = () => {
     return (
         <div id="why-bitcoin" className="px-5 lg:px-20 py-20 border-muted-foreground/30 border-b-1">
-            <div className="flex flex-col gap-10">
-                <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Why Bitcoin</h3>
-                <div className="flex lg:flex-row flex-col justify-content gap-10">
+            <div className="flex flex-col gap-10 ">
+                <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Why Bitcoin ?</h3>
+                <div className="flex lg:flex-row flex-col justify-content gap-10 ">
                     <div className="flex flex-col flex-1 gap-10 justify-between">
                         <h2 className="font-[Cal_Sans] text-6xl lg:text-7xl 2xl:text-8xl lg:max-w-2xl">We've seen the full arc. We chose Bitcoin.</h2>
                         <div className="flex gap-5">
                             <div className="lg:flex grid grid-cols-2 lg:grid-cols-4 gap-3">
                                 <Tooltip delayDuration={10}>
                                     <TooltipTrigger>
-                                        <div className="border p-2 flex h-full font-mono text-[10px] text-primary/40 hover:text-primary">Unbattled security model</div>
+                                        <div className="border p-2 flex h-full font-mono text-[10px] text-primary/60 hover:text-primary">Unbattled security model</div>
                                     </TooltipTrigger>
                                     <TooltipContent className="bg-card p-2 max-w-xl text-muted-foreground border border-muted-foreground/20">
                                         <p className="text-xs">
@@ -63,7 +65,9 @@ export const OurStory = () => {
                         <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">HexQuarter exists to help founders navigate this stack — not just Bitcoin as a payment rail, but as a foundation, with Nostr as the data fabric, and self-custody as the architecture default. <span className="text-white">We build what goes on top.</span></p>
                     </div>
                 </div >
-                <FounderStory />
+                <PositioningStrip />
+                <TrustProof />
+                {/* <FounderStory /> */}
 
             </div >
         </div >

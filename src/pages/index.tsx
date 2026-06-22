@@ -27,9 +27,7 @@ const Index = () => {
       <main className="flex flex-col">
         <Hero />
         <OurStory />
-        <PositioningStrip />
         <ComparisonTable />
-        <TrustProof />
         <Products />
         <WorkWithUs />
         <ServicesPreview />

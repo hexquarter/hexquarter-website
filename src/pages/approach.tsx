@@ -6,6 +6,7 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { Stack } from "@/components/Stack";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { FounderStory } from "@/components/home/FounderStory";
 
 const mapping = [
   { q: "Who owns the value?", b: "Bitcoin", n: "—" },
@@ -29,13 +30,20 @@ const Approach = () => {
           <h1 className="font-[Cal_Sans] text-5xl lg:text-8xl leading-[1]">
             We build on the strongest decentralized foundations <span className="text-primary">available.</span>
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl">
-            After a decade across the decentralized stack, the conclusion is structural, not
-            ideological: <span className="text-white">Bitcoin</span> is the strongest foundation for
-            truth, ownership, settlement and permanence. <span className="text-violet-400">Nostr</span>{" "}
-            is the strongest foundation for identity, communication, synchronization and coordination.
-          </p>
+          <div className="flex flex-col">
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              After a decade across the decentralized stack, the conclusion is structural, not
+              ideological:
+            </p>
+            <ul className="ml-8 text-muted-foreground text-lg">
+              <li className="list-disc"><span className="text-white">Bitcoin</span> is the strongest foundation for
+                truth, ownership, settlement and permanence.</li>
+              <li className="list-disc"><span className="text-violet-400">Nostr</span>{" "}
+                is the strongest foundation for identity, communication, synchronization and coordination.</li>
+            </ul>
+          </div>
         </div>
+        <FounderStory />
       </section>
 
       <Stack />

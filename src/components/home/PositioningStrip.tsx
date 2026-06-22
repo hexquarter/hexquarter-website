@@ -22,7 +22,7 @@ const pillars = [
 
 export const PositioningStrip = () => {
   return (
-    <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
+    <section className="py-10 border-b border-muted-foreground/30 border-t">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-5 max-w-3xl">
           <h3 className="font-mono uppercase tracking-widest text-xs text-muted-foreground">
