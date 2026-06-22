@@ -2,6 +2,8 @@ import { PageShell } from "@/components/PageShell";
 import { Work } from "@/components/Work";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ServicesPreview } from "@/components/home/ServicesPreview";
+import { TrustProof } from "@/components/TrustProof";
 
 const WorkPage = () => {
   return (
@@ -24,6 +26,8 @@ const WorkPage = () => {
       </section>
 
       <Work />
+
+      <ServicesPreview />
 
       <section className="px-5 lg:px-20 py-20">
         <div className="border border-muted-foreground/30 bg-card p-10 lg:p-16 flex flex-col gap-6">

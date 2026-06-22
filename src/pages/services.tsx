@@ -1,6 +1,7 @@
 import { PageShell } from "@/components/PageShell";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { WorkWithUs } from "@/components/home/WorkWithUs";
 
 const services = [
   {
@@ -116,6 +117,9 @@ const Services = () => {
           ))}
         </div>
       </section>
+
+      <WorkWithUs />
+
 
       <section className="px-5 lg:px-20 py-20">
         <div className="border border-muted-foreground/30 bg-card p-10 lg:p-16 flex flex-col gap-6">

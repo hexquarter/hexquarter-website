@@ -1,3 +1,5 @@
+import { WorkWithUs } from "./home/WorkWithUs"
+
 export const Services = () => {
     return (
         <div id="services" className="px-5 lg:px-20 py-20 pb-10 border-muted-foreground/30 border-b-1">
