@@ -1,22 +1,39 @@
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Drum } from "lucide-react";
 import posthog from "posthog-js";
 
 const offers = [
+  {
+    tag: "00 · Discovery",
+    name: "Strategic Fit Assessment",
+    price: "$300",
+    duration: "2-3 hours · async + 1 working session",
+    best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
+    deliverables: [
+      "Review of your business, product or publishing strategy",
+      "Identification of opportunities and trade-offs",
+      "Honest recommendation: pursue now, pilot, or wait",
+      "Recommended next steps and engagement path",
+    ],
+    cta: "Schedule Assessment",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-muted-foreground",
+    border: "border-muted-foreground/40"
+  },
   {
     tag: "01 · Diagnostic",
     name: "Bitcoin & Nostr Architecture Review",
     price: "€1,500",
     duration: "3-5 days · async + 1 working session",
-    best: "Founders, CTOs and product leaders evaluating Bitcoin / Nostr for a real system.",
+    best: "Businesses that have decided to explore Bitcoin or Nostr and need a technical architecture they can confidently build against.",
     deliverables: [
-      "Architecture review of your current or proposed system",
+      "Review of your current or proposed system architecture",
       "Risk assessment across trust, custody and coordination",
-      "Prioritized roadmap with sequencing",
-      "Implementation recommendations",
+      "Integration approach for Bitcoin, Lightning and Nostr",
+      "Prioritized implementation roadmap with technical recommendations",
     ],
     cta: "Book Architecture Review",
-    href: "/contact?offer=review",
+    href: "https://cal.com/hexquarter/intro",
     accent: "text-primary",
     border: "border-primary/40",
   },
@@ -34,7 +51,7 @@ const offers = [
       "Implementation roadmap with effort estimates",
     ],
     cta: "Discuss the Blueprint",
-    href: "/contact?offer=blueprint",
+    href: "https://cal.com/hexquarter/intro",
     accent: "text-violet-400",
     border: "border-violet-400/40",
   },
@@ -51,7 +68,7 @@ const offers = [
       "Decentralized synchronization and coordination",
     ],
     cta: "Start a Project",
-    href: "/contact?offer=build",
+    href: "https://cal.com/hexquarter/intro",
     accent: "text-green-400",
     border: "border-green-400/40",
   },
@@ -75,7 +92,7 @@ export const WorkWithUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           {offers.map((o) => (
             <div
               key={o.name}
@@ -114,6 +131,7 @@ export const WorkWithUs = () => {
               </div>
 
               <Link
+              target="_blank"
                 href={o.href}
                 onClick={() => posthog.capture('offer_cta_clicked', { offer_tag: o.tag, offer_name: o.name, offer_href: o.href })}
                 className="mt-auto bg-primary px-4 py-3 font-mono uppercase text-xs text-center hover:bg-foreground hover:text-primary transition duration-500 flex items-center justify-center gap-2"
@@ -124,9 +142,10 @@ export const WorkWithUs = () => {
           ))}
         </div>
 
-        <p className="font-mono text-xs text-muted-foreground border-l-2 border-primary pl-5 max-w-3xl">
-          Not sure which fits? Most engagements start with the Architecture Review and graduate
-          into a Blueprint or Implementation.
+        <p className="font-mono text-xs text-muted-foreground border-l-2 border-l-primary pl-5">
+         Not sure where to start? 
+         <br /><br />The <strong className="text-white">Strategic Fit Assessment</strong> is designed to help you determine whether Bitcoin, Lightning and Nostr are the right fit for your business. 
+         <br />If you proceed with an Architecture Review, Blueprint or Implementation Project within 30 days, the full €300 <strong className="text-white">is credited</strong> toward your engagement.
         </p>
       </div>
     </section>

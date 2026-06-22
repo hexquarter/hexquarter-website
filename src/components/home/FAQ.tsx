@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "How do engagements usually start?",
-    a: "Most teams begin with the €1,500 Architecture Review. It is the cheapest way to get a senior, decade-long perspective on your system before committing to a larger build.",
+    a: "Most founders begin with the €300 discovery session. It is the cheapest way to get a senior, decade-long perspective on your project before committing to a larger build.",
   },
   {
     q: "What does an Implementation Project look like?",
