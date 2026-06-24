@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const pillars = [
   {
-    tag: "Trust layer",
+    tag: "Trust & Payment layer",
     color: "text-primary",
     border: "border-primary/40",
     title: "Bitcoin",
@@ -11,7 +11,7 @@ const pillars = [
     body: "The strongest decentralized security budget on the planet. We use it where finality, ownership and verifiability are non-negotiable — payments, settlement, anchoring, attestation.",
   },
   {
-    tag: "Coordination layer",
+    tag: "Identity & Coordination layer",
     color: "text-violet-400",
     border: "border-violet-400/40",
     title: "Nostr",
