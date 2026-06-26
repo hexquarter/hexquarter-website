@@ -8,7 +8,7 @@ export const OurStory = () => {
     return (
         <div id="why-bitcoin" className="px-5 lg:px-20 py-20 border-muted-foreground/30 border-b-1">
             <div className="flex flex-col gap-10 ">
-                <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Why Bitcoin ?</h3>
+                <h3 className="font-mono uppercase tracking-widest text-sm text-primary">Our story</h3>
                 <div className="flex lg:flex-row flex-col justify-content gap-10 ">
                     <div className="flex flex-col flex-1 gap-10 justify-between">
                         <h2 className="font-[Cal_Sans] text-6xl lg:text-7xl 2xl:text-8xl lg:max-w-2xl">We've seen the full arc. We chose Bitcoin.</h2>
@@ -65,10 +65,8 @@ export const OurStory = () => {
                         <p className="border-l-2 border-muted-foreground/20 text-muted-foreground pl-5">HexQuarter exists to help founders navigate this stack — not just Bitcoin as a payment rail, but as a foundation, with Nostr as the data fabric, and self-custody as the architecture default. <span className="text-white">We build what goes on top.</span></p>
                     </div>
                 </div >
+                <FounderStory />
                 <PositioningStrip />
-                <TrustProof />
-                {/* <FounderStory /> */}
-
             </div >
         </div >
     )

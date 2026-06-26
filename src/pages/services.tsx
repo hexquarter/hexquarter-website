@@ -2,65 +2,66 @@ import { PageShell } from "@/components/PageShell";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { WorkWithUs } from "@/components/home/WorkWithUs";
+import { Button } from "@/components/ui/button";
 
-const services = [
-  {
-    n: "01",
-    accent: "text-primary",
-    border: "border-primary/40",
-    title: "Architecture & protocol design",
-    when: "When you're committing to infrastructure you expect to live with for 5+ years.",
-    body: "End-to-end system design for decentralized products. We map the protocol surface, choose the right layer for each requirement, and design for sovereignty from the start — not as a retrofit.",
-    deliverables: [
-      "Architecture documents & diagrams",
-      "Protocol-level technical specs",
-      "Failure-mode analysis",
-      "Implementation roadmap",
-    ],
-  },
-  {
-    n: "02",
-    accent: "text-primary",
-    border: "border-primary/40",
-    title: "Bitcoin & Lightning integration",
-    when: "When you need finality, not just confirmation — and full self-custody by default.",
-    body: "Production-grade integrations for payments, settlement and asset issuance. UTXO design, script patterns, Lightning, Spark, Ark and Taproot Assets — chosen for the specific use case.",
-    deliverables: [
-      "UTXO & script design",
-      "Lightning / Spark / Ark integration",
-      "Multisig & timelock custody",
-      "Tokenization & anchoring on Bitcoin",
-    ],
-  },
-  {
-    n: "03",
-    accent: "text-violet-400",
-    border: "border-violet-400/40",
-    title: "Nostr-native systems",
-    when: "When you need identity, communication or coordination infrastructure that users own.",
-    body: "We treat Nostr as an event-driven backbone — a standardized, signed event model that can serve as identity, comms, sync and coordination across distributed systems. Including custom relay infrastructure.",
-    deliverables: [
-      "Portable identity & auth",
-      "Signed event schemas (NIPs)",
-      "Custom relay infrastructure",
-      "Service-to-service coordination over Nostr",
-    ],
-  },
-  {
-    n: "04",
-    accent: "text-muted-foreground",
-    border: "border-muted-foreground/40",
-    title: "Advisory",
-    when: "When you're evaluating decentralized rails and need a senior, unbiased view.",
-    body: "Hands-on advisory for founders, CTOs and product teams: protocol selection, architecture review, Web3 → Bitcoin/Nostr migration paths, and honest assessment of when not to use decentralized infrastructure at all.",
-    deliverables: [
-      "Architecture review",
-      "Protocol selection & tradeoffs",
-      "Migration & sunset planning",
-      "Team coaching",
-    ],
-  },
-];
+// const services = [
+//   {
+//     n: "01",
+//     accent: "text-primary",
+//     border: "border-primary/40",
+//     title: "Architecture & protocol design",
+//     when: "When you're committing to infrastructure you expect to live with for 5+ years.",
+//     body: "End-to-end system design for decentralized products. We map the protocol surface, choose the right layer for each requirement, and design for sovereignty from the start — not as a retrofit.",
+//     deliverables: [
+//       "Architecture documents & diagrams",
+//       "Protocol-level technical specs",
+//       "Failure-mode analysis",
+//       "Implementation roadmap",
+//     ],
+//   },
+//   {
+//     n: "02",
+//     accent: "text-primary",
+//     border: "border-primary/40",
+//     title: "Bitcoin & Lightning integration",
+//     when: "When you need finality, not just confirmation — and full self-custody by default.",
+//     body: "Production-grade integrations for payments, settlement and asset issuance. UTXO design, script patterns, Lightning, Spark, Ark and Taproot Assets — chosen for the specific use case.",
+//     deliverables: [
+//       "UTXO & script design",
+//       "Lightning / Spark / Ark integration",
+//       "Multisig & timelock custody",
+//       "Tokenization & anchoring on Bitcoin",
+//     ],
+//   },
+//   {
+//     n: "03",
+//     accent: "text-violet-400",
+//     border: "border-violet-400/40",
+//     title: "Nostr-native systems",
+//     when: "When you need identity, communication or coordination infrastructure that users own.",
+//     body: "We treat Nostr as an event-driven backbone — a standardized, signed event model that can serve as identity, comms, sync and coordination across distributed systems. Including custom relay infrastructure.",
+//     deliverables: [
+//       "Portable identity & auth",
+//       "Signed event schemas (NIPs)",
+//       "Custom relay infrastructure",
+//       "Service-to-service coordination over Nostr",
+//     ],
+//   },
+//   {
+//     n: "04",
+//     accent: "text-muted-foreground",
+//     border: "border-muted-foreground/40",
+//     title: "Advisory",
+//     when: "When you're evaluating decentralized rails and need a senior, unbiased view.",
+//     body: "Hands-on advisory for founders, CTOs and product teams: protocol selection, architecture review, Web3 → Bitcoin/Nostr migration paths, and honest assessment of when not to use decentralized infrastructure at all.",
+//     deliverables: [
+//       "Architecture review",
+//       "Protocol selection & tradeoffs",
+//       "Migration & sunset planning",
+//       "Team coaching",
+//     ],
+//   },
+// ];
 
 const Services = () => {
   return (
@@ -72,15 +73,20 @@ const Services = () => {
         <div className="flex flex-col gap-8 max-w-5xl">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">Services</h3>
           <h1 className="font-[Cal_Sans] text-5xl lg:text-8xl leading-[1]">
-            Engineering teams hire us for <span className="text-primary">four</span> things.
+            Architecture-first. <br /><span className="text-primary">Senior throughout</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl">
-            Architecture-first. Senior throughout. We work with founders and teams from
+            . We work with founders and teams from
             decision-stage through production — and stay long enough to make sure it holds up.
           </p>
+          <div>
+            <Link href="#packs">
+              <Button className="bg-violet-400 hover:bg-violet-400/80 cursor-pointer">Discover our Launch Packs (start at 300€)</Button>
+            </Link>
+          </div>
         </div>
       </section>
-
+      {/* 
       <section className="px-5 lg:px-20 py-10 border-b border-muted-foreground/30">
         <div className="flex flex-col">
           {services.map((s) => (
@@ -116,10 +122,9 @@ const Services = () => {
             </article>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <WorkWithUs />
-
 
       <section className="px-5 lg:px-20 py-20">
         <div className="border border-muted-foreground/30 bg-card p-10 lg:p-16 flex flex-col gap-6">

@@ -25,15 +25,15 @@ export const FounderStory = () => {
           </h2>
           <div className="flex flex-col gap-5 text-muted-foreground">
             <p className="text-lg">
-              I spent ten years building decentralized systems — across Ethereum, DeFi,
-              infrastructure and protocol design. I saw what worked, what compounded, and what
+              Samuel spents ten years building decentralized systems — across Ethereum, DeFi,
+              infrastructure, blockchain networks and protocols design. <br />After seeing what worked, what compounded, and what
               quietly broke under load.
             </p>
             <p>
-              HexQuarter is the result of that arc. Not a Bitcoin shop. Not a Nostr shop. A{" "}
+              HexQuarter is the result of that arc. Not a Bitcoin or Nostr shop. <br />But a{" "}
               <span className="text-foreground">decentralized systems engineering studio</span> that
               converged on Bitcoin as the trust layer and Nostr as the coordination layer because,
-              after a decade of evidence, those are the foundations worth building on.
+              <br />after a decade of evidence, those are the foundations worth building on.
             </p>
           </div>
 

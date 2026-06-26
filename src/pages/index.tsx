@@ -26,10 +26,10 @@ const Index = () => {
       <Header />
       <main className="flex flex-col">
         <Hero />
+        <TrustProof />
         <OurStory />
-        <Products />
+        {/* <Products /> */}
         <WorkWithUs />
-        <ComparisonTable />
         <FAQ />
         <HomeCTA />
       </main>

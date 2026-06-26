@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import posthog from "posthog-js";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -19,9 +20,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/85" />
 
       <div className="flex flex-col gap-10 2xl:gap-16 relative w-full">
-        <h2 className="uppercase font-mono text-xs tracking-widest">
+        {/* <h2 className="uppercase font-mono text-xs tracking-widest">
           <span className="text-primary">Open-protocol</span> systems design
-        </h2>
+        </h2> */}
 
         <h1 className="lg:text-8xl 2xl:text-9xl text-5xl text-foreground font-[Cal_Sans] max-w-6xl leading-[1]">
           Build products users <span className="text-primary">actually own</span>.
@@ -38,17 +39,19 @@ const Hero = () => {
 
         <div className="flex flex-wrap items-center font-mono text-xs uppercase gap-5">
           <Link
-            href="/contact"
-            onClick={() => posthog.capture('hero_cta_clicked', { cta_label: 'Start a project' })}
-            className="bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
+            href="https://cal.com/hexquarter/strategit-fit"
+            target="blank"
+            className="flex bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
+          // className="text-muted-foreground hover:text-foreground flex items-center gap-2 transition duration-500"
           >
-            Start a project
+            Start with strategic assessment (100 €) <ArrowRight className="h-3" />
           </Link>
           <Link
-            href="/approach"
-            className="text-muted-foreground hover:text-foreground flex items-center gap-2 transition duration-500"
+            href="#packs"
+            className="lex bg-primary px-4 py-3 bg-white text-violet-400 hover:bg-violet-400 hover:text-white transition duration-500"
+            onClick={() => posthog.capture('hero_cta_clicked', { cta_label: 'Start a project' })}
           >
-            Read the approach <ArrowRight className="h-3" />
+            Discover our fast launching packs
           </Link>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Approach = () => {
             </ul>
           </div>
         </div>
-        <FounderStory />
+        {/* <FounderStory /> */}
       </section>
 
       <Stack />

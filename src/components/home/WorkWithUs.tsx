@@ -6,7 +6,7 @@ const offers = [
   {
     tag: "01 · Discovery",
     name: "Strategic Fit Assessment",
-    price: "€100",
+    price: "100 €",
     duration: "1 hour + brief written recommendations",
     best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
     deliverables: [
@@ -22,7 +22,7 @@ const offers = [
   {
     tag: "03 · Diagnostic",
     name: "Bitcoin & Nostr Architecture Review",
-    price: "€1,500",
+    price: "1,500 €",
     duration: "3-5 days · async + 1 working session",
     best: "Businesses that have decided to explore Bitcoin or Nostr and need a technical architecture they can confidently build against.",
     deliverables: [
@@ -39,7 +39,7 @@ const offers = [
   {
     tag: "04 · Blueprint",
     name: "Sovereign Infrastructure Blueprint",
-    price: "€3,000",
+    price: "3,000 €",
     duration: "1-2 weeks",
     best: "Teams committing to a Bitcoin + Nostr foundation and needing a design they can build against.",
     deliverables: [
@@ -57,7 +57,7 @@ const offers = [
   {
     tag: "05 · Build",
     name: "Implementation Projects",
-    price: "Starting at €7,000",
+    price: "Starting at 7,000 €",
     duration: "Scoped per project",
     best: "Teams who need a senior experience to ship the system.",
     deliverables: [
@@ -76,7 +76,7 @@ const offers = [
 const launchPacks = [
   {
     name: "Nostr Identity",
-    price: "Starting at €300",
+    price: "Starting at 300 €",
     duration: "1-3 days",
     best: "Applications looking to add decentralized authentication using Nostr identities.",
     deliverables: [
@@ -91,7 +91,7 @@ const launchPacks = [
   },
   {
     name: "Bitcoin wallet integration",
-    price: "Starting at €500",
+    price: "Starting at 500 €",
     duration: "1-3 days",
     best: "Businesses wanting to send and receive Bitcoin and Lightning payments within their app and being self-custodial.",
     deliverables: [
@@ -106,7 +106,7 @@ const launchPacks = [
   },
   {
     name: "Nostr Messaging",
-    price: "Starting at €500",
+    price: "Starting at 500 €",
     duration: "1-3 days",
     best: "Applications or platforms that want encrypted, user-owned messaging or notification systems built on Nostr.",
     deliverables: [
@@ -121,7 +121,7 @@ const launchPacks = [
   },
   {
     name: "Sovereign Publishing",
-    price: "Starting at $700",
+    price: "Starting at 700 €",
     duration: "3–5 days",
     best: "Media organizations and creators strengthening content distribution, audience ownership and reader monetization without replacing their existing publishing platform.",
     deliverables: [
@@ -138,7 +138,7 @@ const launchPacks = [
   },
   {
     name: "Stable Balance",
-    price: "Starting at $900",
+    price: "Starting at 900 €",
     duration: "1–3 days",
     best: "Applications looking to offer users a stable-value balance for payments, savings or yield products while leveraging Bitcoin-native infrastructure.",
     deliverables: [
@@ -154,7 +154,7 @@ const launchPacks = [
   },
   {
     name: "Loyalty & Digital Assets",
-    price: "Starting at $1,200",
+    price: "Starting at 1,200 €",
     duration: "3-5 days",
     best: "Businesses wanting to issue loyalty points, rewards or digital assets using Bitcoin-native token infrastructure.",
     deliverables: [
@@ -172,11 +172,11 @@ const launchPacks = [
 
 export const WorkWithUs = () => {
   return (
-    <section id="work-with-us" className="px-5 lg:px-20 py-24 border-b border-muted-foreground/30">
+    <section id="pricing" className="px-5 lg:px-20 py-24 border-b border-muted-foreground/30">
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-5">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">
-            Work with HexQuarter
+            Our offer
           </h3>
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl leading-[1.05]">
             Choose the right starting point.
@@ -236,7 +236,7 @@ export const WorkWithUs = () => {
           ))}
         </div>
 
-        <p className="font-mono text-xs text-muted-foreground border-l-2 border-l-primary pl-5">
+        <p className="font-mono text-xs text-muted-foreground border-l-2 border-l-primary pl-5"  id="packs">
           Not sure where to start?
           <br />The <strong className="text-white">Strategic Fit Assessment</strong> is designed to help you determine whether Bitcoin, Lightning and Nostr are the right fit for your business.
         </p>
@@ -250,7 +250,7 @@ export const WorkWithUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5" >
           {launchPacks.map((o) => (
             <div
               key={o.name}
