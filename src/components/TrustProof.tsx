@@ -76,7 +76,6 @@ export const TrustProof = () => {
               </div>
               <p className="text-sm text-foreground/90 leading-relaxed">"{t.quote}"</p>
               <div className="mt-auto flex flex-col gap-1 border-t border-muted-foreground/10 pt-4">
-                <p className="text-sm font-medium">{t.name}</p>
                 <p className="text-sm font-medium">{t.linkedin ? <a href={t.linkedin} target="_blank" className="flex items-center gap-2"><BsLinkedin />{t.name}</a> : t.name}</p>
                 <p className="text-xs text-muted-foreground font-mono">{t.detail}</p>
               </div>
