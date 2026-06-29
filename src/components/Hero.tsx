@@ -40,7 +40,7 @@ const Hero = () => {
 
         <div className="flex flex-wrap items-center font-mono text-xs uppercase gap-5">
           <Link
-            href="https://cal.com/hexquarter/strategit-fit"
+            href="https://cal.com/hexquarter/discovery"
             target="blank"
             className="flex bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
           // className="text-muted-foreground hover:text-foreground flex items-center gap-2 transition duration-500"
