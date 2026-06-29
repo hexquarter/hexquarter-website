@@ -19,7 +19,7 @@ const NotFoundPage = () => {
             <h1 className="mb-4 text-4xl font-bold">404</h1>
             <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
             <Link href="/" className="text-primary hover:underline hover:text-primary/90">
-              Return to Home
+              <button className="border cursor-pointer border-white/30 hover:bg-white hover:text-muted-foreground px-4 py-2 text-white uppercase font-mono text-xs ">Return to Home</button>
             </Link>
           </div>
         </section>

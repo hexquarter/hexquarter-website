@@ -55,12 +55,12 @@ export const ComparisonTable = () => {
   return (
     <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-5 max-w-3xl">
+        <div className="flex flex-col gap-5">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">
             The honest comparison
           </h3>
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl">
-            Bitcoin + Nostr <span className="text-primary">vs</span> the broader Web3 stack.
+            <span className="text-primary">Bitcoin</span>&<span className="text-violet-400">Nostr</span> vs the broader Web3 stack.
           </h2>
           <p className="text-muted-foreground">
             After a decade across both, this is the side-by-side we wish someone had handed us in 2015.
@@ -106,8 +106,8 @@ export const ComparisonTable = () => {
           </table>
         </div>
 
-        <p className="font-mono text-xs text-muted-foreground/70 max-w-3xl">
-          // We're not anti-Web3. We're pro-foundation. The broader ecosystem produced real engineering
+        <p className="font-mono text-xs text-muted-foreground border-muted-foreground/40 text-white/70 border p-2">
+          // We're not anti-Web3. We're pro-foundation. <br />The broader ecosystem produced real engineering
           breakthroughs — we use them where they belong, and we don't pretend they belong everywhere.
         </p>
       </div>

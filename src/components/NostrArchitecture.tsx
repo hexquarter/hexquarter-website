@@ -63,18 +63,16 @@ const flow = [
 
 export const NostrArchitecture = () => {
   return (
-    <section id="nostr-architecture" className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
+    <section id="nostr-architecture" className="px-5 lg:px-20 border-b border-muted-foreground/30">
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-5 max-w-3xl">
-          <h3 className="font-mono uppercase tracking-widest text-xs text-violet-400">
-            Nostr architecture
-          </h3>
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl">
-            What it actually <span className="text-violet-400">is</span>, under the hood.
+            What is <span className="text-violet-400">Nostr</span>'s architecture ?
           </h2>
           <p className="text-muted-foreground">
-            Nostr is not a social network. It's a minimal protocol for signed events over relays —
-            small enough to fit in a weekend and powerful enough to replace whole categories of
+            Nostr is not a social network. <br />
+            It's a <span className="text-white">minimal</span> protocol for signed events over relays —
+            small enough to fit in a weekend and <span className="text-white">powerful enough</span> to replace whole categories of
             backend infrastructure.
           </p>
         </div>

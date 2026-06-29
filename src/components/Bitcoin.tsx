@@ -16,9 +16,9 @@ const useCases = [
         tagBorderColor: 'border-yellow-400/20',
         iconColor: 'bg-yellow-400',
         items: [
-            'Spark — self-custody payments, instant finality, no channel mgmt',
-            'Ark / Arkadeos — shared UTXO pools, non-interactive off-chain txs, scripting',
-            'Transfers = ownership moved without on-chain footprint'
+            'Instant payments without channel management',
+            'Scripting capability',
+            'Asset ownership moved without on-chain footprint'
         ]
     },
     {
@@ -28,7 +28,7 @@ const useCases = [
         tagBorderColor: 'border-green-400/20',
         iconColor: 'bg-green-400',
         items: [
-            'Stablecoins issued on Bitcoin, moved via Spark & Lightning',
+            'Stablecoins issued on Bitcoin moved via L2',
             'Loyalty tokens & digital receipts — on-chain, self-sovereign',
             'Asset metadata anchored to Taproot outputs'
         ]
@@ -53,7 +53,7 @@ export const Bitcoin = () => {
             <div className="flex flex-col lg:gap-10">
                 <div className="flex lg:flex-row flex-col justify-between gap-10">
                     <div className="flex-1 flex flex-col gap-10">
-                        <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-primary/60">Bitcoin engineering</h3>
+                        <h3 className="font-mono uppecase tracking-widest uppercase text-sm text-muted-foreground font-lighter text-primary/80">Bitcoin engineering</h3>
                         <h2 className="text-5xl lg:text-7xl 2xl:text-8xl font-[Cal_Sans] max-w-2xl">Bitcoin as a programmable <span className="text-primary">settlement layer</span></h2>
                         <div className="flex flex-col gap-5 ">
                             <p className="text-muted-foreground hover:text-foreground/80 transition duration-500">Bitcoin's conservatism is a feature, not a limitation. The constraints force precision.</p>
