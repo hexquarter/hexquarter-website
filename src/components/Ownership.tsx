@@ -42,7 +42,7 @@ const offers = [
 
 export const Ownership = () => {
   return (
-    <section className="px-20 py-10">
+    <section className="px-5 lg:px-20 py-10">
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-5 ">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">We help you own</h3>

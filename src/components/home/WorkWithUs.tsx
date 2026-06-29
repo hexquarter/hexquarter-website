@@ -188,7 +188,7 @@ const offers = [
 
 export const WorkWithUs = () => {
   return (
-    <section id="pricing" className="px-5 lg:px-20 py-24 border-b border-muted-foreground/30">
+    <section id="pricing" className="px-5 lg:px-20 py-10 border-b border-muted-foreground/30">
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-5">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">
