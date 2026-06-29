@@ -17,7 +17,7 @@ export const Footer = () => {
           <span className="text-primary">H</span>ex<span className="text-violet-400">Q</span>uarter
         </Link>
         <p className="text-xs text-muted-foreground max-w-xs">
-          Open-protocol systems on Bitcoin, Lightning and Nostr.
+          Build products users actually own.
         </p>
       </div>
       <div className="flex lg:flex-row flex-col gap-2 lg:gap-5 text-xs text-muted-foreground items-start lg:items-center">
