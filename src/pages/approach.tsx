@@ -7,6 +7,7 @@ import { Stack } from "@/components/Stack";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { FounderStory } from "@/components/home/FounderStory";
+import { PositioningStrip } from "@/components/home/PositioningStrip";
 
 const mapping = [
   { q: "Who owns the value?", b: "Bitcoin", n: "—" },
@@ -25,22 +26,13 @@ const Approach = () => {
       description="Bitcoin as the trust layer. Nostr as the coordination layer. The two foundations we build on, and why."
     >
       <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
-        <div className="flex flex-col gap-8 max-w-5xl">
+        <div className="flex flex-col gap-8">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">Approach</h3>
           <h1 className="font-[Cal_Sans] text-5xl lg:text-8xl leading-[1]">
             We build on the strongest decentralized foundations <span className="text-primary">available.</span>
           </h1>
           <div className="flex flex-col">
-            <p className="text-lg text-muted-foreground max-w-3xl">
-              After a decade across the decentralized stack, the conclusion is structural, not
-              ideological:
-            </p>
-            <ul className="ml-8 text-muted-foreground text-lg">
-              <li className="list-disc"><span className="text-white">Bitcoin</span> is the strongest foundation for
-                truth, ownership, settlement and permanence.</li>
-              <li className="list-disc"><span className="text-violet-400">Nostr</span>{" "}
-                is the strongest foundation for identity, communication, synchronization and coordination.</li>
-            </ul>
+            <PositioningStrip />
           </div>
         </div>
         {/* <FounderStory /> */}

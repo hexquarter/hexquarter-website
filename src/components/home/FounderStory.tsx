@@ -13,47 +13,43 @@ const credibility = [
 
 export const FounderStory = () => {
   return (
-    <section className="py-20 border-b border-muted-foreground/30">
+    <section className="">
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
         <div className="lg:col-span-7 flex flex-col gap-8">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">
-            The founder
+            Founder story
           </h3>
-          <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl leading-[1.05]">
-            A decade of decentralized systems.{" "}<br />
-            <span className="text-primary">One deliberate convergence.</span>
-          </h2>
           <div className="flex flex-col gap-5 text-muted-foreground">
-            <p className="text-lg">
-              Samuel spents ten years building decentralized systems — across Ethereum, DeFi,
+            <p className="">
+              I spent 10+ years building decentralized systems — across Ethereum, DeFi,
               infrastructure, blockchain networks and protocols design. <br />After seeing what worked, what compounded, and what
               quietly broke under load.
             </p>
             <p>
-              HexQuarter is the result of that arc. Not a Bitcoin or Nostr shop. <br />But a{" "}
-              <span className="text-foreground">decentralized systems engineering studio</span> that
+              HexQuarter is the result of that arc. Not a Bitcoin or Nostr shop. <br />But we build a{" "}
+              <span className="text-foreground">future where their business isn't dependent on someone else's platform.</span> that
               converged on Bitcoin as the trust layer and Nostr as the coordination layer because,
               <br />after a decade of evidence, those are the foundations worth building on.
             </p>
           </div>
 
-          <ul className="flex flex-col gap-3 border-t border-muted-foreground/20 pt-6">
+          {/* <ul className="flex flex-col gap-3 border-t border-muted-foreground/20 pt-6">
             {credibility.map((c) => (
               <li key={c} className="flex gap-3 items-start">
                 <Check className="h-4 w-4 text-primary mt-1 shrink-0" />
                 <span className="text-sm text-foreground/90">{c}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
 
-          <div className="flex flex-wrap gap-5 items-center pt-2">
+          {/* <div className="flex flex-wrap gap-5 items-center pt-2">
             <Link
               href="/contact"
               className="bg-primary px-5 py-3 font-mono uppercase text-xs hover:bg-foreground hover:text-primary transition duration-500"
             >
               Start a conversation
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="lg:col-span-5 flex flex-col gap-6">
           <div className="relative aspect-[4/5] w-1/2 overflow-hidden border border-muted-foreground/30">

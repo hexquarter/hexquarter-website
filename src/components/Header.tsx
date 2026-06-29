@@ -4,10 +4,10 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
   { href: "/approach", label: "Approach" },
-  { href: "/services", label: "Services" },
-  { href: "/work", label: "Work" },
+  // { href: "/services", label: "Services" },
+  // { href: "/work", label: "Work" },
   { href: "/writing", label: "Writing" },
-  { href: "/about", label: "About" },
+  // { href: "/about", label: "About" },
 ];
 
 const Header = () => {

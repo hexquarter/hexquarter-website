@@ -37,8 +37,8 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <TooltipProvider>
       <Head>
-        <title>HexQuarter — Bitcoin & Nostr engineering</title>
-        <meta name="description" content="We build software where Bitcoin serves as a foundation, with Nostr as the data fabric, and self-custody as the architecture default." />
+        <title>HexQuarter — Build products users actually own.</title>
+        <meta name="description" content="We help internet businesses own what matters: identity, payment, audience and data -  using Bitcoin, Lightning and Nostr." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
       </Head>

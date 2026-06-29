@@ -12,6 +12,7 @@ import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { FAQ } from "@/components/home/FAQ";
 import { HomeCTA } from "@/components/home/HomeCTA";
 import { Footer } from "@/components/Footer";
+import { Ownership } from "@/components/Ownership";
 
 const Index = () => {
   return (
@@ -26,10 +27,12 @@ const Index = () => {
       <Header />
       <main className="flex flex-col">
         <Hero />
+        <Ownership />
+        {/* <OurStory /> */}
+        <WorkWithUs />
+        <Products />
         <TrustProof />
         <OurStory />
-        {/* <Products /> */}
-        <WorkWithUs />
         <FAQ />
         <HomeCTA />
       </main>

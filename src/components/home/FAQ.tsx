@@ -7,28 +7,24 @@ import {
 
 const faqs = [
   {
-    q: "Are you a Bitcoin development agency?",
-    a: "No. HexQuarter is a decentralized systems engineering studio. Bitcoin and Nostr are the foundations we converged on after a decade across the broader decentralized stack — but the work is architecture, not a single protocol.",
-  },
-  {
     q: "Who do you typically work with?",
-    a: "Founders, CTOs and product leaders building payment systems, identity systems, communication systems or decentralized application infrastructure. Teams that need a senior architect, not a junior contractor.",
+    a: "Founders and teams building products where ownership of identity, payments, audience, or data is a core requirement."
   },
   {
-    q: "Do you work with Ethereum or other chains?",
-    a: "We have a decade of experience across Ethereum, DeFi and Web3 infrastructure, which is why we recommend Bitcoin and Nostr today. We will help you evaluate a migration path honestly, but new builds happen on Bitcoin and Nostr.",
+    q: "When is this the right architecture?",
+    a: "When user ownership is a core requirement—identity, payments, data, or communication—not an optional feature. If your product depends on long-term portability and independence from platforms, open protocols reduce future dependency risk."
   },
   {
     q: "How do engagements usually start?",
-    a: "Most founders begin with the €300 discovery session. It is the cheapest way to get a senior, decade-long perspective on your project before committing to a larger build.",
+    a: "With an Architecture Review. We evaluate your product, constraints, and system design before any implementation."
   },
   {
     q: "What does an Implementation Project look like?",
-    a: "Scoped per project, starting at €7,500. Typical scopes: Lightning payment integration, Nostr identity layer, relay infrastructure, or end-to-end decentralized backends. Always shipped, never just specced.",
+    a: "We design and build production systems around payments, identity, communication, and data ownership. Scoped per project with clear deliverables."
   },
   {
-    q: "Do you offer fractional CTO or ongoing advisory?",
-    a: "Yes, for a small number of teams per quarter. Mention it on the contact form and we will see if there is a fit.",
+    q: "Do you offer ongoing support ?",
+    a: "Yes. Through a Fractional Protocol Architect role for teams that need continuous architectural guidance."
   },
 ];
 

@@ -30,10 +30,11 @@ const Hero = () => {
 
         <div className="flex flex-col gap-4 max-w-4xl">
           <p className="text-white text-xl">
-            We build on the strongest decentralized foundations available, so your products inherit their guarantees.
+            We help internet businesses own what matters:
+            <br />• identity <br />• payments <br />• audience • data
           </p>
           <p className="text-white/70">
-            Settlement secured by Bitcoin. <br />Instant payment with Lightning. <br />Identity and data powered by Nostr.
+            Using Bitcoin, Lightning and Nostr—not because they're fashionable, but because they've proven themselves.
           </p>
         </div>
 
@@ -44,14 +45,14 @@ const Hero = () => {
             className="flex bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
           // className="text-muted-foreground hover:text-foreground flex items-center gap-2 transition duration-500"
           >
-            Start with strategic assessment (100 €) <ArrowRight className="h-3" />
+            Book an architecture review <ArrowRight className="h-3" />
           </Link>
           <Link
-            href="#packs"
+            href="#products"
             className="lex bg-primary px-4 py-3 bg-white text-violet-400 hover:bg-violet-400 hover:text-white transition duration-500"
             onClick={() => posthog.capture('hero_cta_clicked', { cta_label: 'Start a project' })}
           >
-            Discover our fast launching packs
+            See our work
           </Link>
         </div>
       </div>

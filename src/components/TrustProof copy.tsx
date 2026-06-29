@@ -40,7 +40,7 @@ const testimonials = [
 
 export const TrustProof = () => {
   return (
-    <section className="px-20 py-10" id="trust-proof">
+    <section className="px-20 py-10">
       <div className="flex flex-col gap-16">
         <div className="flex flex-col gap-5 ">
           <h3 className="font-mono uppercase tracking-widest text-xs text-primary">Track record</h3>

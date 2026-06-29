@@ -22,14 +22,14 @@ const pillars = [
 
 export const PositioningStrip = () => {
   return (
-    <section className="py-10 border-b border-muted-foreground/30 border-t">
+    <section className="py-10">
       <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-5 max-w-3xl">
+        <div className="flex flex-col gap-5">
           <h3 className="font-mono uppercase tracking-widest text-xs text-muted-foreground">
             The foundations
           </h3>
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl">
-            Two protocols. One <span className="text-primary">coherent</span> stack.
+            Two protocols. <br />One <span className="text-primary">coherent</span> stack.
           </h2>
           <p className="text-muted-foreground">
             Most teams reach for a new chain, a new token, a new bridge. We reach for the two
@@ -53,12 +53,6 @@ export const PositioningStrip = () => {
                 {p.subtitle}
               </p>
               <p className="text-muted-foreground">{p.body}</p>
-              <Link
-                href="/approach"
-                className={`mt-auto inline-flex items-center gap-2 font-mono text-xs uppercase ${p.color} hover:text-white transition`}
-              >
-                Read the approach <ArrowUpRight className="h-4 w-4" />
-              </Link>
             </div>
           ))}
         </div>

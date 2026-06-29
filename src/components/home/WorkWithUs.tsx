@@ -3,68 +3,84 @@ import { ArrowRight, Check, Drum } from "lucide-react";
 import posthog from "posthog-js";
 
 const offers = [
+  // {
+  //   tag: "01 · Discovery",
+  //   name: "Strategic Fit Assessment",
+  //   price: "100 €",
+  //   duration: "1 hour + brief written recommendations",
+  //   best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
+  //   deliverables: [
+  //     "Review of your product or business",
+  //     "Opportunities for Bitcoin, Lightning and Nostr",
+  //     "Recommended next steps"
+  //   ],
+  //   cta: "Schedule Assessment",
+  //   href: "https://cal.com/hexquarter/strategit-fit",
+  //   accent: "text-muted-foreground",
+  //   border: "border-muted-foreground/40"
+  // },
   {
-    tag: "01 · Discovery",
-    name: "Strategic Fit Assessment",
-    price: "100 €",
-    duration: "1 hour + brief written recommendations",
-    best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
-    deliverables: [
-      "Review of your product or business",
-      "Opportunities for Bitcoin, Lightning and Nostr",
-      "Recommended next steps"
-    ],
-    cta: "Schedule Assessment",
-    href: "https://cal.com/hexquarter/strategit-fit",
-    accent: "text-muted-foreground",
-    border: "border-muted-foreground/40"
-  },
-  {
-    tag: "03 · Diagnostic",
-    name: "Bitcoin & Nostr Architecture Review",
+    tag: "01 · Diagnostic",
+    name: "Architecture Review",
     price: "1,500 €",
     duration: "3-5 days · async + 1 working session",
-    best: "Businesses that have decided to explore Bitcoin or Nostr and need a technical architecture they can confidently build against.",
+    best: "Validate whether Bitcoin, Lightning or Nostr are the right foundation before investing in development.",
     deliverables: [
-      "Review of your current or proposed system architecture",
-      "Risk assessment across trust, custody and coordination",
-      "Integration approach for Bitcoin, Lightning and Nostr",
-      "Prioritized implementation roadmap with technical recommendations",
+      "Technical architecture assessment",
+      "Risk, trade-off analysis",
+      "Implementation roadmap",
+      "Honest recommendation (including when not to use Bitcoin/Nostr)",
     ],
-    cta: "Book Architecture Review",
+    cta: "Book a review",
     href: "https://cal.com/hexquarter/intro",
     accent: "text-primary",
     border: "border-primary/40",
   },
   {
-    tag: "04 · Blueprint",
-    name: "Sovereign Infrastructure Blueprint",
-    price: "3,000 €",
+    tag: "02 · Blueprint",
+    name: "Sovereign Foundation",
+    price: "4,000 €",
     duration: "1-2 weeks",
-    best: "Teams committing to a Bitcoin + Nostr foundation and needing a design they can build against.",
+    best: "Design the core architecture for products centered around ownership, payments, identity and open data.",
     deliverables: [
-      "Bitcoin strategy (payments, settlement, custody)",
-      "Nostr architecture (identity, events, relays)",
-      "Trust layer design",
-      "Coordination layer design",
-      "Implementation roadmap with effort estimates",
+      "System architecture, protocol selection",
+      "Identity, payments, data ownership design",
+      "Infrastructure, deployment blueprint",
+      "Implementation roadmap with effort estimates"
     ],
     cta: "Discuss the Blueprint",
+    href: "https://cal.com/hexquarter/intro",
+    accent: "text-violet-400",
+    border: "border-violet-400/40",
+  },
+  {
+    tag: "03 · Build",
+    name: "Tailored projects",
+    price: "Starting at 7,000 €",
+    duration: "Scoped per project",
+    best: "From MVP to production-ready infrastructure, built around open protocols and user ownership.",
+    deliverables: [
+      "Bitcoin, Lightning payment systems",
+      "User-owned identity infrastructure",
+      "Communication, synchronization layers",
+      "Production deployment, protocol integrations"
+    ],
+    cta: "Start a Project",
     href: "https://cal.com/hexquarter/intro",
     accent: "text-green-400",
     border: "border-green-400/40",
   },
   {
-    tag: "05 · Build",
-    name: "Implementation Projects",
-    price: "Starting at 7,000 €",
-    duration: "Scoped per project",
-    best: "Teams who need a senior experience to ship the system.",
+    tag: "04 · Support",
+    name: "Fractional Protocol Architect",
+    price: "Starting at 3,000 €/mo",
+    duration: "Retainer",
+    best: "A senior protocol architect embedded in your team to guide architecture, reduce technical risk and accelerate delivery.",
     deliverables: [
-      "Payment systems (Bitcoin, Lightning, Spark)",
-      "Identity systems (Nostr, NIP-05, NIP-42)",
-      "Communication & event infrastructure",
-      "Decentralized synchronization and coordination",
+      "Architecture guidance, technical strategy",
+      "Design reviews, engineering mentorship",
+      "Protocol evaluation, integration support",
+      "Direct collaboration with your product, engineering teams"
     ],
     cta: "Start a Project",
     href: "https://cal.com/hexquarter/intro",
@@ -73,102 +89,102 @@ const offers = [
   },
 ];
 
-const launchPacks = [
-  {
-    name: "Nostr Identity",
-    price: "Starting at 300 €",
-    duration: "1-3 days",
-    best: "Applications looking to add decentralized authentication using Nostr identities.",
-    deliverables: [
-      "Nostr login integration",
-      "User profile mapping",
-      "Session management"
-    ],
-    cta: "Start Nostr Login",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-violet-400",
-    border: "border-violet-400/40"
-  },
-  {
-    name: "Bitcoin wallet integration",
-    price: "Starting at 500 €",
-    duration: "1-3 days",
-    best: "Businesses wanting to send and receive Bitcoin and Lightning payments within their app and being self-custodial.",
-    deliverables: [
-      "Bitcoin & Lightning wallet embedding",
-      "Seemless and fluid user experience",
-      "P2P payment solution for less-risk and better compliance"
-    ],
-    cta: "Accept Bitcoin",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-primary",
-    border: "border-primary/40"
-  },
-  {
-    name: "Nostr Messaging",
-    price: "Starting at 500 €",
-    duration: "1-3 days",
-    best: "Applications or platforms that want encrypted, user-owned messaging or notification systems built on Nostr.",
-    deliverables: [
-      "End-to-end encrypted messaging integration",
-      "User-to-user or system-to-user messaging flow",
-      "Relay configuration for message delivery",
-    ],
-    cta: "Enable Secure Messaging",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-violet-400",
-    border: "border-violet-400/40"
-  },
-  {
-    name: "Sovereign Publishing",
-    price: "Starting at 700 €",
-    duration: "3–5 days",
-    best: "Media organizations and creators strengthening content distribution, audience ownership and reader monetization without replacing their existing publishing platform.",
-    deliverables: [
-      "WordPress or CMS integration",
-      "Publish articles to Nostr while keeping your website as the source of truth",
-      "Verified publisher identity",
-      "Lightning support for direct reader contributions",
-      "Deployment and publishing workflow",
-    ],
-    cta: "Enable Sovereign Publishing",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-violet-400",
-    border: "border-violet-400/40"
-  },
-  {
-    name: "Stable Balance",
-    price: "Starting at 900 €",
-    duration: "1–3 days",
-    best: "Applications looking to offer users a stable-value balance for payments, savings or yield products while leveraging Bitcoin-native infrastructure.",
-    deliverables: [
-      "Integrate stable balance support (e.g. USDB)",
-      "Deposit and withdrawal flows",
-      "Balance display and transaction history",
-      "Wallet integration"
-    ],
-    cta: "Add Stable Balances",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-primary",
-    border: "border-primary/40"
-  },
-  {
-    name: "Loyalty & Digital Assets",
-    price: "Starting at 1,200 €",
-    duration: "3-5 days",
-    best: "Businesses wanting to issue loyalty points, rewards or digital assets using Bitcoin-native token infrastructure.",
-    deliverables: [
-      "Token issuance integration (Spark, Ark or compatible protocols)",
-      "Loyalty or rewards balance",
-      "Transfer and redemption flows",
-      "Wallet compatibility"
-    ],
-    cta: "Launch Digital Assets",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-primary",
-    border: "border-primary/40"
-  },
-]
+// const launchPacks = [
+//   {
+//     name: "Nostr Identity",
+//     price: "Starting at 300 €",
+//     duration: "1-3 days",
+//     best: "Applications looking to add decentralized authentication using Nostr identities.",
+//     deliverables: [
+//       "Nostr login integration",
+//       "User profile mapping",
+//       "Session management"
+//     ],
+//     cta: "Start Nostr Login",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-violet-400",
+//     border: "border-violet-400/40"
+//   },
+//   {
+//     name: "Bitcoin wallet integration",
+//     price: "Starting at 500 €",
+//     duration: "1-3 days",
+//     best: "Businesses wanting to send and receive Bitcoin and Lightning payments within their app and being self-custodial.",
+//     deliverables: [
+//       "Bitcoin & Lightning wallet embedding",
+//       "Seemless and fluid user experience",
+//       "P2P payment solution for less-risk and better compliance"
+//     ],
+//     cta: "Accept Bitcoin",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-primary",
+//     border: "border-primary/40"
+//   },
+//   {
+//     name: "Nostr Messaging",
+//     price: "Starting at 500 €",
+//     duration: "1-3 days",
+//     best: "Applications or platforms that want encrypted, user-owned messaging or notification systems built on Nostr.",
+//     deliverables: [
+//       "End-to-end encrypted messaging integration",
+//       "User-to-user or system-to-user messaging flow",
+//       "Relay configuration for message delivery",
+//     ],
+//     cta: "Enable Secure Messaging",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-violet-400",
+//     border: "border-violet-400/40"
+//   },
+//   {
+//     name: "Sovereign Publishing",
+//     price: "Starting at 700 €",
+//     duration: "3–5 days",
+//     best: "Media organizations and creators strengthening content distribution, audience ownership and reader monetization without replacing their existing publishing platform.",
+//     deliverables: [
+//       "WordPress or CMS integration",
+//       "Publish articles to Nostr while keeping your website as the source of truth",
+//       "Verified publisher identity",
+//       "Lightning support for direct reader contributions",
+//       "Deployment and publishing workflow",
+//     ],
+//     cta: "Enable Sovereign Publishing",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-violet-400",
+//     border: "border-violet-400/40"
+//   },
+//   {
+//     name: "Stable Balance",
+//     price: "Starting at 900 €",
+//     duration: "1–3 days",
+//     best: "Applications looking to offer users a stable-value balance for payments, savings or yield products while leveraging Bitcoin-native infrastructure.",
+//     deliverables: [
+//       "Integrate stable balance support (e.g. USDB)",
+//       "Deposit and withdrawal flows",
+//       "Balance display and transaction history",
+//       "Wallet integration"
+//     ],
+//     cta: "Add Stable Balances",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-primary",
+//     border: "border-primary/40"
+//   },
+//   {
+//     name: "Loyalty & Digital Assets",
+//     price: "Starting at 1,200 €",
+//     duration: "3-5 days",
+//     best: "Businesses wanting to issue loyalty points, rewards or digital assets using Bitcoin-native token infrastructure.",
+//     deliverables: [
+//       "Token issuance integration (Spark, Ark or compatible protocols)",
+//       "Loyalty or rewards balance",
+//       "Transfer and redemption flows",
+//       "Wallet compatibility"
+//     ],
+//     cta: "Launch Digital Assets",
+//     href: "https://cal.com/hexquarter/intro",
+//     accent: "text-primary",
+//     border: "border-primary/40"
+//   },
+// ]
 
 export const WorkWithUs = () => {
   return (
@@ -181,9 +197,9 @@ export const WorkWithUs = () => {
           <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl leading-[1.05]">
             Choose the right starting point.
           </h2>
-          <p className="text-muted-foreground">
+          {/* <p className="text-muted-foreground">
             Sovereign infrastructure, built two ways: structured advisory for system design, and productized packs for fast integration.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -241,16 +257,16 @@ export const WorkWithUs = () => {
           <br />The <strong className="text-white">Strategic Fit Assessment</strong> is designed to help you determine whether Bitcoin, Lightning and Nostr are the right fit for your business.
         </p>
 
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <h2 className="font-[Cal_Sans] text-4xl">
             Fast integration
           </h2>
           <p className="text-muted-foreground">
             Start small with production-ready Bitcoin, Lightning and Nostr integrations. Launch Packs let you introduce user-owned identity, payments and communication into your product with fixed scope, predictable pricing and rapid delivery.
           </p>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5" >
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5" >
           {launchPacks.map((o) => (
             <div
               key={o.name}
@@ -295,7 +311,7 @@ export const WorkWithUs = () => {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
