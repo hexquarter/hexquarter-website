@@ -3,22 +3,6 @@ import { ArrowRight, Check, Drum } from "lucide-react";
 import posthog from "posthog-js";
 
 const offers = [
-  // {
-  //   tag: "01 · Discovery",
-  //   name: "Strategic Fit Assessment",
-  //   price: "100 €",
-  //   duration: "1 hour + brief written recommendations",
-  //   best: "Founders and business leaders deciding whether Bitcoin, Lightning or Nostr align with their product, business model and strategic goals.",
-  //   deliverables: [
-  //     "Review of your product or business",
-  //     "Opportunities for Bitcoin, Lightning and Nostr",
-  //     "Recommended next steps"
-  //   ],
-  //   cta: "Schedule Assessment",
-  //   href: "https://cal.com/hexquarter/strategit-fit",
-  //   accent: "text-muted-foreground",
-  //   border: "border-muted-foreground/40"
-  // },
   {
     tag: "01 · Diagnostic",
     name: "Architecture Review",
@@ -32,7 +16,7 @@ const offers = [
       "Honest recommendation (including when not to use Bitcoin/Nostr)",
     ],
     cta: "Book a review",
-    href: "https://cal.com/hexquarter/intro",
+    href: "https://calendar.proton.me/bookings#-xHAV-0DMMMy2fwHwEW9QT6xhm3PDTmxUPbw8w5ZV7g=",
     accent: "text-primary",
     border: "border-primary/40",
   },
@@ -49,7 +33,7 @@ const offers = [
       "Implementation roadmap with effort estimates"
     ],
     cta: "Discuss the Blueprint",
-    href: "https://cal.com/hexquarter/intro",
+    href: "https://calendar.proton.me/bookings#-xHAV-0DMMMy2fwHwEW9QT6xhm3PDTmxUPbw8w5ZV7g=",
     accent: "text-violet-400",
     border: "border-violet-400/40",
   },
@@ -66,125 +50,11 @@ const offers = [
       "Production deployment, protocol integrations"
     ],
     cta: "Start a Project",
-    href: "https://cal.com/hexquarter/intro",
+    href: "https://calendar.proton.me/bookings#-xHAV-0DMMMy2fwHwEW9QT6xhm3PDTmxUPbw8w5ZV7g=",
     accent: "text-green-400",
     border: "border-green-400/40",
-  },
-  {
-    tag: "04 · Support",
-    name: "Fractional Protocol Architect",
-    price: "Starting at 3,000 €/mo",
-    duration: "Retainer",
-    best: "A senior protocol architect embedded in your team to guide architecture, reduce technical risk and accelerate delivery.",
-    deliverables: [
-      "Architecture guidance, technical strategy",
-      "Design reviews, engineering mentorship",
-      "Protocol evaluation, integration support",
-      "Direct collaboration with your product, engineering teams"
-    ],
-    cta: "Start a Project",
-    href: "https://cal.com/hexquarter/intro",
-    accent: "text-yellow-400",
-    border: "border-yellow-400/40",
-  },
+  }
 ];
-
-// const launchPacks = [
-//   {
-//     name: "Nostr Identity",
-//     price: "Starting at 300 €",
-//     duration: "1-3 days",
-//     best: "Applications looking to add decentralized authentication using Nostr identities.",
-//     deliverables: [
-//       "Nostr login integration",
-//       "User profile mapping",
-//       "Session management"
-//     ],
-//     cta: "Start Nostr Login",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-violet-400",
-//     border: "border-violet-400/40"
-//   },
-//   {
-//     name: "Bitcoin wallet integration",
-//     price: "Starting at 500 €",
-//     duration: "1-3 days",
-//     best: "Businesses wanting to send and receive Bitcoin and Lightning payments within their app and being self-custodial.",
-//     deliverables: [
-//       "Bitcoin & Lightning wallet embedding",
-//       "Seemless and fluid user experience",
-//       "P2P payment solution for less-risk and better compliance"
-//     ],
-//     cta: "Accept Bitcoin",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-primary",
-//     border: "border-primary/40"
-//   },
-//   {
-//     name: "Nostr Messaging",
-//     price: "Starting at 500 €",
-//     duration: "1-3 days",
-//     best: "Applications or platforms that want encrypted, user-owned messaging or notification systems built on Nostr.",
-//     deliverables: [
-//       "End-to-end encrypted messaging integration",
-//       "User-to-user or system-to-user messaging flow",
-//       "Relay configuration for message delivery",
-//     ],
-//     cta: "Enable Secure Messaging",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-violet-400",
-//     border: "border-violet-400/40"
-//   },
-//   {
-//     name: "Sovereign Publishing",
-//     price: "Starting at 700 €",
-//     duration: "3–5 days",
-//     best: "Media organizations and creators strengthening content distribution, audience ownership and reader monetization without replacing their existing publishing platform.",
-//     deliverables: [
-//       "WordPress or CMS integration",
-//       "Publish articles to Nostr while keeping your website as the source of truth",
-//       "Verified publisher identity",
-//       "Lightning support for direct reader contributions",
-//       "Deployment and publishing workflow",
-//     ],
-//     cta: "Enable Sovereign Publishing",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-violet-400",
-//     border: "border-violet-400/40"
-//   },
-//   {
-//     name: "Stable Balance",
-//     price: "Starting at 900 €",
-//     duration: "1–3 days",
-//     best: "Applications looking to offer users a stable-value balance for payments, savings or yield products while leveraging Bitcoin-native infrastructure.",
-//     deliverables: [
-//       "Integrate stable balance support (e.g. USDB)",
-//       "Deposit and withdrawal flows",
-//       "Balance display and transaction history",
-//       "Wallet integration"
-//     ],
-//     cta: "Add Stable Balances",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-primary",
-//     border: "border-primary/40"
-//   },
-//   {
-//     name: "Loyalty & Digital Assets",
-//     price: "Starting at 1,200 €",
-//     duration: "3-5 days",
-//     best: "Businesses wanting to issue loyalty points, rewards or digital assets using Bitcoin-native token infrastructure.",
-//     deliverables: [
-//       "Token issuance integration (Spark, Ark or compatible protocols)",
-//       "Loyalty or rewards balance",
-//       "Transfer and redemption flows",
-//       "Wallet compatibility"
-//     ],
-//     cta: "Launch Digital Assets",
-//     href: "https://cal.com/hexquarter/intro",
-//     accent: "text-primary",
-//     border: "border-primary/40"
-//   },
-// ]
 
 export const WorkWithUs = () => {
   return (
@@ -202,7 +72,7 @@ export const WorkWithUs = () => {
           </p> */}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-5">
           {offers.map((o) => (
             <div
               key={o.name}
