@@ -3,10 +3,11 @@ import { useRouter } from "next/router";
 import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
-  { href: "/approach", label: "Approach" },
+  { href: "/approach", label: "Our Approach" },
+  { href: "/bitcoin-advantage", label: "The Bitcoin Advantage" },
   // { href: "/services", label: "Services" },
   // { href: "/work", label: "Work" },
-  { href: "/writing", label: "Writing" },
+  { href: "/writing", label: "Blog" },
   // { href: "/about", label: "About" },
 ];
 

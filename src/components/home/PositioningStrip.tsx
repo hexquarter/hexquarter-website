@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const pillars = [
   {
@@ -9,6 +9,14 @@ const pillars = [
     title: "Bitcoin",
     subtitle: "Settlement · Ownership · Permanence",
     body: "The strongest decentralized security budget on the planet. We use it where finality, ownership and verifiability are non-negotiable — payments, settlement, anchoring, attestation.",
+    cta: (
+      <Link
+        href="/bitcoin-advantage"
+        className="bg-primary px-5 py-3 font-mono uppercase text-xs hover:bg-white hover:text-primary transition w-fit flex items-center gap-2"
+      >
+        Discover the most secure ledger system <ArrowRight className="h-3 w-3" />
+      </Link>
+    )
   },
   {
     tag: "Identity & Coordination layer",
@@ -53,6 +61,7 @@ export const PositioningStrip = () => {
                 {p.subtitle}
               </p>
               <p className="text-muted-foreground">{p.body}</p>
+              {p.cta && <div className="pt-5">{p.cta}</div>}
             </div>
           ))}
         </div>
