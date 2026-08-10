@@ -31,7 +31,7 @@ const Hero = () => {
         <div className="flex flex-col gap-4 max-w-4xl">
           <p className="text-white text-xl">
             We help internet businesses own what matters:
-            <br />• identity <br />• payments <br />• audience • data
+            <br />• identity <br />• payments <br />• audience <br />• data
           </p>
           <p className="text-white/70">
             Using Bitcoin, Lightning and Nostr—not because they're fashionable, but because they've proven themselves.
