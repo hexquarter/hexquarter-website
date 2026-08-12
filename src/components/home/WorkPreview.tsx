@@ -8,7 +8,7 @@ export const cases = [
     name: "PriceStr",
     kicker: "Bitcoin-denominated pricing infrastructure",
     challenge:
-      "Merchants and applications needed reliable Bitcoin-denominated pricing without depending on a single centralized data provider.",
+      "Applications needed a decentralized and easy-to-use Bitcoin pricing without depending on a single centralized data provider.",
     architecture:
       "A pricing service with signed, verifiable data distribution, redundant sources and clear failure semantics for consumers.",
     technology: ["Bitcoin", "Nostr relays", "Signed events", "TypeScript services"],
@@ -20,37 +20,36 @@ export const cases = [
     name: "Bitlasso",
     kicker: "Bitcoin-native product infrastructure",
     challenge:
-      "Deliver a Bitcoin-native product experience without custodial shortcuts or fragile off-chain accounting.",
+      "Deliver a Bitcoin-native loyalty payment systems product experience without custodial shortcuts or high costs.",
     architecture:
-      "Clear separation of settlement, application state and identity; explicit custody boundaries; auditable transaction flows.",
-    technology: ["Bitcoin", "Lightning", "Key-based identity", "Event-driven services"],
+      "Clear separation of settlement, application state and identity; explicit custody boundaries; portable metadata and identity.",
+    technology: ["Bitcoin", "Lightning", "Nostr", "oRWA"],
     outcome:
       "A system where the trust model is explicit and each component can be reasoned about independently.",
   },
   {
-    slug: "enterprise-network",
-    name: "Permissioned network architecture",
-    kicker: "Enterprise consortium infrastructure",
+    slug: "brio",
+    name: "Brio",
+    kicker: "Telegram-native Bitcoin wallet",
     challenge:
-      "A multi-party business process needed shared state and auditability without exposing data publicly.",
-    architecture:
-      "A permissioned network design with membership governance, data partitioning, deterministic settlement and integration adapters to existing systems.",
-    technology: ["Hyperledger", "Consortium governance", "Cryptographic audit trails"],
+      "Deliver a Bitcoin-native payment system integrated into the Telegram ecosystem with user-experience and security expectations.",
+    architecture: "A Telegram bot with a Bitcoin wallet, Lightning payment channels, and a Nostr-based identity layer for non-custodial user accounts.",
+    technology: ["Bitcoin", "Lightning", "Nostr", "Telegram MiniApp"],
     outcome:
       "A production-ready architecture with defined onboarding, upgrade and operational responsibilities.",
   },
   {
-    slug: "protocol-engineering",
-    name: "Application-specific protocol work",
-    kicker: "Consensus and protocol internals",
+    slug: "ao-protocol",
+    name: "AO ",
+    kicker: "Execution-layer protocol",
     challenge:
-      "A protocol required design and engineering at the consensus, replication and data-availability level.",
+      "The team required expertise in Erlang based blockchain and distributed systems design a production-ready architecture.",
     architecture:
-      "Protocol-level design work covering validation rules, replication strategy, node responsibilities and network assumptions.",
-    technology: ["Archethic", "Arweave", "Distributed systems engineering"],
+      "Support on-going engineering efforts for a decentralized supercomputer built on top of Arweave's permanent data storage.",
+    technology: ["Erlang", "Arwaeve", "Distributed systems engineering"],
     outcome:
-      "Design decisions grounded in explicit trade-offs rather than defaults inherited from another chain.",
-  },
+      "Improvements to the protocol's architecture and implementation grounded in explicit trade-offs rather than defaults inherited from another chain.",
+  }
 ];
 
 export const WorkPreview = () => (

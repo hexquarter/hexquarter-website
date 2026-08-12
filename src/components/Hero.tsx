@@ -14,14 +14,14 @@ const Hero = () => {
     <section className="px-5 lg:px-12 pt-32 lg:pt-44 pb-16 lg:pb-24 border-b border-border">
       <div className="grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-9 flex flex-col gap-10">
-          <p className="label">Blockchain architecture & engineering studio</p>
+          <p className="label">Blockchain architecture & engineering</p>
           <h1 className="font-display font-semibold text-5xl lg:text-8xl 2xl:text-9xl leading-[0.94] max-w-5xl">
-            Turn blockchain ideas into production-ready systems.
+            A place to build decentralized systems.
           </h1>
           <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Blockchain architecture and engineering for teams building serious products — backed by
-            10+ years across Ethereum, Hyperledger, Archethic, Arweave, Bitcoin and decentralized
-            systems.
+            We help teams turn blockchain ideas into production-ready systems. <br />
+            Blockchain architecture, protocol engineering and decentralized infrastructure — backed by
+            10+ years across Bitcoin, Ethereum, Nostr and beyond. 
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <Link

@@ -32,8 +32,7 @@ export const Footer = () => {
             HexQuarter<span className="text-muted-foreground">.</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs">
-            Blockchain architecture and engineering. We don&apos;t start with a blockchain — we
-            start with the system.
+            Blockchain architecture and engineering.
           </p>
         </div>
 

@@ -61,7 +61,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Head>
         <title>HexQuarter Blog — Bitcoin & Nostr engineering</title>
-        <meta name="description" content="Technical articles and updates about Bitcoin and Nostr engineering from HexQuarter." />
+        <meta name="description" content="Technical articles and updates about engineering expereiences from HexQuarter." />
       </Head>
       <Header />
       <main className="flex flex-col px-5 lg:px-20 py-20">

@@ -28,7 +28,7 @@ export const BitcoinPerspective = () => (
           Why we often recommend Bitcoin.
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed">
-          We are protocol-agnostic by experience and Bitcoin-specialized by choice. After a decade
+          We are protocol-agnostic by experience and Bitcoin-specialized by choice. <br /><br />After a decade
           across ecosystems, Bitcoin remains the most credible settlement layer for systems that
           need to still be standing in ten years.
         </p>

@@ -30,7 +30,7 @@ export const expertise: Expertise[] = [
       "Draw explicit system boundaries between settlement, application state and identity.",
       "Evaluate protocols against those constraints — including the option of no blockchain.",
     ],
-    technologies: ["Bitcoin", "Ethereum / EVM", "Hyperledger", "Archethic", "Arweave"],
+    technologies: ["Bitcoin", "Ethereum / EVM", "Arweave", "Custom"],
     outcomes: [
       "A documented architecture with explicit trade-offs.",
       "A protocol decision you can defend to a board or an auditor.",
@@ -68,6 +68,29 @@ export const expertise: Expertise[] = [
       "Operational runbooks tied to real failure modes.",
       "Engineering teams able to own the system after handover.",
     ],
+  },
+  {
+    slug: "ai-payments",
+    name: "Agentic Payments",
+    eyebrow: "Expertise / 06",
+    headline: "Autonomous agents that pay, settle to access resources.",
+    intro: "Agentic payments are a new paradigm for autonomous software agents to pay for services, settle to access resources, and manage their own finances without human intervention.",
+    problems: [
+      "Autonomous agents need to pay for services and resources without human intervention.",
+      "Current payment systems are not designed for autonomous agents, leading to inefficiencies and security risks.",
+      "There is a lack of standardization in agentic payment protocols, making interoperability difficult.",
+    ],
+    approach: [
+      "Design payment protocols that allow autonomous agents to initiate and complete transactions securely.",
+      "Implement settlement mechanisms that ensure timely and reliable access to resources.",
+      "Develop standards for agentic payments to promote interoperability across different platforms and services.",
+    ],
+    technologies: ["x402", "l402", "Agentic payment protocols", "Autonomous agent frameworks"],
+    outcomes: [
+      "A secure and efficient payment system for autonomous agents.",
+      "Reliable settlement mechanisms that ensure access to resources.",
+      "Standardized protocols that enable interoperability across platforms.",
+    ]
   },
   {
     slug: "bitcoin",
@@ -146,5 +169,5 @@ export const expertise: Expertise[] = [
       "Operational controls that scale with volume.",
       "A clear path from pilot to regulated production.",
     ],
-  },
+  }
 ];
