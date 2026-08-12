@@ -7,7 +7,7 @@ const nav = [
   { href: "/expertise", label: "Expertise" },
   { href: "/approach", label: "Approach" },
   { href: "/work", label: "Work" },
-  { href: "/blog", label: "Insights" },
+  // { href: "/blog", label: "Insights" },
   { href: "/about", label: "About" },
 ];
 

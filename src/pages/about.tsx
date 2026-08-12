@@ -5,30 +5,20 @@ import founderPhoto from "@/assets/founder2.png";
 
 const arc = [
   {
-    year: "2014 — 2017",
-    t: "Early decentralized systems",
-    b: "First protocol work: consensus, peer-to-peer networking and the realities of distributed state.",
-  },
-  {
-    year: "2017 — 2020",
+    year: "2015 — 2017",
     t: "Smart-contract platforms",
-    b: "Ethereum and EVM systems, DeFi protocol architecture, and the operational cost of on-chain complexity.",
+    b: "Ethereum and EVM systems and the operational cost of on-chain complexity.",
   },
   {
-    year: "2019 — 2022",
-    t: "Enterprise & permissioned networks",
-    b: "Hyperledger consortium design: governance, membership, privacy and integration with existing systems.",
+    year: "2018 — 2025",
+    t: "Protocol & blockchain engineering",
+    b: "Archethic: consensus internals, replication and permanent data availability.",
   },
   {
-    year: "2020 — 2023",
-    t: "Protocol & storage engineering",
-    b: "Archethic and Arweave: consensus internals, replication and permanent data availability.",
-  },
-  {
-    year: "2023 — today",
+    year: "2025 — Now",
     t: "Bitcoin, Lightning & Nostr",
     b: "Settlement, custody, payments and portable identity — the stack we now specialize in by choice.",
-  },
+  }
 ];
 
 const About = () => (
@@ -59,12 +49,18 @@ const About = () => (
         </div>
         <div className="lg:col-span-8 flex flex-col gap-5 text-lg text-muted-foreground leading-relaxed">
           <p>
-            I&apos;ve spent more than ten years building decentralized systems. Public
-            smart-contract platforms. Permissioned enterprise networks. Application-specific
-            protocols. Decentralized storage. Bitcoin infrastructure.
+            I&apos;ve spent more than ten years building decentralized systems. 
+            <ul className="list-disc list-inside mt-2">
+              <li>Brand new layer 1 protocol</li>
+              <li>Public smart-contract applications</li>
+              <li>Bitcoin wallets</li>
+              <li>Nostr infrastructure</li>
+              <li>Permissioned enterprise networks</li>
+              <li>Application-specific protocols</li>
+            </ul>
           </p>
           <p>
-            That range shapes how we work. Having built on multiple protocols, we can tell you
+            That range shapes how we work. <br />Having built on multiple protocols, we can tell you
             honestly which one fits your constraints — or whether you need one at all.
           </p>
           <p className="text-foreground">
