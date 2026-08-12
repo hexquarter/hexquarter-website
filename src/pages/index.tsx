@@ -1,44 +1,29 @@
-import Head from "next/head";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import { PositioningStrip } from "@/components/home/PositioningStrip";
-import { OurStory } from "@/components/OurStory";
-import { ComparisonTable } from "@/components/ComparisonTable";
-import { FounderStory } from "@/components/home/FounderStory";
-import { TrustProof } from "@/components/TrustProof";
-import { Products } from "@/components/Products";
-import { WorkWithUs } from "@/components/home/WorkWithUs";
-import { ServicesPreview } from "@/components/home/ServicesPreview";
-import { FAQ } from "@/components/home/FAQ";
-import { HomeCTA } from "@/components/home/HomeCTA";
-import { Footer } from "@/components/Footer";
-import { Ownership } from "@/components/Ownership";
+import { PageShell } from "@/components/PageShell";
+import { Problem } from "@/components/home/Problem";
+import { Ecosystems } from "@/components/home/Ecosystems";
+import { Capabilities } from "@/components/home/Capabilities";
+import { BitcoinPerspective } from "@/components/home/BitcoinPerspective";
+import { WorkPreview } from "@/components/home/WorkPreview";
+import { ApproachPreview } from "@/components/home/ApproachPreview";
+import { FounderNote } from "@/components/home/FounderNote";
+import { FinalCTA } from "@/components/Primitives";
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Head>
-        <title>HexQuarter — Decentralized systems engineered to last</title>
-        <meta
-          name="description"
-          content="HexQuarter is a decentralized systems engineering studio. We design payment, identity and coordination systems on Bitcoin and Nostr — led by a founder with a decade across the decentralized stack."
-        />
-      </Head>
-      <Header />
-      <main className="flex flex-col">
-        <Hero />
-        <Ownership />
-        {/* <OurStory /> */}
-        <WorkWithUs />
-        <Products />
-        <TrustProof />
-        <OurStory />
-        <FAQ />
-        <HomeCTA />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const Index = () => (
+  <PageShell
+    title="HexQuarter — Blockchain Architecture & Engineering Studio"
+    description="Blockchain architecture and engineering for teams building serious products. 10+ years across Ethereum, Hyperledger, Archethic, Arweave, Bitcoin and decentralized systems."
+  >
+    <Hero />
+    <Problem />
+    <Ecosystems />
+    <Capabilities />
+    <BitcoinPerspective />
+    <WorkPreview />
+    <ApproachPreview />
+    <FounderNote />
+    <FinalCTA />
+  </PageShell>
+);
 
 export default Index;
