@@ -18,7 +18,7 @@ renderer.heading = ({ text, depth }) => {
 };
 
 renderer.code = ({ text }) => {
-  return `<pre class="bg-white p-5 overflow-x-auto text-sm rounded-xl border-muted-foreground/20"><code>${text}</code></pre>`;
+  return `<pre class="bg-card p-5 overflow-x-auto text-sm rounded-xl border-border"><code>${text}</code></pre>`;
 }
 
 renderer.table = (e) => {
@@ -26,11 +26,11 @@ renderer.table = (e) => {
   return `<table class="table-auto w-full border-collapse my-5">
     <thead>
       <tr>
-        ${e.header.map((h) => `<th class="border-b border-r px-3 border-muted-foreground/20 text-left pb-2 text-foreground">${h.text}</th>`).join('')}
+        ${e.header.map((h) => `<th class="border-b border-r px-3 border-border text-left pb-2 text-foreground">${h.text}</th>`).join('')}
       </tr>
     </thead>
     <tbody>
-      ${e.rows.map((row) => `<tr>${row.map((c) => `<td class="border-b border-r px-3 last:border-r-0 py-3 border-muted-foreground/20 py-2 text-foreground/70">${c.text}</td>`).join('')}</tr>`).join('')}
+      ${e.rows.map((row) => `<tr>${row.map((c) => `<td class="border-b border-r px-3 last:border-r-0 py-3 border-border py-2 text-foreground/70">${c.text}</td>`).join('')}</tr>`).join('')}
     </tbody>
   </table>`;
 }
@@ -166,8 +166,8 @@ const BlogDetails = () => {
         </section>
         {article && (
           <div className="flex flex-col justify-between gap-5 items-start mx-auto">
-            <img src={article.image} alt={article.title} className="object-cover max-h-100 w-full border border-muted-foreground/20" />
-            <div className="flex flex-col gap-5 text-muted-foreground text-base bg-card p-10 border border-muted-foreground/20">
+            <img src={article.image} alt={article.title} className="object-cover max-h-100 w-full border border-border" />
+            <div className="flex flex-col gap-5 text-muted-foreground text-base bg-card p-10 border border-border">
               <MarkdownRenderer content={article.content} />
             </div>
           </div>

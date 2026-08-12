@@ -1,30 +1,32 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import Header from "@/components/Header";
+import { PageShell } from "@/components/PageShell";
+import { CTALink } from "@/components/Primitives";
 
 const NotFoundPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", router.asPath);
+    console.error("404: route not found:", router.asPath);
   }, [router.asPath]);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main className="flex flex-col gap-10 m-20">
-        <section className="hex-section">
-          <div className="hex-container">
-            <h1 className="mb-4 text-4xl font-bold">404</h1>
-            <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-            <Link href="/" className="text-primary hover:underline hover:text-primary/90">
-              <button className="border cursor-pointer border-white/30 hover:bg-white hover:text-muted-foreground px-4 py-2 text-white uppercase font-mono text-xs ">Return to Home</button>
-            </Link>
-          </div>
-        </section>
-      </main>
-    </div>
+    <PageShell title="Page not found — HexQuarter" description="This page does not exist.">
+      <section className="px-5 lg:px-12 pt-36 pb-32 flex flex-col gap-8">
+        <p className="label">Error 404</p>
+        <h1 className="font-display text-5xl lg:text-7xl font-semibold">Page not found.</h1>
+        <p className="text-muted-foreground text-lg max-w-xl">
+          The page you were looking for doesn&apos;t exist or has moved.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <CTALink href="/">Back to home</CTALink>
+          <CTALink href="/expertise" variant="ghost">
+            Explore expertise
+          </CTALink>
+        </div>
+      </section>
+    </PageShell>
   );
 };
 

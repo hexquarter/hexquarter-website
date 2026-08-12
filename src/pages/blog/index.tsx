@@ -82,12 +82,12 @@ const Blog = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           {!loading && articles.map((a) => (
-            <Link key={a.id} href={`/blog/${a.id}`} onClick={() => posthog.capture('blog_article_clicked', { article_id: a.id, article_title: a.title })} className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group">
+            <Link key={a.id} href={`/blog/${a.id}`} onClick={() => posthog.capture('blog_article_clicked', { article_id: a.id, article_title: a.title })} className="h-full p-6 border border-border bg-card hover:bg-card group">
               <div className="flex flex-col gap-5">
                 <h3 className="font-display font-semibold text-2xl font-medium text-foreground mb-3 group-hover:text-muted-foreground">
                   {a.title}
                 </h3>
-                <h2 className="hex-tag">{a.date.toDateString()}</h2>
+                <h2 className="label">{a.date.toDateString()}</h2>
                 <img src={a.image} alt={a.title} />
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {a.summary}
