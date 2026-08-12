@@ -1,105 +1,101 @@
 import { PageShell } from "@/components/PageShell";
-import { Bitcoin } from "@/components/Bitcoin";
-import { Nostr } from "@/components/Nostr";
-import { NostrArchitecture } from "@/components/NostrArchitecture";
-import { ComparisonTable } from "@/components/ComparisonTable";
-import { Stack } from "@/components/Stack";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { FounderStory } from "@/components/home/FounderStory";
-import { PositioningStrip } from "@/components/home/PositioningStrip";
+import { PageHero, Section, Eyebrow, FinalCTA, FlowDiagram } from "@/components/Primitives";
+import { steps } from "@/components/home/ApproachPreview";
 
-const mapping = [
-  { q: "Who owns the value?", b: "Bitcoin", n: "—" },
-  { q: "How is value transferred?", b: "Lightning / Spark / L1", n: "—" },
-  { q: "How is finality achieved?", b: "Proof-of-work", n: "—" },
-  { q: "Who are the participants?", b: "—", n: "Nostr identities (npub)" },
-  { q: "How do they communicate?", b: "—", n: "Signed events over relays" },
-  { q: "How do they synchronize?", b: "—", n: "Event replication" },
-  { q: "How do they coordinate?", b: "—", n: "Signed event exchange" },
+const principles = [
+  {
+    t: "The system comes first",
+    b: "Technology selection is an output of architecture, not an input to it.",
+  },
+  {
+    t: "Trade-offs are stated, not hidden",
+    b: "Every architecture has costs. We document them so decisions can be defended later.",
+  },
+  {
+    t: "Production is the standard",
+    b: "Prototypes are cheap. We design for operations, upgrades, incidents and audits.",
+  },
+  {
+    t: "No blockchain is a valid answer",
+    b: "If a database and good cryptography solve the problem, we'll tell you.",
+  },
 ];
 
-const Approach = () => {
-  return (
-    <PageShell
-      title="Approach — HexQuarter"
-      description="Bitcoin as the trust layer. Nostr as the coordination layer. The two foundations we build on, and why."
-    >
-      <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
-        <div className="flex flex-col gap-8">
-          <h3 className="font-mono uppercase tracking-widest text-xs text-primary">Approach</h3>
-          <h1 className="font-[Cal_Sans] text-5xl lg:text-8xl leading-[1]">
-            We build on the strongest decentralized foundations <span className="text-primary">available.</span>
-          </h1>
-          <div className="flex flex-col">
-            <PositioningStrip />
-          </div>
-        </div>
-        {/* <FounderStory /> */}
-      </section>
+const deliverables = [
+  "Architecture document with explicit trust model",
+  "Protocol and infrastructure recommendation with trade-offs",
+  "System diagrams: components, boundaries, data flows",
+  "Risk register: failure modes, custody, compliance",
+  "Implementation plan sequenced by risk and dependency",
+];
 
-      <Stack />
-      <Bitcoin />
-      <Nostr />
-      <NostrArchitecture />
-      <ComparisonTable />
+const Approach = () => (
+  <PageShell
+    title="Approach — How We Build Blockchain Systems | HexQuarter"
+    description="Understand, architect, select, build, ship. A five-step engineering process for blockchain systems that have to work in production."
+  >
+    <PageHero
+      eyebrow="Approach"
+      title="We don't start with a blockchain. We start with the system."
+      intro="Most failed blockchain projects didn't fail at implementation. They failed at architecture — a protocol chosen before anyone defined what actually needed to be trustless."
+    />
 
-      <section className="px-5 lg:px-20 py-20 border-b border-muted-foreground/30">
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-col gap-5">
-            <h3 className="font-mono uppercase tracking-widest text-xs text-muted-foreground">
-              Mental model
-            </h3>
-            <h2 className="font-[Cal_Sans] text-4xl lg:text-6xl">
-              Two layers, <span className="text-primary">different questions.</span>
-            </h2>
-            <p className="text-muted-foreground">
-              The clearest way to think about the stack: separate the questions each layer is
-              designed to answer.
-            </p>
-          </div>
-          <div className="border border-muted-foreground/20 overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-card">
-                <tr className="text-left font-mono uppercase text-xs">
-                  <th className="p-4 border-b border-muted-foreground/20 text-muted-foreground">Question</th>
-                  <th className="p-4 border-b border-l border-muted-foreground/20 text-primary">Bitcoin</th>
-                  <th className="p-4 border-b border-l border-muted-foreground/20 text-violet-400">Nostr</th>
-                </tr>
-              </thead>
-              <tbody>
-                {mapping.map((row, i) => (
-                  <tr key={i} className="hover:bg-white/5 transition">
-                    <td className="p-4 border-t border-muted-foreground/10 text-white">{row.q}</td>
-                    <td className="p-4 border-t border-l border-muted-foreground/10 text-muted-foreground">
-                      {row.b}
-                    </td>
-                    <td className="p-4 border-t border-l border-muted-foreground/10 text-muted-foreground">
-                      {row.n}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+    <Section>
+      <div className="flex flex-col gap-10">
+        <Eyebrow>The process</Eyebrow>
+        <FlowDiagram steps={steps.map((s) => s.title)} />
+        <ol className="border-t border-border">
+          {steps.map((s) => (
+            <li
+              key={s.id}
+              className="py-8 border-b border-border grid lg:grid-cols-12 gap-3 lg:gap-8"
+            >
+              <span className="lg:col-span-1 font-mono text-[11px] text-muted-foreground">
+                {s.id}
+              </span>
+              <h2 className="lg:col-span-4 font-display text-xl lg:text-2xl font-medium">
+                {s.title}
+              </h2>
+              <p className="lg:col-span-7 text-muted-foreground text-lg leading-relaxed">{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </Section>
 
-      <section className="px-5 lg:px-20 py-20">
-        <div className="border border-muted-foreground/30 bg-card p-10 lg:p-16 flex flex-col gap-6">
-          <h2 className="font-[Cal_Sans] text-3xl lg:text-5xl max-w-3xl">
-            Want to apply this to your product?
-          </h2>
-          <Link
-            href="/contact"
-            className="bg-primary px-5 py-3 font-mono uppercase text-xs hover:bg-white hover:text-primary transition w-fit flex items-center gap-2"
-          >
-            Start a project <ArrowRight className="h-3 w-3" />
-          </Link>
+    <Section className="bg-card">
+      <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="lg:col-span-4">
+          <Eyebrow>Principles</Eyebrow>
         </div>
-      </section>
-    </PageShell>
-  );
-};
+        <div className="lg:col-span-8 grid md:grid-cols-2 border-t border-l border-border bg-background">
+          {principles.map((p) => (
+            <div key={p.t} className="p-8 border-r border-b border-border flex flex-col gap-3">
+              <h3 className="font-display text-lg font-medium">{p.t}</h3>
+              <p className="text-muted-foreground">{p.b}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+
+    <Section>
+      <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="lg:col-span-4">
+          <Eyebrow>What you receive</Eyebrow>
+        </div>
+        <ul className="lg:col-span-8 border-t border-border">
+          {deliverables.map((d) => (
+            <li key={d} className="py-5 border-b border-border text-lg">
+              {d}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
+
+    <FinalCTA />
+  </PageShell>
+);
 
 export default Approach;

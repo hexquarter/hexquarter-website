@@ -1,11 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -24,11 +29,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+  --color-rule: var(--rule);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -41,89 +42,81 @@
 
 @layer base {
   :root {
-    /* Bitcoin-inspired dark palette */
-    --background: #171717;
-    --foreground: white;
-
-    --card: #1f1f1f;
-    --card-foreground: 40 10% 92%;
-
-    --popover: 220 15% 9%;
-    --popover-foreground: 40 10% 92%;
-
-    /* Bitcoin orange - refined, not garish */
-    --primary: #ff5502;
-    --primary-foreground: 220 15% 6%;
-
-    --secondary: 220 12% 14%;
-    --secondary-foreground: 40 10% 75%;
-
-    --muted: 220 12% 12%;
-    --muted-foreground: #9c9a9a;
-
-    --accent: 36 95% 55%;
-    --accent-foreground: 220 15% 6%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 12% 18%;
-    --input: 220 12% 18%;
-    --ring: 36 95% 55%;
-
-    --radius: 0.25rem;
-
-    /* Custom tokens */
-    --hex-amber: 36 95% 55%;
-    --hex-amber-muted: 36 60% 45%;
-    --hex-charcoal: 220 15% 6%;
-    --hex-charcoal-light: 220 15% 9%;
-    --hex-slate: 220 12% 14%;
-    --hex-text-primary: 40 10% 92%;
-    --hex-text-secondary: 220 10% 60%;
-    --hex-text-muted: 220 10% 45%;
-  }
-
-  .dark {
-    --background: 220 15% 6%;
-    --foreground: 40 10% 92%;
-  }
-
-  .light {
+    /* Editorial / architectural light system */
     --background: #ffffff;
-    --foreground: #0a0a0a;
-    --card: #f7f7f7;
-    --card-foreground: #0a0a0a;
+    --foreground: #0b0b0c;
+
+    --card: #fafaf9;
+    --card-foreground: #0b0b0c;
+
     --popover: #ffffff;
-    --popover-foreground: #0a0a0a;
-    --primary: #ff5502;
+    --popover-foreground: #0b0b0c;
+
+    /* Primary is near-black: buttons, emphasis */
+    --primary: #0b0b0c;
     --primary-foreground: #ffffff;
-    --secondary: #f0f0f0;
-    --secondary-foreground: #0a0a0a;
-    --muted: #f0f0f0;
-    --muted-foreground: #525252;
-    --accent: #ff5502;
-    --accent-foreground: #ffffff;
-    --border: #e5e5e5;
-    --input: #e5e5e5;
-    --ring: #ff5502;
-  }
 
-  .light .hex-logo p,
-  .light .hex-logo .logo-accent {
-    color: #000 !important;
-  }
+    --secondary: #f4f4f2;
+    --secondary-foreground: #0b0b0c;
 
-  .light .bg-card {
-    background-color: #f7f7f7;
+    --muted: #f4f4f2;
+    --muted-foreground: #6d6d70;
+
+    --accent: #f4f4f2;
+    --accent-foreground: #0b0b0c;
+
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+
+    --border: #e6e5e2;
+    --input: #e6e5e2;
+    --ring: #0b0b0c;
+    --rule: #e6e5e2;
+
+    --radius: 0px;
   }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/40;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+  ::selection {
+    background: #0b0b0c;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground;
+  }
+  .rule-grid {
+    background-image: linear-gradient(to right, var(--rule) 1px, transparent 1px);
+    background-size: 25% 100%;
+  }
+  .link-underline {
+    @apply relative inline-flex items-center gap-2;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-px w-0 bg-foreground transition-all duration-300;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
   }
 }

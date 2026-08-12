@@ -1,60 +1,55 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import posthog from "posthog-js";
-import { Button } from "./ui/button";
+
+const meta = [
+  "10+ years",
+  "Multiple blockchain ecosystems",
+  "Protocol & system architecture",
+  "Production engineering",
+];
 
 const Hero = () => {
   return (
-    <section className="pt-30 relative h-full lg:min-h-[88vh] pb-20 overflow-hidden lg:px-20 px-5 flex items-center">
-      <div className="absolute inset-0 w-full h-[130%] -top-[15%]">
-        <video
-          src="/bg-video.mp4"
-          loop
-          muted
-          preload="auto"
-          playsInline
-          autoPlay
-          className="absolute top-0 object-cover inset-0 w-full h-full"
-        />
+    <section className="px-5 lg:px-12 pt-32 lg:pt-44 pb-16 lg:pb-24 border-b border-border">
+      <div className="grid lg:grid-cols-12 gap-10">
+        <div className="lg:col-span-9 flex flex-col gap-10">
+          <p className="label">Blockchain architecture & engineering studio</p>
+          <h1 className="font-display font-semibold text-5xl lg:text-8xl 2xl:text-9xl leading-[0.94] max-w-5xl">
+            Turn blockchain ideas into production-ready systems.
+          </h1>
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+            Blockchain architecture and engineering for teams building serious products — backed by
+            10+ years across Ethereum, Hyperledger, Archethic, Arweave, Bitcoin and decentralized
+            systems.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="/contact"
+              onClick={() => posthog.capture("hero_cta_clicked", { cta_label: "Discuss your project" })}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground border border-primary px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] hover:bg-background hover:text-foreground transition-colors duration-300"
+            >
+              Discuss your project <ArrowRight className="h-3 w-3" />
+            </Link>
+            <Link
+              href="/approach"
+              className="inline-flex items-center gap-2 border border-border px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground hover:text-foreground hover:border-foreground transition-colors duration-300"
+            >
+              Explore our approach <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
       </div>
-      <div className="absolute inset-0 bg-background/85" />
 
-      <div className="flex flex-col gap-10 2xl:gap-16 relative w-full">
-        {/* <h2 className="uppercase font-mono text-xs tracking-widest">
-          <span className="text-primary">Open-protocol</span> systems design
-        </h2> */}
-
-        <h1 className="lg:text-8xl 2xl:text-9xl text-5xl text-foreground font-[Cal_Sans] max-w-6xl leading-[1]">
-          Build products users <span className="text-primary">actually own</span>.
-        </h1>
-
-        <div className="flex flex-col gap-4 max-w-4xl">
-          <p className="text-white text-xl">
-            We help internet businesses own what matters:
-            <br />• identity <br />• payments <br />• audience <br />• data
-          </p>
-          <p className="text-white/70">
-            Using Bitcoin, Lightning and Nostr—not because they're fashionable, but because they've proven themselves.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap items-center font-mono text-xs uppercase gap-5">
-          <Link
-            href="https://calendar.proton.me/bookings#-xHAV-0DMMMy2fwHwEW9QT6xhm3PDTmxUPbw8w5ZV7g="
-            target="blank"
-            className="flex bg-primary px-4 py-3 hover:bg-white hover:text-primary transition duration-500"
-          // className="text-muted-foreground hover:text-foreground flex items-center gap-2 transition duration-500"
+      <div className="mt-16 lg:mt-24 border-t border-border grid md:grid-cols-4">
+        {meta.map((m) => (
+          <div
+            key={m}
+            className="py-5 md:px-6 md:first:pl-0 border-b md:border-b-0 md:border-r last:border-r-0 border-border font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
           >
-            Book an architecture review <ArrowRight className="h-3" />
-          </Link>
-          <Link
-            href="#products"
-            className="lex bg-primary px-4 py-3 bg-white text-violet-400 hover:bg-violet-400 hover:text-white transition duration-500"
-            onClick={() => posthog.capture('hero_cta_clicked', { cta_label: 'Start a project' })}
-          >
-            See our work
-          </Link>
-        </div>
+            {m}
+          </div>
+        ))}
       </div>
     </section>
   );

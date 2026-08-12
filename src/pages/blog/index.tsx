@@ -68,7 +68,7 @@ const Blog = () => {
         <section className="py-10">
           <div className="flex flex-col gap-5">
             <h2 className="font-mono uppercase text-muted-foreground">Blog</h2>
-            <h1 className="font-[Cal_Sans] text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl text-foreground leading-tight">Insights on Bitcoin & Nost Engineering</h1>
+            <h1 className="font-display font-semibold text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl text-foreground leading-tight">Insights on Bitcoin & Nost Engineering</h1>
           </div>
         </section>
 
@@ -76,18 +76,18 @@ const Blog = () => {
           <div className="flex items-center gap">
             <svg className="mr-3 size-5 bg-violet-400 animate-spin ..." viewBox="0 0 24 24">
             </svg>
-            <p>Fetching from <span className="text-violet-400">Nostr</span>...yes completely decentralized </p>
+            <p>Fetching from <span className="text-foreground">Nostr</span>...yes completely decentralized </p>
           </div>
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           {!loading && articles.map((a) => (
-            <Link key={a.id} href={`/blog/${a.id}`} onClick={() => posthog.capture('blog_article_clicked', { article_id: a.id, article_title: a.title })} className="h-full p-6 border border-muted-foreground/20 bg-card hover:bg-white group">
+            <Link key={a.id} href={`/blog/${a.id}`} onClick={() => posthog.capture('blog_article_clicked', { article_id: a.id, article_title: a.title })} className="h-full p-6 border border-border bg-card hover:bg-card group">
               <div className="flex flex-col gap-5">
-                <h3 className="font-[Cal_Sans] text-2xl font-medium text-foreground mb-3 group-hover:text-black">
+                <h3 className="font-display font-semibold text-2xl font-medium text-foreground mb-3 group-hover:text-muted-foreground">
                   {a.title}
                 </h3>
-                <h2 className="hex-tag">{a.date.toDateString()}</h2>
+                <h2 className="label">{a.date.toDateString()}</h2>
                 <img src={a.image} alt={a.title} />
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {a.summary}
