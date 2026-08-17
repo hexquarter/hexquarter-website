@@ -21,6 +21,7 @@ const Index = () => (
     <Capabilities />
     <BitcoinPerspective />
     <WorkPreview />
+    <Testimonials />
     <ApproachPreview />
     <FounderNote />
     <FinalCTA />
