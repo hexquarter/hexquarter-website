@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && rm -rf dist && cp -r out dist",
+    "build:dev": "next build && rm -rf dist && cp -r out dist",
     "start": "next start",
     "export": "next build && rm -rf dist && cp -r out dist",
     "lint": "eslint .",
