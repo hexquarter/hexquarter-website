@@ -5,6 +5,7 @@ import { Ecosystems } from "@/components/home/Ecosystems";
 import { Capabilities } from "@/components/home/Capabilities";
 import { BitcoinPerspective } from "@/components/home/BitcoinPerspective";
 import { WorkPreview } from "@/components/home/WorkPreview";
+import { Testimonials } from "@/components/home/Testimonials";
 import { ApproachPreview } from "@/components/home/ApproachPreview";
 import { FounderNote } from "@/components/home/FounderNote";
 import { FinalCTA } from "@/components/Primitives";
@@ -20,6 +21,7 @@ const Index = () => (
     <Capabilities />
     <BitcoinPerspective />
     <WorkPreview />
+    <Testimonials />
     <ApproachPreview />
     <FounderNote />
     <FinalCTA />
