@@ -3,22 +3,17 @@ import { Section, Eyebrow } from "@/components/Primitives";
 const quotes = [
   {
     quote:
-      "We came in with a protocol choice already made. HexQuarter challenged it, documented the trade-offs, and saved us a rewrite we would have discovered six months in.",
-    name: "CTO",
-    org: "Payments startup",
+      "Highly committed, responsive, and always willing to go the extra mile to ensure the end result matched what I needed. I would gladly recommend HexQuarter to anyone looking for a reliable and dedicated development partner.",
+    name: "CEO",
+    category: "Bitcoin wallet",
+    org: "ABC2 Wealth and Investments",
   },
   {
-    quote:
-      "The architecture review was the most useful two weeks we spent all year. We finally had a written trust model our whole team could argue about.",
-    name: "Founder",
-    org: "Bitcoin infrastructure company",
-  },
-  {
-    quote:
-      "Senior, direct, and honest about scope. They told us which part of the work we did not need — that is rare.",
-    name: "Head of Engineering",
-    org: "Fintech platform",
-  },
+    quote: "Integrating PriceStr was seamless; their signature-verified Nostr feed provides the absolute reliability our bitcoin infrastructure requires",
+    name: "CEO",
+    category: "Nostr infrastructure",
+    org: "NotaryBTC",
+  }
 ];
 
 const signals = [
@@ -47,6 +42,9 @@ export const Testimonials = () => (
           <figcaption className="mt-auto label">
             {q.name} · {q.org}
           </figcaption>
+          <div>
+            <span className="text-lg leading-relaxed text-xs text-muted-foreground border p-2">{q.category}</span>
+          </div>
         </figure>
       ))}
     </div>
