@@ -41,6 +41,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="We help internet businesses own what matters: identity, payment, audience and data -  using Bitcoin, Lightning and Nostr." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <meta name='impact-site-verification' content='103b35e9-01d5-43b2-b58c-70db3271099d' />
       </Head>
       <Toaster />
       <Sonner />
