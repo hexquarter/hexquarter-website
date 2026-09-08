@@ -26,7 +26,7 @@ const capabilities = [
 export const Capabilities = () => (
   <Section>
     <div className="flex flex-col gap-6 max-w-3xl">
-      <Eyebrow index="03">What we do</Eyebrow>
+      <Eyebrow index="02">What we do</Eyebrow>
       <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
         From architecture to implementation.
       </h2>

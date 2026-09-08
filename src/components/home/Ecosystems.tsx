@@ -13,7 +13,7 @@ export const Ecosystems = () => (
   <Section>
     <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
       <div className="lg:col-span-5 flex flex-col gap-6">
-        <Eyebrow index="02">Experience across ecosystems</Eyebrow>
+        <Eyebrow index="01">Experience across ecosystems</Eyebrow>
         <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
           10+ years. Multiple protocols. One discipline: decentralized systems.
         </h2>

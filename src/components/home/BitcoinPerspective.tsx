@@ -23,7 +23,7 @@ export const BitcoinPerspective = () => (
   <Section className="bg-card">
     <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
       <div className="lg:col-span-5 flex flex-col gap-6">
-        <Eyebrow index="04">Our perspective</Eyebrow>
+        <Eyebrow index="03">Our perspective</Eyebrow>
         <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
           Why we often recommend Bitcoin.
         </h2>

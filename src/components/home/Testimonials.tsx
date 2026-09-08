@@ -26,7 +26,7 @@ const signals = [
 export const Testimonials = () => (
   <Section>
     <div className="flex flex-col gap-6 max-w-3xl">
-      <Eyebrow index="06">What clients say</Eyebrow>
+      <Eyebrow index="05">What clients say</Eyebrow>
       <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
         Judgement, in writing.
       </h2>

@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import { PageShell } from "@/components/PageShell";
-import { Problem } from "@/components/home/Problem";
+// import { Problem } from "@/components/home/Problem";
 import { Ecosystems } from "@/components/home/Ecosystems";
 import { Capabilities } from "@/components/home/Capabilities";
 import { BitcoinPerspective } from "@/components/home/BitcoinPerspective";
@@ -16,7 +16,7 @@ const Index = () => (
     description="Blockchain architecture and engineering for teams building serious products. 10+ years across Ethereum, Hyperledger, Archethic, Arweave, Bitcoin and decentralized systems."
   >
     <Hero />
-    <Problem />
+    {/* <Problem /> */}
     <Ecosystems />
     <Capabilities />
     <BitcoinPerspective />

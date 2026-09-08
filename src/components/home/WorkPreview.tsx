@@ -55,7 +55,7 @@ export const cases = [
 export const WorkPreview = () => (
   <Section>
     <div className="flex flex-col gap-6 max-w-3xl">
-      <Eyebrow index="05">Selected work</Eyebrow>
+      <Eyebrow index="04">Selected work</Eyebrow>
       <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
         Systems, not screenshots.
       </h2>

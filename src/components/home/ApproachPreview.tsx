@@ -32,9 +32,9 @@ export const ApproachPreview = () => (
   <Section>
     <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
       <div className="lg:col-span-5 flex flex-col gap-6">
-        <Eyebrow index="06">Approach</Eyebrow>
+        <Eyebrow index="05">Approach</Eyebrow>
         <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
-          We don&apos;t start with a blockchain. We start with the system.
+          We don&apos;t start with a blockchain. <br />We start with the system.
         </h2>
         <div className="pt-2">
           <CTALink href="/approach" variant="ghost">
