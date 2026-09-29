@@ -22,7 +22,7 @@ export const FounderNote = () => (
       <div className="lg:col-span-8 flex flex-col gap-6">
         <Eyebrow index="06">Founder</Eyebrow>
         <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02] max-w-2xl">
-          Protocol-agnostic by experience. Bitcoin-specialized by choice.
+          Product and Tech leader for decentralized projects.
         </h2>
         <div className="flex flex-col gap-5 text-muted-foreground text-lg leading-relaxed max-w-2xl">
           <p>

@@ -1,4 +1,5 @@
 import { Section, Eyebrow } from "@/components/Primitives";
+import { FaLinkedin } from "react-icons/fa";
 
 const quotes = [
   {
@@ -7,21 +8,23 @@ const quotes = [
     name: "CEO",
     category: "Bitcoin wallet",
     org: "ABC2 Wealth and Investments",
+    linkedin: "https://www.linkedin.com/in/jannesdp",
   },
   {
     quote: "Integrating PriceStr was seamless; their signature-verified Nostr feed provides the absolute reliability our bitcoin infrastructure requires",
     name: "CEO",
     category: "Nostr infrastructure",
     org: "NotaryBTC",
+    linkedin: "https://www.linkedin.com/in/eriberto-ortiz-ceo/",
   }
 ];
 
-const signals = [
-  { k: "10+ yrs", v: "Building decentralized systems" },
-  { k: "L1 protocol", v: "Consensus & replication internals shipped" },
-  { k: "Bitcoin · Lightning · Nostr", v: "Production systems in operation" },
-  { k: "Senior only", v: "Direct work with the architect" },
-];
+// const signals = [
+//   { k: "10+ yrs", v: "Building decentralized systems" },
+//   { k: "L1 protocol", v: "Consensus & replication internals shipped" },
+//   { k: "Bitcoin · Lightning · Nostr", v: "Production systems in operation" },
+//   { k: "Senior only", v: "Direct work with the architect" },
+// ];
 
 export const Testimonials = () => (
   <Section>
@@ -39,8 +42,17 @@ export const Testimonials = () => (
       {quotes.map((q) => (
         <figure key={q.quote} className="p-8 border-r border-b border-border flex flex-col gap-6">
           <blockquote className="text-lg leading-relaxed">&ldquo;{q.quote}&rdquo;</blockquote>
-          <figcaption className="mt-auto label">
-            {q.name} · {q.org}
+          <figcaption className="mt-auto label flex items-center gap-2">
+            {q.name} · {q.org} {q.linkedin && (
+              <a
+                href={q.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                <FaLinkedin className="h-5 w-5" />
+              </a>
+            )}
           </figcaption>
           <div>
             <span className="text-lg leading-relaxed text-xs text-muted-foreground border p-2">{q.category}</span>
@@ -49,13 +61,13 @@ export const Testimonials = () => (
       ))}
     </div>
 
-    <div className="mt-12 grid md:grid-cols-4 border-t border-l border-border">
+    {/* <div className="mt-12 grid md:grid-cols-4 border-t border-l border-border">
       {signals.map((s) => (
         <div key={s.k} className="p-6 border-r border-b border-border flex flex-col gap-2">
           <p className="font-display text-xl font-medium">{s.k}</p>
           <p className="text-sm text-muted-foreground">{s.v}</p>
         </div>
       ))}
-    </div>
+    </div> */}
   </Section>
 );

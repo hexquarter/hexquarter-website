@@ -19,7 +19,7 @@ const Index = () => (
     {/* <Problem /> */}
     <Ecosystems />
     <Capabilities />
-    <BitcoinPerspective />
+    {/* <BitcoinPerspective /> */}
     <WorkPreview />
     <Testimonials />
     <ApproachPreview />

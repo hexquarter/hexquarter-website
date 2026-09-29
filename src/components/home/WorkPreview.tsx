@@ -13,7 +13,7 @@ export const cases = [
       "A pricing service with signed, verifiable data distribution, redundant sources and clear failure semantics for consumers.",
     technology: ["Bitcoin", "Nostr relays", "Signed events", "TypeScript services"],
     outcome:
-      "A pricing layer applications can integrate without inheriting one provider's uptime or trust assumptions.",
+      "A pricing layer developers can integrate without configuration for free.",
   },
   {
     slug: "bitlasso",
@@ -25,7 +25,7 @@ export const cases = [
       "Clear separation of settlement, application state and identity; explicit custody boundaries; portable metadata and identity.",
     technology: ["Bitcoin", "Lightning", "Nostr", "oRWA"],
     outcome:
-      "A system where the trust model is explicit and each component can be reasoned about independently.",
+      "Self-custodial loyalty and invocing systems for merchants",
   },
   {
     slug: "brio",
@@ -36,7 +36,7 @@ export const cases = [
     architecture: "A Telegram bot with a Bitcoin wallet, Lightning payment channels, and a Nostr-based identity layer for non-custodial user accounts.",
     technology: ["Bitcoin", "Lightning", "Nostr", "Telegram MiniApp"],
     outcome:
-      "A production-ready architecture with defined onboarding, upgrade and operational responsibilities.",
+      "Contact addressed Bitcoin wallet with Lightning payments and Telegram integration.",
   },
   {
     slug: "ao-protocol",
@@ -55,7 +55,7 @@ export const cases = [
 export const WorkPreview = () => (
   <Section>
     <div className="flex flex-col gap-6 max-w-3xl">
-      <Eyebrow index="04">Selected work</Eyebrow>
+      <Eyebrow index="03">Selected work</Eyebrow>
       <h2 className="font-display text-3xl lg:text-5xl font-semibold leading-[1.02]">
         Systems, not screenshots.
       </h2>

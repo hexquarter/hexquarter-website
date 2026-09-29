@@ -70,29 +70,6 @@ export const expertise: Expertise[] = [
     ],
   },
   {
-    slug: "ai-payments",
-    name: "Agentic Payments",
-    eyebrow: "Expertise / 06",
-    headline: "Autonomous agents that pay, settle to access resources.",
-    intro: "Agentic payments are a new paradigm for autonomous software agents to pay for services, settle to access resources, and manage their own finances without human intervention.",
-    problems: [
-      "Autonomous agents need to pay for services and resources without human intervention.",
-      "Current payment systems are not designed for autonomous agents, leading to inefficiencies and security risks.",
-      "There is a lack of standardization in agentic payment protocols, making interoperability difficult.",
-    ],
-    approach: [
-      "Design payment protocols that allow autonomous agents to initiate and complete transactions securely.",
-      "Implement settlement mechanisms that ensure timely and reliable access to resources.",
-      "Develop standards for agentic payments to promote interoperability across different platforms and services.",
-    ],
-    technologies: ["x402", "l402", "Agentic payment protocols", "Autonomous agent frameworks"],
-    outcomes: [
-      "A secure and efficient payment system for autonomous agents.",
-      "Reliable settlement mechanisms that ensure access to resources.",
-      "Standardized protocols that enable interoperability across platforms.",
-    ]
-  },
-  {
     slug: "bitcoin",
     name: "Bitcoin",
     eyebrow: "Expertise / 03",

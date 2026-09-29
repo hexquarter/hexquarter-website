@@ -3,9 +3,9 @@ import { Section, Eyebrow } from "@/components/Primitives";
 const timeline = [
   { name: "Bitcoin", note: "Settlement, custody architecture and asset infrastructure." },
   { name: "Ethereum", note: "Public smart-contract platforms, DeFi protocols, EVM tooling." },
-  { name: "Lightning", note: "Payment channels, routing and real-time settlement." },
+  { name: "Stacks", note: "Unlock Bitcoin potential with BTCfi" },
+  { name: "Lightning & Statechains", note: "Real time payment rails, token issuance and management." },
   { name: "Nostr", note: "Portable identity, signed events and coordination infrastructure." },
-  { name: "Arweave", note: "Decentralized storage and permanent data availability." },
   { name: "Custom", note: "Application-specific protocol engineering and consensus internals." },
 ];
 

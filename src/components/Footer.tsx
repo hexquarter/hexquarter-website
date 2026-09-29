@@ -9,7 +9,6 @@ const groups = [
       { href: "/expertise/bitcoin", label: "Bitcoin" },
       { href: "/expertise/nostr", label: "Nostr" },
       { href: "/expertise/stablecoins", label: "Stablecoins" },
-      { href: "/expertise/ai-payments", label: "Agentic payments" },
     ],
   },
   {
